@@ -1,0 +1,21 @@
+html, input, button {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #815412;
+  background-image: radial-gradient(circle at center, #F6FFAD 0, #E7CF69 200%);
+}
+
+td {
+  border: 1px;
+}
+
+li {
+  list-style-type: none;
+}
+
+img.logo {
+  width: 30%;
+}
+/*  { */
+/*   border: 2px solid rgb(160 160 160); */
+/* } */
