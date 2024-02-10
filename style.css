@@ -1,8 +1,19 @@
-html, input, button {
+html {
   font-family: Arial, sans-serif;
   font-weight: bold;
   color: #815412;
-  background-image: radial-gradient(circle at center, #F6FFAD 0, #E7CF69 200%);
+  background-image: radial-gradient(circle at center, #F6FFAD 0, #E7CF69 5000px);
+}
+
+input, button {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #815412;
+  background-color: #F6FFAD;
+}
+
+fieldset {
+  border: 0;
 }
 
 td {
@@ -14,8 +25,5 @@ li {
 }
 
 img.logo {
-  width: 30%;
+  width: 25%;
 }
-/*  { */
-/*   border: 2px solid rgb(160 160 160); */
-/* } */

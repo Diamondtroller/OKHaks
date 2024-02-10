@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <title>OKHaks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="/"><img src="/OKHaks.png" alt="OKHaks" class="logo"></a>
+    <h1>Lietu informācija</h1>
+    <label for="query">Lietu filtrs:</label>
+    <input type="search" id="query" placeholder="tuss"/>
+    <button id="submit">Meklēt</button>
+    <form id="choice" method="dialog">
+      <fieldset id="results"></fieldset>
+      <button type="submit" formmethod="dialog">Atlasīt</button>
+    </form>
+    <div id="itemInfo"></div>
+    <script type="module" src="/scripts/items.js"></script>
+  </body>
+</html>
