@@ -24,7 +24,7 @@ function deleteChildren(element) {
 }
 
 function makeTitle(title) {
-  const element = document.createElement("h2");
+  const element = document.createElement("h3");
   element.textContent = title;
   return element;
 }
@@ -94,17 +94,48 @@ function load() {
 
   deleteChildren(itemInfo);
 
-  if (id === null || items.items[id] === undefined) {
+  if (id === null) {
+    return;
+  }
+  if (items.items[id] === undefined) {
     itemInfo.textContent = "Šī lieta netika atrasta!";
     return;
   }
 
   itemInfo.appendChild(document.createElement("hr"));
-  itemInfo.appendChild(makeItem(id, false));
+  const item = document.createElement("h2");
+  item.appendChild(makeItem(id, false));
+  itemInfo.appendChild(item);
   itemInfo.appendChild(document.createElement("hr"));
 
+  if (stringsLV.ITEMS[id].NOTE !== "") {
+    const note = document.createElement("blockquote");
+    note.textContent = stringsLV.ITEMS[id].NOTE;
+    itemInfo.appendChild(note);
+  }
+
+  itemInfo.appendChild(makeTitle("Vispārīga informācija"));
+  const generalInfo = document.createElement("table");
+  
+  function makeRow(label, value) {
+    if (value !== undefined) {
+      const row = document.createElement("tr");
+      const labelElement = createElementWithAttrs("td", [["class", "info"]]);
+      labelElement.textContent = label;
+      row.appendChild(labelElement);
+      const valueElement = createElementWithAttrs("td", [["class", "info"]]);
+      valueElement.textContent = value;
+      row.appendChild(valueElement);
+      generalInfo.appendChild(row);
+    }
+  }
+
+  makeRow("Atbloķēšanās līmenis", items.items[id].level);
+  makeRow("Darbības reizes", items.items[id].lifes);
+  itemInfo.appendChild(generalInfo);
+
   if (items.items[id].reward !== undefined) {
-    itemInfo.appendChild(makeTitle("Lietas apbalvojumu varbūtības"));
+    itemInfo.appendChild(makeTitle("Lietas apbalvojumi"));
     const rewards = document.createElement("table");
     for (const entry of items.items[id].reward.split(",")) {
       const [rewardId, amount] = entry.split(":");
@@ -119,6 +150,18 @@ function load() {
     }
     itemInfo.appendChild(rewards);
   }
+
+  itemInfo.appendChild(document.createElement("hr"));
+  const raw = document.createElement("details");
+  const rawLabel = document.createElement("summary");
+  rawLabel.textContent = "Skatīt tīros datus";
+  raw.appendChild(rawLabel);
+  const code = document.createElement("code");
+  const text = document.createElement("pre");
+  text.textContent = JSON.stringify(items.items[id], null, 2);
+  code.appendChild(text);
+  raw.appendChild(code);
+  itemInfo.appendChild(raw);
 }
 
 load();

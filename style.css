@@ -12,12 +12,26 @@ input, button {
   background-color: #F6FFAD;
 }
 
+a:link, a:visited, a:hover, a:active {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #815412;
+  text-decoration: underline;
+}
+
 fieldset {
   border: 0;
 }
 
-td {
-  border: 1px;
+table {
+  border-collapse: collapse;
+}
+td.info {
+  border: inset #815412;
+}
+
+blockquote {
+  font-style: italic;
 }
 
 li {
@@ -25,5 +39,6 @@ li {
 }
 
 img.logo {
-  width: 25%;
+  width: 25vw;
+  max-width: 250px;
 }
