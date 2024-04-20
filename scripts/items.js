@@ -44,23 +44,22 @@ function makeItem(id, makeLink) {
     "src",
     `https://okeanija.draugiem.lv/html5/i/${icon}.png`,
   ]]);
-  let name;
-  if (makeLink) {
-    name = createElementWithAttrs("a", [
-      ["id", `a_${id}`],
-      ["href", "#"],
-      ["data-id", id.toString()],
-    ]);
-    name.textContent = `${stringsLV.ITEMS[id].CAPTION} (#${id})`;
-    name.onclick = () => navigate(id);
-  } else {
-    name = document.createTextNode(`${stringsLV.ITEMS[id].CAPTION} (#${id})`);
-  }
+  const name = document.createTextNode(`${stringsLV.ITEMS[id].CAPTION} (#${id})`);
   nameCol.appendChild(name);
   imgCol.appendChild(img);
   tr.appendChild(imgCol);
   tr.appendChild(nameCol);
   item.appendChild(tr);
+  if (makeLink) {
+    const anchor = createElementWithAttrs("a", [
+      ["id", `a_${id}`],
+      ["href", "#"],
+      ["data-id", id.toString()],
+    ]);
+    anchor.appendChild(item);
+    anchor.onclick = () => navigate(id);
+    return anchor;
+  }
   return item;
 }
 
@@ -115,24 +114,73 @@ function load() {
   }
 
   itemInfo.appendChild(makeTitle("Vispārīga informācija"));
-  const generalInfo = document.createElement("table");
-  
-  function makeRow(label, value) {
+  function makeRow(label, value, doBorder) {
     if (value !== undefined) {
       const row = document.createElement("tr");
-      const labelElement = createElementWithAttrs("td", [["class", "info"]]);
+      let labelElement, valueElement;
+      if (doBorder) {
+        labelElement = createElementWithAttrs("td", [["class", "info"]]);
+        valueElement = createElementWithAttrs("td", [["class", "info"]]);
+      } else {
+        labelElement = document.createElement("td");
+        valueElement = document.createElement("td");
+      }
+
       labelElement.textContent = label;
       row.appendChild(labelElement);
-      const valueElement = createElementWithAttrs("td", [["class", "info"]]);
-      valueElement.textContent = value;
+
+      valueElement.appendChild(value);
       row.appendChild(valueElement);
-      generalInfo.appendChild(row);
+      return row;
     }
   }
 
-  makeRow("Atbloķēšanās līmenis", items.items[id].level);
-  makeRow("Darbības reizes", items.items[id].lifes);
-  itemInfo.appendChild(generalInfo);
+  const generalInfo = document.createElement("table");
+  function makeTable(table, values) {
+    for (const v of values) {
+      table.appendChild(v);
+    }
+    return table;
+  }
+
+  const generalInfoRows = [];
+  if (items.items[id].level !== undefined) {
+    generalInfoRows.push(
+      makeRow(
+        "Atbloķēšanās līmenis",
+        document.createTextNode(items.items[id].level),
+        true
+      )
+    );
+  }
+  // price
+  let price = items.items[id].price;
+  if (price !== "-1" && price !== undefined) {
+    let priceSplit = price.split(":");
+    let priceId = "3";
+    if (priceSplit.length > 2) {
+      priceId = priceSplit[1];
+    }
+    const t = document.createElement("table");
+    generalInfoRows.push(
+      makeRow("Cena", makeTable(t, [makeRow(priceSplit[1], makeItem(priceSplit[0], true), false)]), true)
+    );
+    
+  }
+  let superPrice = items.items[id].superPrice;
+  if (superPrice !== "-1" && superPrice !== undefined) {
+    const t = document.createElement("table");
+    generalInfoRows.push(
+      makeRow("Rubīnu cena", makeTable(t, [makeRow(superPrice, makeItem(0, true), false)]), true)
+    );
+  }
+  if (items.items[id].lifes !== undefined) {
+    generalInfoRows.push(
+      makeRow("Darbības reizes", document.createTextNode(items.items[id].lifes), true)
+    );
+  }
+
+  itemInfo.appendChild(makeTable(generalInfo, generalInfoRows));
 
   if (items.items[id].reward !== undefined) {
     itemInfo.appendChild(makeTitle("Lietas apbalvojumi"));
