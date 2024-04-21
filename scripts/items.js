@@ -44,7 +44,9 @@ function makeItem(id, makeLink) {
     "src",
     `https://okeanija.draugiem.lv/html5/i/${icon}.png`,
   ]]);
-  const name = document.createTextNode(`${stringsLV.ITEMS[id].CAPTION} (#${id})`);
+  const name = document.createTextNode(
+    `${stringsLV.ITEMS[id].CAPTION} (#${id})`,
+  );
   nameCol.appendChild(name);
   imgCol.appendChild(img);
   tr.appendChild(imgCol);
@@ -165,8 +167,8 @@ function load() {
       makeRow(
         "Atbloķēšanās līmenis",
         document.createTextNode(items.items[id].level),
-        true
-      )
+        true,
+      ),
     );
   }
 
@@ -174,33 +176,41 @@ function load() {
   if (superPrice !== "-1" && superPrice !== undefined) {
     const t = document.createElement("table");
     generalInfoRows.push(
-      makeRow("Rubīnu cena", makeValueItemTable(`0:${superPrice}`), true)
+      makeRow("Rubīnu cena", makeValueItemTable(`0:${superPrice}`), true),
     );
   }
 
   const price = items.items[id].price;
   if (price !== "-1" && price !== undefined) {
     generalInfoRows.push(
-      makeRow("Veikala cena", makeValueItemTable(items.items[id].price), true)
+      makeRow("Veikala cena", makeValueItemTable(items.items[id].price), true),
     );
   }
 
   const sellPrice = items.items[id].sellPrice;
   if (sellPrice !== "-1" && sellPrice !== undefined) {
     generalInfoRows.push(
-      makeRow("Pārdošanas cena", makeValueItemTable(items.items[id].sellPrice), true)
+      makeRow(
+        "Pārdošanas cena",
+        makeValueItemTable(items.items[id].sellPrice),
+        true,
+      ),
     );
   }
 
   if (items.items[id].lifes !== undefined) {
     generalInfoRows.push(
-      makeRow("Darbības reizes", document.createTextNode(items.items[id].lifes), true)
+      makeRow(
+        "Darbības reizes",
+        document.createTextNode(items.items[id].lifes),
+        true,
+      ),
     );
   }
 
   if (items.items[id].transform !== undefined) {
     generalInfoRows.push(
-      makeRow("Pārvēršas par", makeItem(items.items[id].transform, true), true)
+      makeRow("Pārvēršas par", makeItem(items.items[id].transform, true), true),
     );
   }
 
@@ -212,7 +222,9 @@ function load() {
   }
 
   if (items.items[id].friendReward !== undefined) {
-    itemInfo.appendChild(makeTitle("Lietas apbalvojumu varbūtības pie draugiem"));
+    itemInfo.appendChild(
+      makeTitle("Lietas apbalvojumu varbūtības pie draugiem"),
+    );
     itemInfo.appendChild(makeValueItemTable(items.items[id].friendReward));
   }
 
