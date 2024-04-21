@@ -143,6 +143,22 @@ function load() {
     return table;
   }
 
+  function makeValueItemTable(values) {
+    const table = document.createElement("table");
+    for (const entry of values.split(",")) {
+      const [itemId, value] = entry.split(":");
+      const row = document.createElement("tr");
+      const valueElement = document.createElement("td");
+      valueElement.textContent = value.toString();
+      row.appendChild(valueElement);
+      const itemElement = document.createElement("td");
+      itemElement.appendChild(makeItem(itemId, true));
+      row.appendChild(itemElement);
+      table.appendChild(row);
+    }
+    return table;
+  }
+
   const generalInfoRows = [];
   if (items.items[id].level !== undefined) {
     generalInfoRows.push(
@@ -153,50 +169,51 @@ function load() {
       )
     );
   }
-  // price
-  let price = items.items[id].price;
-  if (price !== "-1" && price !== undefined) {
-    let priceSplit = price.split(":");
-    let priceId = "3";
-    if (priceSplit.length > 2) {
-      priceId = priceSplit[1];
-    }
-    const t = document.createElement("table");
-    generalInfoRows.push(
-      makeRow("Cena", makeTable(t, [makeRow(priceSplit[1], makeItem(priceSplit[0], true), false)]), true)
-    );
-    
-  }
-  let superPrice = items.items[id].superPrice;
+
+  const superPrice = items.items[id].superPrice;
   if (superPrice !== "-1" && superPrice !== undefined) {
     const t = document.createElement("table");
     generalInfoRows.push(
-      makeRow("Rubīnu cena", makeTable(t, [makeRow(superPrice, makeItem(0, true), false)]), true)
+      makeRow("Rubīnu cena", makeValueItemTable(`0:${superPrice}`), true)
     );
   }
+
+  const price = items.items[id].price;
+  if (price !== "-1" && price !== undefined) {
+    generalInfoRows.push(
+      makeRow("Veikala cena", makeValueItemTable(items.items[id].price), true)
+    );
+  }
+
+  const sellPrice = items.items[id].sellPrice;
+  if (sellPrice !== "-1" && sellPrice !== undefined) {
+    generalInfoRows.push(
+      makeRow("Pārdošanas cena", makeValueItemTable(items.items[id].sellPrice), true)
+    );
+  }
+
   if (items.items[id].lifes !== undefined) {
     generalInfoRows.push(
       makeRow("Darbības reizes", document.createTextNode(items.items[id].lifes), true)
     );
   }
 
+  if (items.items[id].transform !== undefined) {
+    generalInfoRows.push(
+      makeRow("Pārvēršas par", makeItem(items.items[id].transform, true), true)
+    );
+  }
+
   itemInfo.appendChild(makeTable(generalInfo, generalInfoRows));
 
   if (items.items[id].reward !== undefined) {
-    itemInfo.appendChild(makeTitle("Lietas apbalvojumi"));
-    const rewards = document.createElement("table");
-    for (const entry of items.items[id].reward.split(",")) {
-      const [rewardId, amount] = entry.split(":");
-      const row = document.createElement("tr");
-      const probCol = document.createElement("td");
-      probCol.textContent = amount.toString();
-      row.appendChild(probCol);
-      const itemCol = document.createElement("td");
-      itemCol.appendChild(makeItem(rewardId, true));
-      row.appendChild(itemCol);
-      rewards.appendChild(row);
-    }
-    itemInfo.appendChild(rewards);
+    itemInfo.appendChild(makeTitle("Lietas apbalvojumu varbūtības"));
+    itemInfo.appendChild(makeValueItemTable(items.items[id].reward));
+  }
+
+  if (items.items[id].friendReward !== undefined) {
+    itemInfo.appendChild(makeTitle("Lietas apbalvojumu varbūtības pie draugiem"));
+    itemInfo.appendChild(makeValueItemTable(items.items[id].friendReward));
   }
 
   itemInfo.appendChild(document.createElement("hr"));
