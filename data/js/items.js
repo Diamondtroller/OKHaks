@@ -97,7 +97,7 @@ export default
       "superPrice": "-1",
       "sellPrice": "-1",
       "subtype": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "itemClass": "mermaid",
       "dimension": "1,1,0",
@@ -123,7 +123,7 @@ export default
       "lifes": "1",
       "timer": "3600,18000",
       "level": "-1",
-      "allowedMaps": "2,28,53",
+      "allowedMaps": "2,53",
       "reward": "5:-1,2:8,311:0.7,321:0.5,312:0.3,2091:-1",
       "friendReward": "2091:-1,1566:0.1,4:8",
       "dimension": "1,1,0",
@@ -156,7 +156,7 @@ export default
       "dimension": "1,1,0",
       "size": "50,50,68",
       "quests": "5",
-      "allowedMaps": "2,28,53",
+      "allowedMaps": "2,53",
       "store": "-1",
       "transform": "3556",
       "v": "2",
@@ -177,7 +177,7 @@ export default
       "sellProtection": "1",
       "dimension": "8,17,0",
       "size": "400,850,500",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-704,-321"
     },
     "20": {
@@ -371,7 +371,7 @@ export default
       "sellProtection": "1",
       "itemClass": "governorFlag",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "1,1,0",
       "size": "50,50,243",
       "quests": "5",
@@ -535,7 +535,7 @@ export default
       "store": "-1",
       "itemClass": "festivalBus",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "3,1,0",
       "size": "150,50,150",
       "layer": "0",
@@ -555,7 +555,7 @@ export default
       "store": "-1",
       "itemClass": "festivalTentClose3",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "3,2,0",
       "size": "150,100,165",
       "layer": "0",
@@ -1275,7 +1275,7 @@ export default
       "sellPrice": "-1",
       "subtype": "0",
       "store": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "lifes": "1",
       "dimension": "3,2,0",
       "size": "150,100,165",
@@ -1295,7 +1295,7 @@ export default
       "sellPrice": "-1",
       "subtype": "0",
       "store": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "lifes": "1",
       "dimension": "3,2,0",
       "size": "150,100,165",
@@ -1315,7 +1315,7 @@ export default
       "subtype": "0",
       "store": "-1",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "2,2,0",
       "size": "100,100,185",
       "layer": "0",
@@ -1925,7 +1925,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1363:0.08,1364:0.06",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,21,25,28,38,31,43,47",
+      "allowedMaps": "2,21,25,38,31,43,47",
       "b": "-27,-242,133,291,5,0"
     },
     "101": {
@@ -1948,7 +1948,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1363:0.06,1364:0.06",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,21,25,28,38,31,43,47",
+      "allowedMaps": "2,21,25,38,31,43,47",
       "b": "-7,-190,107,232,3,0"
     },
     "102": {
@@ -2031,7 +2031,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:4,3:1,309:0.09,308:0.12,314:0.06,136:0.17,1284:0.05,1287:0.05,1288:0.08",
-      "allowedMaps": "2,19,21,24,28,31,32,42,43,50",
+      "allowedMaps": "2,19,21,24,31,32,42,43,50",
       "b": "0,0"
     },
     "106": {
@@ -2057,7 +2057,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,106:3,159:0.1,1267:0.06,1268:0.08,1269:0.07",
       "friendReward": "4:4,1499:0.3,2550:0.1",
-      "allowedMaps": "2,21,28,31,43,49,50",
+      "allowedMaps": "2,21,31,43,49,50",
       "b": "0,-33,100,86,4,0"
     },
     "107": {
@@ -2083,7 +2083,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,107:3,1069:0.07",
       "friendReward": "4:4,1559:0.07,1566:0.09,1499:0.3",
-      "allowedMaps": "2,21,28,31,34,47,49,50",
+      "allowedMaps": "2,21,31,34,47,49,50",
       "b": "0,-43,100,95,4,0"
     },
     "108": {
@@ -2109,7 +2109,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,108:3,1069:0.15,1366:0.1",
       "friendReward": "4:4,1499:0.3,2548:0.1",
-      "allowedMaps": "2,15,21,28,31,47,49,50",
+      "allowedMaps": "2,15,21,31,47,49,50",
       "b": "0,-50.3,100,103,4,0"
     },
     "109": {
@@ -2348,7 +2348,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:8,3:1,307:0.1,149:0.2,320:0.3",
       "friendReward": "4:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "thornsIcon",
       "level": "11",
       "storeType": "3",
@@ -2464,7 +2464,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "itemClass": "tentBig",
       "social": "*",
       "superPrice": "-1",
@@ -2485,7 +2485,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "ba": "1",
       "b": "-45,-49",
@@ -2647,7 +2647,7 @@ export default
       "movable": "0",
       "sellProtection": "1",
       "reward": "1306:1,1782:0.6,5:-1,2047:-1,4:50,3:15,283:0.5,212:0.3,286:0.1,1551:0.35",
-      "allowedMaps": "23,28",
+      "allowedMaps": "23,",
       "social": "*",
       "timer": "900",
       "itemClass": "fishingPlace7",
@@ -2693,7 +2693,7 @@ export default
       "level": "8",
       "storeType": "3",
       "quests": "682",
-      "allowedMaps": "2,5,11,19,28,48"
+      "allowedMaps": "2,5,11,19,,48"
     },
     "137": {
       "itemClass": "roadsign1",
@@ -2787,7 +2787,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-1",
       "buildItems": "313:2,149:1",
-      "allowedMaps": "2,17,21,25,28,31",
+      "allowedMaps": "2,17,21,25,31",
       "b": "9.1,-70.2,77,115,2,0"
     },
     "141": {
@@ -2814,7 +2814,7 @@ export default
       "iconClass": "chicken_0",
       "reward": "5:-1,2:-1,4:4,1282:0.05,1283:0.06,1286:0.06,1316:0.07",
       "friendReward": "2:-1,4:5",
-      "allowedMaps": "2,20,21,27,28,36,43,49,50",
+      "allowedMaps": "2,20,21,27,36,43,49,50",
       "b": "34,1"
     },
     "142": {
@@ -2839,7 +2839,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-1,4:8,311:0.35,1282:0.05,1283:0.06,1286:0.06,1316:0.07",
       "friendReward": "2:-1,4:5,1564:0.15,1573:0.1",
-      "allowedMaps": "2,20,21,27,28,36,43,49,50",
+      "allowedMaps": "2,20,21,27,36,43,49,50",
       "b": "26,-24"
     },
     "143": {
@@ -2866,7 +2866,7 @@ export default
       "reward": "5:-1,4:4,2:-5",
       "friendReward": "2:-5,4:25,2549:0.1",
       "iconClass": "cow_0",
-      "allowedMaps": "2,15,21,27,28,47,50",
+      "allowedMaps": "2,15,21,27,47,50",
       "b": "12,-30"
     },
     "144": {
@@ -2891,7 +2891,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-5,4:32,312:0.7",
       "friendReward": "2:-5,4:25,2549:0.09",
-      "allowedMaps": "2,15,21,27,28,47,50",
+      "allowedMaps": "2,15,21,27,47,50",
       "b": "-7,-54"
     },
     "145": {
@@ -2917,7 +2917,7 @@ export default
       "reward": "5:-1,4:4,2:-4",
       "friendReward": "2:-4,4:20,1572:0.1,1562:0.09",
       "iconClass": "sheep_0",
-      "allowedMaps": "2,21,28,31,43,50",
+      "allowedMaps": "2,21,31,43,50",
       "b": "21,-12",
       "ba": "1",
       "animation": "width:57,height:50,frames:10,type:rand"
@@ -2943,7 +2943,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-4,4:24,321:0.5",
       "friendReward": "2:-4,4:20,1572:0.1,1562:0.09",
-      "allowedMaps": "2,21,28,31,43,50",
+      "allowedMaps": "2,21,31,43,50",
       "b": "12,-28"
     },
     "147": {
@@ -2969,7 +2969,7 @@ export default
       "reward": "5:-1,4:4,2:-3,2099:0.05",
       "friendReward": "2:-3,4:15,2547:0.09",
       "iconClass": "pig_0",
-      "allowedMaps": "2,21,28,31,34,47,50",
+      "allowedMaps": "2,21,31,34,47,50",
       "ba": "1",
       "b": "18,-5"
     },
@@ -2995,7 +2995,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-3,4:16,2099:0.07",
       "friendReward": "2:-3,4:15,2547:0.1",
-      "allowedMaps": "2,21,28,31,34,47,50",
+      "allowedMaps": "2,21,31,34,47,50",
       "ba": "1",
       "b": "4,-22"
     },
@@ -3189,7 +3189,7 @@ export default
       "storeType": "3",
       "level": "9",
       "quests": "28",
-      "allowedMaps": "2,19,28,36,47,48"
+      "allowedMaps": "2,19,36,47,48"
     },
     "160": {
       "itemClass": "workshop1_1",
@@ -3286,7 +3286,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,164:3,159:0.1,1365:0.09",
       "friendReward": "4:4,1499:0.3,2548:0.1",
-      "allowedMaps": "2,11,21,28,36,47,50",
+      "allowedMaps": "2,11,21,36,47,50",
       "b": "0,-34.65,100,88,4,0"
     },
     "165": {
@@ -3476,7 +3476,7 @@ export default
       "level": "7",
       "iconClass": "fertilizer",
       "quests": "740",
-      "allowedMaps": "2,11,15,21,27,28,31,34,47,49"
+      "allowedMaps": "2,11,15,21,27,31,34,47,49"
     },
     "175": {
       "type": "20",
@@ -3489,7 +3489,7 @@ export default
       "iconClass": "fodder",
       "level": "7",
       "quests": "741",
-      "allowedMaps": "2,11,15,21,28,31,34,47,49"
+      "allowedMaps": "2,11,15,21,31,34,47,49"
     },
     "176": {
       "itemClass": "greatMountain",
@@ -3794,7 +3794,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4",
       "buildItems": "316:2",
-      "allowedMaps": "2,17,21,25,28,46",
+      "allowedMaps": "2,17,21,25,46",
       "b": "17.05,-13.2,66,54,2,0"
     },
     "190": {
@@ -3815,7 +3815,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:2,4:20",
-      "allowedMaps": "2,17,21,25,28,46",
+      "allowedMaps": "2,17,21,25,46",
       "b": "17.05,-26.7,66,67,2,0"
     },
     "191": {
@@ -3970,7 +3970,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-1",
       "buildItems": "149:1",
-      "allowedMaps": "2,17,21,28,47",
+      "allowedMaps": "2,17,21,47",
       "b": "20.5,-35.4,60,76,2,0"
     },
     "198": {
@@ -3992,7 +3992,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:5,4:16",
-      "allowedMaps": "2,17,21,28,47",
+      "allowedMaps": "2,17,21,47",
       "b": "20.65,-35.85,60,76,2,0"
     },
     "199": {
@@ -4139,7 +4139,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-1",
       "buildItems": "313:1,315:1",
-      "allowedMaps": "2,17,21,28,36",
+      "allowedMaps": "2,17,21,36",
       "b": "10,-76"
     },
     "205": {
@@ -4161,7 +4161,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:4,4:10",
-      "allowedMaps": "2,17,21,28,36",
+      "allowedMaps": "2,17,21,36",
       "b": "10,-76"
     },
     "206": {
@@ -4283,7 +4283,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-2,1328:0.08,1329:0.06",
       "buildItems": "313:1",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "-50,-26,200,104,2,0"
     },
     "211": {
@@ -4305,7 +4305,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:6,4:20",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "-27.75,-32.1,157,99,2,0"
     },
     "212": {
@@ -4319,7 +4319,7 @@ export default
       "social": "*",
       "iconClass": "seaShell",
       "reward": "2:2,284:0.12",
-      "allowedMaps": "2,20,28,42,46"
+      "allowedMaps": "2,20,42,46"
     },
     "213": {
       "itemClass": "dragonFruitTree",
@@ -4416,7 +4416,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,216:2,1069:0.07",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,27,28,31,43,47,50",
+      "allowedMaps": "2,21,27,31,43,47,50",
       "b": "0,-16.1,100,66,4,0"
     },
     "217": {
@@ -4465,7 +4465,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-1",
       "buildItems": "313:1",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "24.35,-112.5,52,142,2,0"
     },
     "219": {
@@ -4487,7 +4487,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:4,4:10",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "23.95,-112.5,54,142,2,0"
     },
     "220": {
@@ -4743,7 +4743,7 @@ export default
       "sellPrice": "3:2",
       "subtype": "0",
       "social": "*",
-      "allowedMaps": "2,15,21,22,28,29,36,43"
+      "allowedMaps": "2,15,21,22,29,36,43"
     },
     "235": {
       "iconClass": "yeast",
@@ -5005,7 +5005,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1361:0.08,1362:0.08",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,10,21,25,28,34,51",
+      "allowedMaps": "2,10,21,25,34,51",
       "b": "-20.5,-214.85,133,261,3,0"
     },
     "247": {
@@ -5056,7 +5056,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,464:2,248:0.1,2094:0.04",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,25,28,31,43,50",
+      "allowedMaps": "2,21,25,31,43,50",
       "b": "-0.45,-41.25,100,91,4,0"
     },
     "249": {
@@ -5566,7 +5566,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,1:-4",
       "buildItems": "122:1,317:1",
-      "allowedMaps": "2,17,21,28,36",
+      "allowedMaps": "2,17,21,36",
       "b": "0,-50,100,100,2,0"
     },
     "275": {
@@ -5587,7 +5587,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:3,4:30",
-      "allowedMaps": "2,17,21,28,36",
+      "allowedMaps": "2,17,21,36",
       "b": "11.6,-55.25,78,97,2,0"
     },
     "276": {
@@ -5823,7 +5823,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1363:0.07,1364:0.05",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,21,25,28,38,31,43,47",
+      "allowedMaps": "2,21,25,38,31,43,47",
       "b": "16,-65"
     },
     "290": {
@@ -5846,7 +5846,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1361:0.06,1362:0.07",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,10,21,25,28,34,51",
+      "allowedMaps": "2,10,21,25,34,51",
       "b": "-6.6,-165.5,102,205,3,0"
     },
     "291": {
@@ -5872,7 +5872,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1361:0.06,1362:0.07",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,10,21,25,28,34,51",
+      "allowedMaps": "2,10,21,25,34,51",
       "b": "14,-61"
     },
     "292": {
@@ -5893,7 +5893,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1359:0.06,1360:0.08",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,15,21,28,34,47",
+      "allowedMaps": "2,15,21,34,47",
       "b": "-47.2,-190.35,179,237,3,0"
     },
     "293": {
@@ -5916,7 +5916,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1359:0.05,1360:0.07",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,15,21,28,34,47",
+      "allowedMaps": "2,15,21,34,47",
       "b": "-28.95,-140.3,142,182,3,0"
     },
     "294": {
@@ -5942,7 +5942,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:2,4:4,1359:0.05,1360:0.07",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,15,21,28,34,47",
+      "allowedMaps": "2,15,21,34,47",
       "b": "5,-62"
     },
     "295": {
@@ -6297,7 +6297,7 @@ export default
       "sellPrice": "3:30",
       "subtype": "0",
       "social": "*",
-      "allowedMaps": "2,25,28,36,52"
+      "allowedMaps": "2,25,,36,52"
     },
     "323": {
       "itemClass": "waterSource1Era_0",
@@ -6936,7 +6936,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-2,1330:0.08,1331:0.06",
       "buildItems": "122:1,313:1",
-      "allowedMaps": "2,15,17,21,28,53",
+      "allowedMaps": "2,15,17,21,53",
       "b": "-33,-96"
     },
     "350": {
@@ -6958,7 +6958,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:18,4:40",
-      "allowedMaps": "2,15,17,21,28,53",
+      "allowedMaps": "2,15,17,21,53",
       "b": "-43,-94"
     },
     "351": {
@@ -6982,7 +6982,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-2,1330:0.08,1331:0.06",
       "buildItems": "122:1,313:1",
-      "allowedMaps": "2,17,21,28,51,53",
+      "allowedMaps": "2,17,21,51,53",
       "b": "-43,-74"
     },
     "352": {
@@ -7004,7 +7004,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:18,4:40",
-      "allowedMaps": "2,17,21,28,51,53",
+      "allowedMaps": "2,17,21,51,53",
       "b": "-43,-74"
     },
     "353": {
@@ -7548,7 +7548,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,376:3",
       "friendReward": "4:4,1559:0.07,1566:0.09,1499:0.3",
-      "allowedMaps": "2,21,28,31,47,50,52",
+      "allowedMaps": "2,21,31,47,50,52",
       "b": "0,-30.55,100,80,4,0"
     },
     "377": {
@@ -7574,7 +7574,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,377:3,159:0.1",
       "friendReward": "4:4,1499:0.3,2551:0.1",
-      "allowedMaps": "2,21,28,31,34,43,47,50",
+      "allowedMaps": "2,21,31,34,43,47,50",
       "b": "0,-23.05,100,73,4,0"
     },
     "378": {
@@ -7600,7 +7600,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,378:3,159:0.1,1270:0.07,1271:0.08",
       "friendReward": "4:4,1499:0.3,2551:0.1",
-      "allowedMaps": "2,11,21,25,28,31,47,50",
+      "allowedMaps": "2,11,21,25,31,47,50",
       "b": "0,-17.05,100,67,4,0"
     },
     "379": {
@@ -7626,7 +7626,7 @@ export default
       "reward": "5:-1,4:4,2:-5",
       "friendReward": "2:-5,4:25,1572:0.9,1562:0.8",
       "iconClass": "goat_0",
-      "allowedMaps": "2,20,21,28,49,50",
+      "allowedMaps": "2,20,21,49,50",
       "ba": "1",
       "b": "18,-14"
     },
@@ -7651,7 +7651,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-4,4:30",
       "friendReward": "2:-4,4:20,1572:0.9,1562:0.8",
-      "allowedMaps": "2,20,21,28,49,50",
+      "allowedMaps": "2,20,21,49,50",
       "ba": "1",
       "b": "7,-51"
     },
@@ -8526,7 +8526,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-1,2100:0.06",
       "buildItems": "313:3",
-      "allowedMaps": "2,15,21,27,28,36",
+      "allowedMaps": "2,15,21,27,36",
       "b": "-140.6,4.9,381,192,2,0"
     },
     "421": {
@@ -8547,7 +8547,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:70,4:50",
-      "allowedMaps": "2,15,21,27,28,36",
+      "allowedMaps": "2,15,21,27,36",
       "b": "-138.75,-7.55,377,199,2,0"
     },
     "422": {
@@ -8569,7 +8569,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:8,4:12",
-      "allowedMaps": "2,17,21,25,28,31",
+      "allowedMaps": "2,17,21,25,31",
       "b": "8.5,-73.15,80,119,2,0"
     },
     "423": {
@@ -8594,7 +8594,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-1,1326:0.07,1327:0.08",
       "buildItems": "313:1,315:1",
-      "allowedMaps": "2,17,20,21,28,47",
+      "allowedMaps": "2,17,20,21,,47",
       "b": "-1,-8.55,102,58,2,0"
     },
     "424": {
@@ -8616,7 +8616,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:5,4:12",
-      "allowedMaps": "2,17,20,21,28,47",
+      "allowedMaps": "2,17,20,21,,47",
       "b": "21.05,-10.1,58,50,2,0"
     },
     "425": {
@@ -8687,7 +8687,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:12,393:-4,1324:0.09,1325:0.08",
       "buildItems": "149:1,316:1",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "-48.95,-15.95,197,92,2,0"
     },
     "428": {
@@ -8709,7 +8709,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:8,4:12",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "-43.4,-15.6,186,87,2,0"
     },
     "429": {
@@ -8827,7 +8827,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4",
       "buildItems": "394:1",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "24.8,-3.65,52,45,2,0"
     },
     "434": {
@@ -8849,7 +8849,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:5,4:12",
-      "allowedMaps": "2,17,21,25,28",
+      "allowedMaps": "2,17,21,25,",
       "b": "-1.95,-62.05,103,104,2,0"
     },
     "435": {
@@ -9454,7 +9454,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,465:1",
       "friendReward": "4:4,2550:0.1",
-      "allowedMaps": "2,15,21,28,31,50",
+      "allowedMaps": "2,15,21,31,50",
       "b": "-22.1,-213.55,128,250,4,0"
     },
     "467": {
@@ -9489,7 +9489,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:8,316:-10",
       "buildItems": "467:3,313:1",
-      "allowedMaps": "2,15,17,28,36,51",
+      "allowedMaps": "2,15,17,36,51",
       "b": "8,-30"
     },
     "469": {
@@ -9510,7 +9510,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:16",
-      "allowedMaps": "2,15,17,28,36,51",
+      "allowedMaps": "2,15,17,36,51",
       "b": "8,-39"
     },
     "470": {
@@ -9848,7 +9848,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,318:-1",
       "buildItems": "487:1",
-      "allowedMaps": "2,17,21,24,28,31,50",
+      "allowedMaps": "2,17,21,24,31,50",
       "b": "0,0"
     },
     "492": {
@@ -9869,7 +9869,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:4,4:12",
-      "allowedMaps": "2,17,21,24,28,31,50",
+      "allowedMaps": "2,17,21,24,31,50",
       "walkingMultiplier": "0.25",
       "b": "3,1"
     },
@@ -10162,7 +10162,7 @@ export default
       "subtype": "0",
       "storeType": "3",
       "social": "*",
-      "allowedMaps": "2,21,28,53"
+      "allowedMaps": "2,21,53"
     },
     "506": {
       "itemClass": "stoneFenceCorner1_0",
@@ -10507,7 +10507,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-2,318:-2,1330:0.09,1331:0.08",
       "buildItems": "487:3,393:3,315:1",
-      "allowedMaps": "2,17,25,28",
+      "allowedMaps": "2,17,25",
       "b": "-42.05,-35.9,183,132,2,0"
     },
     "521": {
@@ -10529,7 +10529,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:35,4:20",
-      "allowedMaps": "2,17,25,28",
+      "allowedMaps": "2,17,25",
       "b": "-42.05,-35.9,183,132,2,0"
     },
     "522": {
@@ -10697,7 +10697,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "ba": "1",
       "b": "8,-13"
     },
@@ -11438,8 +11438,8 @@ export default
       "sellPrice": "-1",
       "social": "*",
       "subtype": "0",
-      "allowedMaps": "28",
-      "itemClass": "festivalStageValentine_1",
+      "allowedMaps": "82",
+      "itemClass": "festivalStage",
       "dimension": "8,17,0",
       "size": "400,850,500",
       "layer": "0",
@@ -11551,7 +11551,7 @@ export default
       "sellPrice": "3:3",
       "social": "*",
       "subtype": "0",
-      "allowedMaps": "2,21,28"
+      "allowedMaps": "2,21,"
     },
     "573": {
       "itemClass": "januPaparde",
@@ -11721,7 +11721,7 @@ export default
       "reward": "5:-1,2:-12,4:4,1322:0.06,1323:0.07",
       "friendReward": "2:-12,4:60",
       "iconClass": "ostrich_0",
-      "allowedMaps": "2,21,25,28,31,47",
+      "allowedMaps": "2,21,25,31,47",
       "ba": "1",
       "b": "28,-28"
     },
@@ -11746,7 +11746,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-12,4:8,311:1,1322:0.06,1323:0.07",
       "friendReward": "2:-12,4:60,1564:0.2,1573:0.15",
-      "allowedMaps": "2,21,25,28,31,47",
+      "allowedMaps": "2,21,25,31,47",
       "v": "2",
       "b": "7.85,-79.1"
     },
@@ -11773,7 +11773,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,583:2,1265:0.05,1266:0.07",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,28,50",
+      "allowedMaps": "2,21,50",
       "b": "0,-15.15,100,65,4,0"
     },
     "584": {
@@ -14857,7 +14857,7 @@ export default
       "reward": "5:-1,2:-3,4:4,1319:0.05,1320:0.06,1321:0.07",
       "friendReward": "2:-3,4:15",
       "iconClass": "rooster_0",
-      "allowedMaps": "2,21,25,28,31,34,43,47",
+      "allowedMaps": "2,21,25,31,34,43,47",
       "ba": "1",
       "b": "33,1"
     },
@@ -14882,7 +14882,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-3,4:15,1319:0.05,1320:0.06,1321:0.07",
       "friendReward": "2:-3,4:15,1560:0.08,1565:0.1",
-      "allowedMaps": "2,21,25,28,31,34,43,47",
+      "allowedMaps": "2,21,25,31,34,43,47",
       "ba": "1",
       "b": "14,-47"
     },
@@ -15153,7 +15153,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:10,316:-2",
       "buildItems": "313:2,315:2",
-      "allowedMaps": "2,25,28",
+      "allowedMaps": "2,25,",
       "b": "25.65,-123.1,49,159,2,0"
     },
     "759": {
@@ -15176,7 +15176,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:50,6:8",
-      "allowedMaps": "2,25,28",
+      "allowedMaps": "2,25,",
       "b": "20.15,-124.3,67,160,2,0"
     },
     "760": {
@@ -15773,7 +15773,10 @@ export default
       "reward": "6:500,4:6000,10:3",
       "allowedMaps": "2",
       "ba": "1",
-      "b": "-39,-268"
+      "b": "-39,-268",
+      "transform": "4470",
+      "buildItems": "4490:1",
+      "quests": "11"
     },
     "787": {
       "price": "-1",
@@ -16017,7 +16020,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:1",
-      "allowedMaps": "2,17,21,24,25,28,47,51,52",
+      "allowedMaps": "2,17,21,24,25,47,51,52",
       "walkingMultiplier": "0.15",
       "b": "7,1"
     },
@@ -16044,7 +16047,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,802:1",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,28,31,43,47,50,53",
+      "allowedMaps": "2,21,31,43,47,50,53",
       "b": "0,-11.95,100,61,4,0"
     },
     "802": {
@@ -16699,7 +16702,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,832:4",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,28,31,43,50",
+      "allowedMaps": "2,21,31,43,50",
       "b": "-6.4,-38.8,111,88,4,0"
     },
     "833": {
@@ -16851,7 +16854,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,838:2,839:0.2",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,25,28,31,47,50,51",
+      "allowedMaps": "2,21,25,31,47,50,51",
       "b": "0,-37.9,100,87,4,0"
     },
     "840": {
@@ -16969,7 +16972,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,316:-1,2916:0.05",
       "buildItems": "843:5,315:1",
-      "allowedMaps": "2,15,17,25,28,51",
+      "allowedMaps": "2,15,17,25,51",
       "b": "-10.85,-68.15,121,102,2,0"
     },
     "846": {
@@ -16991,7 +16994,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:100",
-      "allowedMaps": "2,15,17,25,28,51",
+      "allowedMaps": "2,15,17,25,51",
       "b": "-12.85,-73.3,125,107,2,0"
     },
     "847": {
@@ -17923,7 +17926,7 @@ export default
       "movable": "1",
       "sellProtection": "1",
       "reward": "4:50,6:15",
-      "allowedMaps": "2,25,28",
+      "allowedMaps": "2,25,",
       "b": "-41.65,-68.65,183,130,2,0"
     },
     "890": {
@@ -18019,7 +18022,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:12,805:-1",
       "buildItems": "313:3,315:2",
-      "allowedMaps": "2,25,28",
+      "allowedMaps": "2,25,",
       "b": "-41.3,-33.95,183,94,2,0"
     },
     "894": {
@@ -19114,7 +19117,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-15,4:40,2910:0.12",
       "friendReward": "2:-15,4:75",
-      "allowedMaps": "2,21,28,50",
+      "allowedMaps": "2,21,50",
       "b": "-1,-79.6,87,117,2,0"
     },
     "955": {
@@ -19140,7 +19143,7 @@ export default
       "reward": "5:-1,4:4,2:-15,2910:0.07",
       "friendReward": "2:-15,4:75",
       "iconClass": "antelope_0",
-      "allowedMaps": "2,21,28,50",
+      "allowedMaps": "2,21,50",
       "b": "16.55,-20,56,57,2,0"
     },
     "956": {
@@ -19166,7 +19169,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,952:1,956:0.1",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,27,28,31,43,50",
+      "allowedMaps": "2,21,27,31,43,50",
       "b": "0,-10.25,100,60,4,0"
     },
     "957": {
@@ -20466,7 +20469,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,925:-5",
       "buildItems": "481:9,487:3",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "1.25,-4.5,98,53,2,0"
     },
     "1034": {
@@ -20490,7 +20493,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:15,4:500",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "1,-69"
     },
     "1035": {
@@ -20515,7 +20518,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,925:-6",
       "buildItems": "481:9,487:3",
-      "allowedMaps": "2,17,25,28",
+      "allowedMaps": "2,17,25",
       "b": "14.75,-41.75,72,77,2,0"
     },
     "1036": {
@@ -20539,7 +20542,7 @@ export default
       "sellProtection": "0",
       "reward": "6:15,4:400",
       "animation": "width:85,height:100,frames:18,type:loop",
-      "allowedMaps": "2,17,25,28",
+      "allowedMaps": "2,17,25",
       "b": "8,-52"
     },
     "1037": {
@@ -20682,7 +20685,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:10,4:950",
-      "allowedMaps": "2,25,28",
+      "allowedMaps": "2,25,",
       "b": "0,0"
     },
     "1045": {
@@ -21443,8 +21446,7 @@ export default
       "sellProtection": "0",
       "reward": "4:300,6:20",
       "allowedMaps": "2,17,25,31",
-      "b": "25,-32",
-      "showItems": "2276,2277,2286"
+      "b": "25,-32"
     },
     "1081": {
       "itemClass": "aquarium_1",
@@ -21491,7 +21493,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:10,316:-3,313:-3,315:-2",
       "buildItems": "287:1,313:2",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "15.05,-12.25,70,52,2,0"
     },
     "1083": {
@@ -21516,7 +21518,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:10,316:-3,313:-3,315:-2",
       "buildItems": "313:4,285:1",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "15.05,-12.25,70,52,2,0"
     },
     "1084": {
@@ -21539,7 +21541,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:100,6:18",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "21.5,-47.1,58,87,2,0"
     },
     "1085": {
@@ -21562,7 +21564,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:100,6:17",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "21.5,-47.2,58,87,2,0"
     },
     "1086": {
@@ -21611,7 +21613,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,1087:3",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,27,28,31,47,50",
+      "allowedMaps": "2,21,27,31,47,50",
       "b": "0,-14.55,107,65,4,0"
     },
     "1088": {
@@ -21637,7 +21639,7 @@ export default
       "reward": "5:-1,2:-1,4:3",
       "friendReward": "2:-1,4:5",
       "iconClass": "rabbitIcon",
-      "allowedMaps": "2,21,25,28,31,47,50",
+      "allowedMaps": "2,21,25,31,47,50",
       "bfs": "0,0,0,4;31,0,1,3;0,30,2",
       "b": "35.2,2.25,31,30,5,0"
     },
@@ -21662,7 +21664,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-1,4:8",
       "friendReward": "2:-1,4:5",
-      "allowedMaps": "2,21,25,28,31,47,50",
+      "allowedMaps": "2,21,25,31,47,50",
       "ba": "1",
       "b": "28,-6"
     },
@@ -21944,7 +21946,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:10,1102:-1,1328:0.08,1329:0.07",
       "buildItems": "482:2,122:1",
-      "allowedMaps": "2,15,17,20,21,25,28",
+      "allowedMaps": "2,15,17,20,21,25",
       "b": "0,-34.6,100,84,2,0"
     },
     "1106": {
@@ -21967,7 +21969,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:8,6:17",
-      "allowedMaps": "2,15,17,20,21,25,28",
+      "allowedMaps": "2,15,17,20,21,25",
       "b": "18.9,-34.4,64,75,2,0"
     },
     "1107": {
@@ -21992,7 +21994,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:12,1102:-1,1:-2",
       "buildItems": "310:2,482:2",
-      "allowedMaps": "2,17,20,25,28,36",
+      "allowedMaps": "2,17,20,25,36",
       "b": "-31.9,-115.55,163,147,2,0"
     },
     "1108": {
@@ -22015,7 +22017,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:8,6:25",
-      "allowedMaps": "2,17,20,25,28,36",
+      "allowedMaps": "2,17,20,25,36",
       "b": "-31.35,-114.95,163,147,2,0"
     },
     "1109": {
@@ -22144,7 +22146,7 @@ export default
       "reward": "5:-1,4:6,2:-4,1317:0.06,1318:0.05",
       "friendReward": "2:-4,4:20",
       "iconClass": "duck_0",
-      "allowedMaps": "2,15,21,27,28,34,50",
+      "allowedMaps": "2,15,21,27,34,50",
       "ba": "1",
       "b": "31,-13"
     },
@@ -22170,7 +22172,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:6,2:-4,307:0.6,1317:0.06,1318:0.05",
       "friendReward": "2:-4,4:20,1560:0.09,1565:0.12",
-      "allowedMaps": "2,15,21,27,28,34,50",
+      "allowedMaps": "2,15,21,27,34,50",
       "ba": "1",
       "b": "19,-32"
     },
@@ -22197,7 +22199,7 @@ export default
       "reward": "5:-1,4:10,2:-4",
       "friendReward": "2:-4,4:20,1570:0.09,1574:0.1",
       "iconClass": "cat_0",
-      "allowedMaps": "2,21,20,25,28,31,47,50",
+      "allowedMaps": "2,21,20,25,31,47,50",
       "ba": "1",
       "b": "32,-4"
     },
@@ -22211,7 +22213,7 @@ export default
       "store": "-1",
       "size": "50,50,93",
       "dimension": "1,1,0",
-      "sellPrice": "3:50",
+      "sellPrice": "3:65",
       "subtype": "0",
       "layer": "0",
       "quests": "804",
@@ -22223,7 +22225,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-4,4:10",
       "friendReward": "2:-4,4:20,1570:0.09,1574:0.1",
-      "allowedMaps": "2,21,20,25,28,31,47,50",
+      "allowedMaps": "2,21,20,25,31,47,50",
       "animation": "width:60,height:77,frames:10,type:loop,fps:10",
       "ba": "1",
       "b": "24,-31"
@@ -22251,7 +22253,7 @@ export default
       "reward": "5:-1,4:5,2:-5",
       "friendReward": "2:-5,4:25,1570:0.09,1574:0.1",
       "iconClass": "smallDog_0",
-      "allowedMaps": "2,11,21,25,28,31,47,50",
+      "allowedMaps": "2,11,21,25,31,47,50",
       "ba": "1",
       "b": "29,-8"
     },
@@ -22277,7 +22279,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,308:0.5,4:8,2:-5",
       "friendReward": "2:-5,4:25,1570:0.09,1574:0.1",
-      "allowedMaps": "2,11,21,25,28,31,47,50",
+      "allowedMaps": "2,11,21,25,31,47,50",
       "bfs": "0,0,0,8,16,24,32,40,59,79,109,149;57,0,1,9,17,25,33,114;114,0,2,10,14,18,22,26,30,34,38,54,64,74,84,99,119,139;171,0,3,5,11,13,19,21,27,29,35,37,94,124,134;228,0,4,12,20,28,36,49,69,89,129;285,0,6;342,0,7,15,23,31,39,104,144;399,0,41;0,55,42,61,81,113;57,55,43,56,76,103,143;114,55,44,100,140;171,55,45;228,55,46;285,55,47;342,55,48;399,55,50,70,91,131;0,110,51,71,93,133;57,110,52,72,95,135;114,110,53,73,97,137;171,110,55,75,101,141;228,110,57,77,105,145;285,110,58,78,107,147;342,110,60,80,111;399,110,62,82,115;0,165,63,83,102,116,117,142;57,165,65,85,121;114,165,66,86,123;171,165,67,87,125;228,165,68,88,127;285,165,90,130;342,165,92,132;399,165,96,136;0,220,98,120,138;57,220,106,146;114,220,108,148;171,220,110;228,220,112;285,220,118;342,220,122;399,220,126;0,275,128",
       "b": "17,-21.95,57,55,150,1"
     },
@@ -22318,7 +22320,7 @@ export default
       "social": "*",
       "quests": "740",
       "reward": "174:10",
-      "allowedMaps": "2,21,27,28,31,34,44,51"
+      "allowedMaps": "2,21,27,31,34,44,51"
     },
     "1124": {
       "iconClass": "packFodder",
@@ -22333,7 +22335,7 @@ export default
       "social": "*",
       "quests": "741",
       "reward": "175:10",
-      "allowedMaps": "2,17,21,27,28,31,44,46"
+      "allowedMaps": "2,17,21,27,31,44,46"
     },
     "1125": {
       "level": "5",
@@ -22599,7 +22601,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:-5,313:-1,4:2,2916:0.05",
       "buildItems": "316:8,122:5",
-      "allowedMaps": "2,21,28,31,47,51",
+      "allowedMaps": "2,21,31,47,51",
       "b": "11,-18"
     },
     "1140": {
@@ -22625,7 +22627,7 @@ export default
       "iconClass": "beehiveIcon",
       "reward": "5:-1,1141:1,4:5,234:-3,1142:0.3,1376:0.06",
       "friendReward": "4:10,3:3,234:-1,1571:0.08",
-      "allowedMaps": "2,21,28,31,47,51",
+      "allowedMaps": "2,21,31,47,51",
       "b": "6,-35"
     },
     "1141": {
@@ -22699,7 +22701,7 @@ export default
       "reward": "5:-1,1141:-1,4:10",
       "friendReward": "1141:-1,4:5,2552:0.09",
       "iconClass": "bear_0",
-      "allowedMaps": "2,15,21,28,31",
+      "allowedMaps": "2,15,21,31",
       "ba": "1",
       "b": "16,-9"
     },
@@ -22724,7 +22726,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:30,1141:-1",
       "friendReward": "1141:-1,4:20,2552:0.1",
-      "allowedMaps": "2,15,21,28,31",
+      "allowedMaps": "2,15,21,31",
       "ba": "1",
       "b": "7,-67"
     },
@@ -22750,7 +22752,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:18,4:4",
-      "allowedMaps": "2,17,21,28,50",
+      "allowedMaps": "2,17,21,50",
       "b": "27,-50"
     },
     "1147": {
@@ -22775,7 +22777,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1141:-1,4:3",
       "buildItems": "1142:3,313:3",
-      "allowedMaps": "2,17,21,28,50",
+      "allowedMaps": "2,17,21,50",
       "b": "28,-26"
     },
     "1148": {
@@ -22800,7 +22802,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1141:-1,4:3",
       "buildItems": "1142:3,311:3",
-      "allowedMaps": "2,17,25,28,31",
+      "allowedMaps": "2,17,25,31",
       "b": "14,0"
     },
     "1149": {
@@ -22824,7 +22826,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:20,4:50",
-      "allowedMaps": "2,17,25,28,31",
+      "allowedMaps": "2,17,25,31",
       "b": "14,-13"
     },
     "1150": {
@@ -23771,7 +23773,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:6,1:3",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,15,21,27,28,31,51",
+      "allowedMaps": "2,15,21,27,31,51",
       "b": "-71.85,-226.6,251,272,3,0"
     },
     "1199": {
@@ -23798,7 +23800,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:3,4:6",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,15,21,27,28,31,51",
+      "allowedMaps": "2,15,21,27,31,51",
       "b": "12,-66"
     },
     "1200": {
@@ -23972,7 +23974,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,742:-1,319:-1,4:20",
       "buildItems": "906:1,903:1,904:1",
-      "allowedMaps": "2,15,17,25,28",
+      "allowedMaps": "2,15,17,25",
       "b": "6,-72"
     },
     "1211": {
@@ -23996,7 +23998,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:1000,6:50",
-      "allowedMaps": "2,15,17,25,28",
+      "allowedMaps": "2,15,17,25",
       "b": "-1,-79"
     },
     "1212": {
@@ -24021,7 +24023,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,475:-2,4:10",
       "buildItems": "284:3,313:3",
-      "allowedMaps": "2,15,17,25,28",
+      "allowedMaps": "2,15,17,25",
       "b": "6,-30"
     },
     "1213": {
@@ -24045,7 +24047,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:400,6:40",
-      "allowedMaps": "2,15,17,25,28",
+      "allowedMaps": "2,15,17,25",
       "b": "9,-16"
     },
     "1214": {
@@ -24615,7 +24617,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1:3,4:6",
       "friendReward": "4:2,2553:0.09",
-      "allowedMaps": "2,15,21,27,28,31,51",
+      "allowedMaps": "2,15,21,27,31,51",
       "b": "-5.95,-128.75,107,174,2,0"
     },
     "1241": {
@@ -25511,7 +25513,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "ba": "1",
       "b": "18,-116",
       "iconClass": "decorationPackageItem",
@@ -25588,7 +25590,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,1306:3,4:6",
-      "allowedMaps": "2,28,43",
+      "allowedMaps": "2,43",
       "b": "13,-11"
     },
     "1308": {
@@ -26247,7 +26249,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "social": "*",
-      "reward": "5:-1,2:-4,4:10,301:0.2,285:0.1",
+      "reward": "5:-1,2:-4,4:10,301:0.4,285:0.2",
       "friendReward": "2:-4,4:20,1570:0.09,1574:0.1",
       "allowedMaps": "2,20,21,47",
       "b": "19,-32"
@@ -26275,7 +26277,7 @@ export default
       "social": "*",
       "reward": "5:-1,4:5,1352:3",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "2,21,28,43,50,51",
+      "allowedMaps": "2,21,43,50,51",
       "b": "-12.45,-29.15,121,80,4,0"
     },
     "1353": {
@@ -27071,7 +27073,7 @@ export default
       "sellPrice": "-1",
       "social": "*",
       "reward": "234:40",
-      "allowedMaps": "2,21,22,28,29,31,43,46,51"
+      "allowedMaps": "2,21,22,29,31,43,46,51"
     },
     "1405": {
       "iconClass": "yeastPack",
@@ -27451,7 +27453,7 @@ export default
       "social": "*",
       "reward": "5:-1,4:4,316:-2",
       "buildItems": "478:1",
-      "allowedMaps": "2,17,25,27,28",
+      "allowedMaps": "2,17,25,27,",
       "b": "-37,-34"
     },
     "1423": {
@@ -27475,7 +27477,7 @@ export default
       "social": "*",
       "iconClass": "ironBenchIcon",
       "reward": "6:18,4:500",
-      "allowedMaps": "2,17,25,27,28",
+      "allowedMaps": "2,17,25,27,",
       "b": "-37,-33"
     },
     "1424": {
@@ -27500,7 +27502,7 @@ export default
       "social": "*",
       "reward": "5:-1,4:4,316:-2,1324:0.09,1325:0.1",
       "buildItems": "478:1",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "-38,-23"
     },
     "1425": {
@@ -27524,7 +27526,7 @@ export default
       "social": "*",
       "iconClass": "ironTableIcon",
       "reward": "6:20,4:500",
-      "allowedMaps": "2,17,25,28,36",
+      "allowedMaps": "2,17,25,36",
       "b": "-38,-24"
     },
     "1426": {
@@ -27734,7 +27736,7 @@ export default
       "social": "*",
       "reward": "5:-1,4:15,318:-1,2100:0.04",
       "buildItems": "487:8,481:30",
-      "allowedMaps": "2,25,28",
+      "allowedMaps": "2,25,",
       "b": "-42,-17"
     },
     "1437": {
@@ -27758,7 +27760,7 @@ export default
       "social": "*",
       "iconClass": "stonePoolIcon",
       "reward": "6:95,4:600",
-      "allowedMaps": "2,25,28",
+      "allowedMaps": "2,25,",
       "b": "-36,-20"
     },
     "1438": {
@@ -27784,7 +27786,7 @@ export default
       "social": "*",
       "reward": "5:-1,4:6,2:-3",
       "friendReward": "2:-3,4:15,2552:0.09",
-      "allowedMaps": "2,20,21,28,31,34,50",
+      "allowedMaps": "2,20,21,31,34,50",
       "b": "38,0"
     },
     "1439": {
@@ -27809,7 +27811,7 @@ export default
       "social": "*",
       "reward": "5:-1,4:6,2:-3,579:0.3,648:0.3",
       "friendReward": "2:-3,4:15,2552:0.1",
-      "allowedMaps": "2,20,21,28,31,34,50",
+      "allowedMaps": "2,20,21,31,34,50",
       "b": "25,-1"
     },
     "1440": {
@@ -29278,7 +29280,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-2,2:-3,1:-3,481:-1,4:12,3:2",
       "b": "-36,-20",
       "buildItems": "311:1,5:5"
@@ -29300,7 +29302,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-1,1:-3,4:12,107:3,2:6",
       "b": "-29,-90",
       "transform": "4411",
@@ -29391,7 +29393,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "social": "*",
-      "allowedMaps": "2,28,46",
+      "allowedMaps": "2,46",
       "reward": "6:2",
       "storeType": "1",
       "quests": "3142",
@@ -29416,7 +29418,7 @@ export default
       "sellProtection": "0",
       "social": "*",
       "quests": "3142",
-      "allowedMaps": "2,28,46",
+      "allowedMaps": "2,46",
       "storeType": "1",
       "reward": "6:2",
       "iconClass": "decorationPackageItem",
@@ -29440,7 +29442,7 @@ export default
       "sellProtection": "0",
       "social": "*",
       "quests": "3142",
-      "allowedMaps": "2,28,46",
+      "allowedMaps": "2,46",
       "reward": "6:2",
       "storeType": "1",
       "iconClass": "decorationPackageItem",
@@ -29464,7 +29466,7 @@ export default
       "sellProtection": "0",
       "social": "*",
       "quests": "3142",
-      "allowedMaps": "2,28,46",
+      "allowedMaps": "2,46",
       "storeType": "1",
       "iconClass": "decorationPackageItem",
       "b": "-22,-214"
@@ -29900,7 +29902,7 @@ export default
       "level": "20",
       "iconClass": "gasoline",
       "social": "*",
-      "allowedMaps": "2,34,28,52"
+      "allowedMaps": "2,34,52"
     },
     "1552": {
       "type": "11",
@@ -29915,7 +29917,7 @@ export default
       "storeType": "3",
       "quests": "1025",
       "reward": "1551:15",
-      "allowedMaps": "2,28,52"
+      "allowedMaps": "2,52"
     },
     "1553": {
       "itemClass": "cupid_2",
@@ -30324,7 +30326,7 @@ export default
       "friendReward": "4:4,1499:0.3",
       "itemClass": "aubergine",
       "social": "*",
-      "allowedMaps": "2,21,28,43,50",
+      "allowedMaps": "2,21,43,50",
       "b": "-5.7,-54.25,105,104,4,0"
     },
     "1580": {
@@ -30350,7 +30352,7 @@ export default
       "friendReward": "583:-1,4:35",
       "social": "*",
       "iconClass": "elephant_0",
-      "allowedMaps": "2,20,21,25,28,31,47",
+      "allowedMaps": "2,20,21,25,31,47,50",
       "v": "2",
       "b": "17.75,-32.85"
     },
@@ -30374,7 +30376,7 @@ export default
       "reward": "5:-1,4:20,481:2,583:-1,2912:0.06",
       "friendReward": "583:-1,4:35",
       "social": "*",
-      "allowedMaps": "2,20,21,25,28,31,47",
+      "allowedMaps": "2,20,21,25,31,47,50",
       "v": "2",
       "b": "-17.85,-71.9"
     },
@@ -30421,7 +30423,7 @@ export default
       "reward": "159:20",
       "iconClass": "greenWormPack",
       "social": "*",
-      "allowedMaps": "2,19,28,36,47"
+      "allowedMaps": "2,19,36,47"
     },
     "1585": {
       "type": "11",
@@ -32014,7 +32016,7 @@ export default
       "subtype": "47",
       "iconClass": "SlimeFriend_1_item",
       "social": "*",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "lifes": "1",
       "reward": "5:-2,2734:0.45,4:5,1664:0.2,108:-1",
       "dimension": "1,1,0",
@@ -33933,7 +33935,7 @@ export default
       "friendReward": "1784:-1,4:25",
       "iconClass": "zebra_Icon",
       "social": "*",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "b": "19,-50"
     },
     "1765": {
@@ -33958,7 +33960,7 @@ export default
       "reward": "5:-1,1784:-1,4:30,2910:0.15",
       "friendReward": "1784:-1,4:25",
       "social": "*",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "b": "-9,-69"
     },
     "1766": {
@@ -34018,7 +34020,7 @@ export default
       "friendReward": "1779:-1,4:35",
       "iconClass": "crocodile_Icon",
       "social": "*",
-      "allowedMaps": "2,15,21,28",
+      "allowedMaps": "2,15,21",
       "b": "-87,4"
     },
     "1769": {
@@ -34043,7 +34045,7 @@ export default
       "reward": "5:-1,1779:-1,4:40,1618:0.09,1619:0.06",
       "friendReward": "1779:-1,4:35",
       "social": "*",
-      "allowedMaps": "2,15,21,28",
+      "allowedMaps": "2,15,21",
       "b": "-74,0"
     },
     "1770": {
@@ -34819,7 +34821,7 @@ export default
       "quests": "11",
       "reward": "5:0.7,4:10,307:0.6,1141:0.8,1142:0.4,1371:0.08,1559:0.06,1560:0.06",
       "social": "*",
-      "allowedMaps": "1,2,3,4,5,17,21,24,28,42"
+      "allowedMaps": "2,17,21,24,42"
     },
     "1816": {
       "itemClass": "greatMountain_1",
@@ -35651,7 +35653,7 @@ export default
       "sellProtection": "1",
       "reward": "5:-1,4:10,1837:-1",
       "buildItems": "487:1",
-      "allowedMaps": "2,17,25,27,28",
+      "allowedMaps": "2,17,25,27,",
       "social": "*",
       "b": "14,-3"
     },
@@ -35674,7 +35676,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:20",
-      "allowedMaps": "2,17,25,27,28",
+      "allowedMaps": "2,17,25,27,",
       "iconClass": "limestone_bird_Icon",
       "social": "*",
       "b": "26,1"
@@ -35810,7 +35812,7 @@ export default
       "reward": "5:-1,1779:-1,4:40,2913:0.06",
       "friendReward": "1779:-1,4:35",
       "iconClass": "snake_Icon",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "*",
       "b": "20,-16"
     },
@@ -35835,7 +35837,7 @@ export default
       "reward": "5:-1,1779:-1,4:40,1859:0.3,2913:0.06",
       "friendReward": "1779:-1,4:35",
       "iconClass": "snake_Icon",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "*",
       "b": "24,-23"
     },
@@ -35947,7 +35949,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,1868:1,4:15",
-      "allowedMaps": "2,21,28,51",
+      "allowedMaps": "2,21,51",
       "social": "*",
       "b": "26,-8"
     },
@@ -37023,7 +37025,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,1923:3",
       "friendReward": "4:4,1499:0.3,2549:0.1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "iconClass": "riceIcon",
       "itemClass": "rice",
       "social": "*",
@@ -38548,7 +38550,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,1962:-1,4:100,1999:0.2,1763:0.4,1785:0.3,972:0.3,1786:0.3",
-      "allowedMaps": "2,15,21,28,34,47",
+      "allowedMaps": "2,15,21,34,47",
       "itemClass": "evilJungle",
       "social": "DR_LV,INB_LV,SPOKI",
       "transform": "293",
@@ -38569,7 +38571,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,1962:-1,4:100,1999:0.2,1317:0.2,1318:0.1,1360:0.1,1365:0.1",
-      "allowedMaps": "2,21,28,51",
+      "allowedMaps": "2,21,51",
       "itemClass": "evilJungle2",
       "social": "*",
       "transform": "1867",
@@ -38611,7 +38613,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,1962:-1,4:100,1999:0.2,216:0.5,583:0.5,579:0.3,224:0.3",
-      "allowedMaps": "2,21,27,28,31,43,50",
+      "allowedMaps": "2,21,27,31,43,50",
       "itemClass": "evilJungle2",
       "social": "DR_LV,INB_LV,SPOKI",
       "transform": "956",
@@ -38912,7 +38914,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28"
+      "allowedMaps": "82"
     },
     "2022": {
       "itemClass": "fence_Challange_Corner4",
@@ -38931,7 +38933,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28"
+      "allowedMaps": "82"
     },
     "2023": {
       "itemClass": "roses",
@@ -38968,7 +38970,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "sellPrice": "-1",
-      "allowedMaps": "28"
+      "allowedMaps": "82"
     },
     "2025": {
       "itemClass": "januaryPrizeDefault_G_Snow",
@@ -39532,7 +39534,7 @@ export default
       "superPrice": "45",
       "sellPrice": "-1",
       "subtype": "0",
-      "allowedMaps": "28,43",
+      "allowedMaps": "82,43",
       "iconClass": "BlueBirdShopIcon",
       "social": "*",
       "level": "25",
@@ -42007,22 +42009,21 @@ export default
       "lifes": "1",
       "price": "-1",
       "superPrice": "-1",
-      "type": "1",
+      "type": "6",
       "store": "-1",
       "dimension": "1,1,0",
       "size": "50,50,170",
-      "subtype": "22",
+      "subtype": "0",
       "sellPrice": "-1",
       "layer": "0",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "49",
-      "iconClass": "icesculpturePeacock_item",
+      "allowedMaps": "41",
       "b": "21,-41",
-      "transform": "2666",
-      "reward": "3417:-1,4:5,1:1"
+      "reward": "6:16",
+      "showItems": "2276,2277,2286"
     },
     "2194": {
       "itemClass": "biteFlower_1",
@@ -42145,7 +42146,7 @@ export default
       "price": "-1",
       "superPrice": "-1",
       "sellPrice": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "1548:1,1254:4",
       "ba": "1",
       "b": "-71,-13"
@@ -43054,7 +43055,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "2730:5,174:20,175:20,1551:25,467:1,314:4,4174:-2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "b": "9,-28"
     },
@@ -43205,7 +43206,7 @@ export default
       "sellPrice": "3:10",
       "subtype": "0",
       "iconClass": "heartCarnival_item",
-      "allowedMaps": "2,28,34",
+      "allowedMaps": "2,34",
       "storeType": "-1",
       "social": "*"
     },
@@ -43290,7 +43291,7 @@ export default
       "sellPrice": "-1",
       "subtype": "0",
       "store": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "lifes": "13",
       "dimension": "3,2,0",
       "size": "150,100,75",
@@ -43311,7 +43312,7 @@ export default
       "sellPrice": "-1",
       "subtype": "0",
       "store": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "lifes": "13",
       "dimension": "3,2,0",
       "size": "150,100,165",
@@ -43334,7 +43335,7 @@ export default
       "store": "-1",
       "itemClass": "festivalTentHelloween_1",
       "lifes": "13",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "3,2,0",
       "size": "150,100,165",
       "layer": "0",
@@ -43445,7 +43446,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28,43",
+      "allowedMaps": "82,43",
       "social": "*",
       "quests": "55",
       "transform": "2268",
@@ -43461,7 +43462,7 @@ export default
       "store": "-1",
       "itemClass": "festivalBusLV",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "3,1,0",
       "size": "150,50,120",
       "layer": "0",
@@ -43490,7 +43491,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "social": "*",
-      "allowedMaps": "28,43",
+      "allowedMaps": "82,43",
       "transform": "2269",
       "iconClass": "coloringEgg_item",
       "reward": "4:8,2339:-1,2340:0.24",
@@ -43514,7 +43515,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "social": "*",
-      "allowedMaps": "28,43",
+      "allowedMaps": "82,43",
       "iconClass": "goldenHen_item",
       "reward": "2:-2,4:8,2339:-1,2340:0.33,3366:1",
       "timer": "90,172800",
@@ -43660,22 +43661,22 @@ export default
       "store": "-1",
       "sellPrice": "3:2",
       "subtype": "0",
-      "superPrice": "-1",
+      "superPrice": "5",
       "price": "-1",
       "storeType": "-1",
-      "allowedMaps": "2,21",
-      "iconClass": "candypackChristmasItem18",
+      "allowedMaps": "2,21,41",
+      "iconClass": "emptyBag_item",
       "social": "*"
     },
     "2277": {
       "price": "-1",
-      "superPrice": "-1",
+      "superPrice": "5",
       "type": "7",
       "store": "-1",
       "sellPrice": "3:2",
       "subtype": "0",
-      "allowedMaps": "2,21",
-      "iconClass": "coconutLobster",
+      "allowedMaps": "2,21,41",
+      "iconClass": "signIcon",
       "social": "*"
     },
     "2278": {
@@ -43685,7 +43686,7 @@ export default
       "sellPrice": "-1",
       "subtype": "31",
       "store": "-1",
-      "itemClass": "Ananas_Mapobject",
+      "itemClass": "potatoesBag",
       "layer": "0",
       "walkable": "0",
       "movable": "0",
@@ -43694,9 +43695,9 @@ export default
       "dimension": "1,1,0",
       "lifes": "1",
       "allowedMaps": "41",
-      "reward": "4:1,2276:-2,2277:1,2286:1",
+      "reward": "5:-1,4:1,2276:-2,2277:1,2286:1",
       "social": "*",
-      "b": "13,-85"
+      "ba": "1"
     },
     "2279": {
       "type": "1",
@@ -43705,7 +43706,7 @@ export default
       "sellPrice": "-1",
       "subtype": "31",
       "store": "-1",
-      "itemClass": "Ananas_Mapobject",
+      "itemClass": "potatoesBag",
       "layer": "0",
       "walkable": "0",
       "movable": "0",
@@ -43714,9 +43715,9 @@ export default
       "dimension": "1,1,0",
       "lifes": "1",
       "allowedMaps": "41",
-      "reward": "4:1,2276:1,2277:-2,2286:1",
+      "reward": "5:-1,2276:1,2277:-2,2286:1",
       "social": "*",
-      "b": "13,-85"
+      "ba": "1"
     },
     "2280": {
       "type": "1",
@@ -43725,7 +43726,7 @@ export default
       "sellPrice": "-1",
       "subtype": "31",
       "store": "-1",
-      "itemClass": "Ananas_Mapobject",
+      "itemClass": "potatoesBag",
       "layer": "0",
       "walkable": "0",
       "movable": "0",
@@ -43734,30 +43735,30 @@ export default
       "dimension": "1,1,0",
       "lifes": "1",
       "allowedMaps": "41",
-      "reward": "4:1,2276:1,2277:1,2286:-2",
+      "reward": "5:-1,2276:1,2277:1,2286:-2",
       "social": "*",
-      "b": "13,-85"
+      "ba": "1"
     },
     "2281": {
       "type": "7",
       "store": "-1",
       "price": "-1",
-      "superPrice": "1",
+      "superPrice": "2",
       "sellPrice": "3:6",
       "subtype": "0",
-      "allowedMaps": "2,34,51",
-      "iconClass": "lighter",
+      "allowedMaps": "2,34,41",
+      "iconClass": "emojie_2_item",
       "social": "*"
     },
     "2282": {
-      "itemClass": "generator",
-      "lifes": "12",
+      "itemClass": "watchTower_1",
+      "lifes": "2",
       "price": "-1",
       "superPrice": "-1",
       "type": "18",
       "store": "-1",
       "dimension": "1,1,0",
-      "size": "50,50,160",
+      "size": "50,50,180",
       "layer": "0",
       "sellPrice": "-1",
       "subtype": "0",
@@ -43766,15 +43767,14 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "1",
-      "reward": "5:-1,2281:1",
+      "reward": "5:-3,2281:1,4:8",
       "social": "*",
-      "timer": "3600",
       "allowedMaps": "41",
-      "ba": "1",
-      "b": "3,-127"
+      "b": "-20,-260",
+      "timer": "7200"
     },
     "2283": {
-      "itemClass": "januaryPrizeGold_Pelican_MapObject",
+      "itemClass": "janka_happy",
       "level": "-1",
       "lifes": "1",
       "price": "-1",
@@ -43783,22 +43783,22 @@ export default
       "store": "-1",
       "storeType": "-1",
       "dimension": "1,1,0",
-      "size": "50,50,75",
+      "size": "50,50,120",
       "quests": "11",
       "layer": "0",
       "sellPrice": "-1",
       "subtype": "0",
-      "walkable": "0",
+      "walkable": "1",
       "movable": "0",
       "sellProtection": "1",
-      "reward": "5:-42,4:88",
-      "allowedMaps": "28,41",
+      "reward": "2277:-1,2276:1",
+      "allowedMaps": "82,41",
       "social": "*",
       "timer": "1",
       "b": "4,-71"
     },
     "2284": {
-      "itemClass": "januaryPrizeSilver_Pelican_MapObject",
+      "itemClass": "cowGirl",
       "level": "-1",
       "lifes": "1",
       "price": "-1",
@@ -43807,22 +43807,22 @@ export default
       "store": "-1",
       "storeType": "-1",
       "dimension": "1,1,0",
-      "size": "50,50,75",
+      "size": "50,50,120",
       "quests": "11",
       "layer": "0",
       "sellPrice": "-1",
       "subtype": "0",
-      "walkable": "0",
+      "walkable": "1",
       "movable": "0",
       "sellProtection": "1",
-      "reward": "5:-42,4:88",
+      "reward": "2276:-1,2286:1",
       "allowedMaps": "41",
       "social": "*",
       "timer": "1",
       "b": "4,-71"
     },
     "2285": {
-      "itemClass": "januaryPrizeBronz_Pelican_MapObject",
+      "itemClass": "chimney",
       "level": "-1",
       "lifes": "1",
       "price": "-1",
@@ -43831,15 +43831,15 @@ export default
       "store": "-1",
       "storeType": "-1",
       "dimension": "1,1,0",
-      "size": "50,50,75",
+      "size": "50,50,120",
       "quests": "11",
       "layer": "0",
       "sellPrice": "-1",
       "subtype": "0",
-      "walkable": "0",
+      "walkable": "1",
       "movable": "0",
       "sellProtection": "1",
-      "reward": "5:-42,4:88",
+      "reward": "2286:-1,2277:1",
       "allowedMaps": "41",
       "social": "*",
       "timer": "1",
@@ -43849,11 +43849,11 @@ export default
       "type": "7",
       "store": "-1",
       "price": "-1",
-      "superPrice": "-1",
-      "sellPrice": "-1",
-      "subtype": "47",
-      "allowedMaps": "55",
-      "iconClass": "coctaileCarnival_item",
+      "superPrice": "5",
+      "sellPrice": "3:2",
+      "subtype": "0",
+      "allowedMaps": "2,21,41",
+      "iconClass": "picnicBread_Icon",
       "social": "*"
     },
     "2287": {
@@ -43928,7 +43928,7 @@ export default
       "reward": "159:-3,149:-1,5:-1,4:20",
       "friendReward": "159:-2,149:-1,4:20",
       "iconClass": "platypus_icon_0",
-      "allowedMaps": "2,21,25,28,31",
+      "allowedMaps": "2,21,25,31",
       "transform": "2290",
       "social": "*",
       "b": "31,1"
@@ -43954,7 +43954,7 @@ export default
       "sellProtection": "0",
       "reward": "159:-1,149:-1,5:-1,4:40",
       "friendReward": "159:-1,149:-1,4:40",
-      "allowedMaps": "2,21,25,28,31",
+      "allowedMaps": "2,21,25,31",
       "social": "*",
       "b": "2,-1"
     },
@@ -43979,7 +43979,7 @@ export default
       "reward": "377:-6,5:-1,4:50",
       "friendReward": "377:-5,4:70",
       "iconClass": "wallaby_icon_0",
-      "allowedMaps": "2,15,21,25,28,36",
+      "allowedMaps": "2,15,21,25,36",
       "transform": "2292",
       "social": "*",
       "b": "30,-17"
@@ -44005,7 +44005,7 @@ export default
       "sellProtection": "0",
       "reward": "377:-3,5:-1,4:50",
       "friendReward": "377:-1,4:50",
-      "allowedMaps": "2,15,21,25,28,36",
+      "allowedMaps": "2,15,21,25,36",
       "social": "*",
       "b": "13,-51"
     },
@@ -44064,7 +44064,7 @@ export default
       "sellProtection": "0",
       "dimension": "1,1,0",
       "size": "50,50,68",
-      "reward": "2281:-1,2831:3,317:10,2:100,357:7,972:6,1574:2,1570:2,1397:6",
+      "reward": "2281:-1,1680:5,317:10,2:100,357:7,972:6,1574:2,1570:2,1397:6",
       "social": "*",
       "b": "4,-45",
       "store": "-1"
@@ -44981,7 +44981,7 @@ export default
       "sellPrice": "3:2",
       "subtype": "0",
       "iconClass": "rainbowMug_item",
-      "allowedMaps": "2,19,21,28,43",
+      "allowedMaps": "2,19,21,43",
       "social": "*",
       "quests": "3972"
     },
@@ -44994,7 +44994,7 @@ export default
       "subtype": "0",
       "quests": "2024",
       "iconClass": "goldenHen_item",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "*",
       "storeType": "-1"
     },
@@ -45079,7 +45079,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,2982:1,4:8",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "b": "-29,-9"
     },
@@ -45249,7 +45249,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "buildItems": "2339:3,481:7,321:4",
       "b": "-27,8",
@@ -45293,7 +45293,7 @@ export default
       "sellPrice": "-1",
       "social": "*",
       "reward": "2353:10",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "quests": "2025"
     },
     "2355": {
@@ -46350,7 +46350,7 @@ export default
       "subtype": "0",
       "store": "-1",
       "level": "5",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "quests": "5",
       "layer": "0",
       "walkable": "0",
@@ -47167,7 +47167,7 @@ export default
       "social": "*",
       "reward": "5:-1,579:-1,648:-1,1866:0.55,4:6",
       "friendReward": "4:12,579:-1,648:-1",
-      "allowedMaps": "2,19,28,34",
+      "allowedMaps": "2,19,34",
       "transform": "2451",
       "b": "24,-14"
     },
@@ -47190,7 +47190,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "social": "*",
-      "allowedMaps": "2,19,28,34",
+      "allowedMaps": "2,19,34",
       "timer": "86400,172800",
       "reward": "5:-1,313:0.3,4:6,2:20,579:-3,648:-3",
       "friendReward": "313:-2,579:-2,4:20",
@@ -47302,7 +47302,7 @@ export default
       "sellPrice": "3:5",
       "quests": "28",
       "level": "10",
-      "allowedMaps": "2,19,28,34",
+      "allowedMaps": "2,19,34",
       "social": "*",
       "itemClass": "hedgehog_apples",
       "lifes": "3",
@@ -47519,7 +47519,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-91,-19"
     },
     "2461": {
@@ -48062,7 +48062,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "itemClass": "treeTile_default",
       "social": "*",
       "iconClass": "treeTile_default_item",
@@ -48168,7 +48168,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28,44,54",
+      "allowedMaps": "82,44,54",
       "itemClass": "pixieReward",
       "quests": "5",
       "social": "*",
@@ -49074,7 +49074,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,1:4,4:4,1361:0.08,1359:0.07,1364:0.08,2542:-1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "storeType": "2",
       "iconClass": "treeTile_default_item",
       "walkingMultiplier": "15",
@@ -49098,7 +49098,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "4:15,307:0.25,149:0.25,320:0.25,2180:-2,1922:0.05",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "DR_LV,INB_LV,SPOKI",
       "iconClass": "treeTileYellow_item",
       "b": "3,-32"
@@ -49120,7 +49120,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "1657:1,4:15,2543:-1,1202:1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "DR_LV,INB_LV,SPOKI",
       "iconClass": "treeTileLatvia_item",
       "walkingMultiplier": "0.1",
@@ -49205,7 +49205,7 @@ export default
       "sellPrice": "3:18",
       "subtype": "0",
       "iconClass": "horn_item",
-      "allowedMaps": "2,21,28,35",
+      "allowedMaps": "2,21,35",
       "social": "DR_LV,INB_LV,SPOKI"
     },
     "2543": {
@@ -49216,7 +49216,7 @@ export default
       "sellPrice": "-1",
       "subtype": "0",
       "iconClass": "armor_item",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI"
     },
     "2544": {
@@ -49719,7 +49719,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "transform": "2571",
       "social": "*",
       "reward": "5:-4,481:-1,4:15,1289:0.2,377:1",
@@ -49744,7 +49744,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "timer": "5,32400,32400",
       "reward": "5:-2,481:3,4:25,357:0.1,191:0.5,975:0.5,801:0.5",
@@ -51441,7 +51441,7 @@ export default
       "subtype": "0",
       "quests": "55",
       "iconClass": "lipsCarnival_item",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "*"
     },
     "2657": {
@@ -51453,7 +51453,7 @@ export default
       "subtype": "47",
       "quests": "55",
       "iconClass": "shawlCarnival_item",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "*"
     },
     "2658": {
@@ -51465,7 +51465,7 @@ export default
       "subtype": "0",
       "quests": "55",
       "iconClass": "pixieDust_item",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*"
     },
     "2659": {
@@ -51477,7 +51477,7 @@ export default
       "subtype": "47",
       "quests": "55",
       "iconClass": "poemCarnival_item",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "social": "*"
     },
     "2660": {
@@ -52107,7 +52107,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "iconClass": "squirrel_1_item",
-      "allowedMaps": "2,28,53",
+      "allowedMaps": "2,53",
       "social": "*",
       "reward": "5:-1,2:-6,311:0.2,321:0.7,312:0.3,2091:-1",
       "v": "2",
@@ -52147,7 +52147,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "travel": "2",
       "b": "22,-89",
@@ -52476,7 +52476,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-47,-2",
       "transform": "2707",
       "reward": "5:-1,4:4,3:1,309:0.09,308:0.12,314:0.06,136:0.17,1284:0.05,1287:0.05,1288:0.08"
@@ -52523,7 +52523,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "transform": "2707",
       "b": "-21,-61",
       "reward": "5:-1,2:-5,308:0.25,4:8,1319:0.05,1320:0.06,1321:0.07"
@@ -52545,7 +52545,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-50,-60",
       "reward": "5:-1,4:6,2:-3,579:0.3,648:0.3,1560:0.08,1565:0.07",
       "transform": "2706"
@@ -52663,7 +52663,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "23,28,53",
+      "allowedMaps": "23,,53",
       "reward": "5:-4,256:1,4:15,212:0.15",
       "b": "24,-21",
       "transform": "3857"
@@ -52875,7 +52875,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "wave_item",
       "b": "-39,-31"
     },
@@ -52965,7 +52965,7 @@ export default
       "sellPrice": "-1",
       "subtype": "0",
       "social": "*",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "-1",
       "iconClass": "garlicHead_item"
     },
@@ -52977,7 +52977,7 @@ export default
       "sellPrice": "3:1",
       "subtype": "0",
       "social": "*",
-      "allowedMaps": "2,19,28,48",
+      "allowedMaps": "2,19,48",
       "iconClass": "mineralsBucket_item",
       "quests": "4983"
     },
@@ -53578,7 +53578,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:15",
-      "allowedMaps": "2,28,51",
+      "allowedMaps": "2,51",
       "iconClass": "grassClean_item",
       "b": "0,-1"
     },
@@ -53904,7 +53904,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28,49",
+      "allowedMaps": "82,49",
       "iconClass": "dragonSleep_item",
       "reward": "5:-1,4:8,3:1,307:0.2,149:0.1,320:0.1",
       "b": "-49,-58"
@@ -54068,7 +54068,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "reward": "6:6,960:1",
       "social": "DR_LV,INB_LV,SPOKI",
       "iconClass": "dragonWall_item",
@@ -54089,7 +54089,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "reward": "481:5,6:8,2:4",
       "iconClass": "cocktailTableIcon",
@@ -54112,7 +54112,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:8,3:-3,307:0.2,149:1,2554:0.1,212:0.1,481:-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "quests": "5015",
       "transform": "2781",
       "buildItems": "316:3,313:2",
@@ -54154,7 +54154,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "reward": "5:-1,4:15,319:-1,309:-1",
       "transform": "2785",
       "social": "DR_LV,INB_LV,SPOKI",
@@ -54177,7 +54177,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "reward": "6:6,960:1",
       "social": "DR_LV,INB_LV,SPOKI",
       "iconClass": "dragonTower_item",
@@ -54198,7 +54198,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "reward": "5:-1,4:15,319:-1,309:-1",
       "transform": "2780",
       "social": "DR_LV,INB_LV,SPOKI",
@@ -54512,7 +54512,7 @@ export default
       "sellProtection": "0",
       "reward": "3301:-1,5:-1,4:5",
       "social": "DR_LV,INB_LV,SPOKI",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "transform": "2801",
       "b": "16,5"
     },
@@ -54533,7 +54533,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,975:0.25,2:-2,4:5",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "33,-14"
     },
     "2802": {
@@ -54602,7 +54602,7 @@ export default
       "sellProtection": "0",
       "store": "-1",
       "reward": "5:-2,1:-1,906:0.1,149:0.5,3:4,4:6",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "storeType": "-1",
       "social": "*",
       "iconClass": "greekVaseIcon",
@@ -54655,7 +54655,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,377:-1,4:10",
       "iconClass": "meerkatSport_item",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "35,-38"
     },
     "2807": {
@@ -54677,7 +54677,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,106:-1,4:10",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "11.5,-8.95,63,45,2,0"
     },
     "2808": {
@@ -55432,7 +55432,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "2935:-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "trainIcon",
       "b": "49,24",
       "transform": "2847",
@@ -55455,7 +55455,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "2935:-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "49,24",
       "iconClass": "PurplePeas_item",
       "storeType": "-1"
@@ -55607,7 +55607,7 @@ export default
       "sellProtection": "0",
       "social": "*",
       "reward": "5:-3,465:-1,4:8,3:7,2:6,316:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "timer": "18000",
       "b": "-38,-98"
     },
@@ -55895,7 +55895,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,286:0.1,283:0.1,287:0.1,4:2,212:0.2,288:0.07,136:-1,159:-1,1279:0.05,1277:0.07,3:8",
       "social": "*",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "timer": "390",
       "animation": "width:100,height:52,frames:70,type:rand",
       "b": "0,-30"
@@ -55918,7 +55918,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-2,1382:0.35,4:9,1499:0.1,107:1,1815:0.2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "carawaySeeds",
       "b": "19,-33",
       "timer": "10800,1,10799"
@@ -55974,7 +55974,7 @@ export default
       "sellProtection": "0",
       "social": "*",
       "reward": "5:-2,2339:-1,4:10",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "quests": "2866",
       "storeType": "4",
       "buildItems": "1373:1,1370:1",
@@ -56323,7 +56323,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:10",
-      "allowedMaps": "2,21,24,28,42,49,54",
+      "allowedMaps": "2,21,24,42,49,54",
       "social": "DR_LV,INB_LV,SPOKI",
       "quests": "2690",
       "walkingMultiplier": "0.15",
@@ -56347,7 +56347,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:10",
-      "allowedMaps": "2,21,24,28,42,49,54",
+      "allowedMaps": "2,21,24,42,49,54",
       "social": "DR_LV,INB_LV,SPOKI",
       "quests": "2690",
       "walkingMultiplier": "0.15",
@@ -56371,7 +56371,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:10",
-      "allowedMaps": "2,21,24,28,42,49,54",
+      "allowedMaps": "2,21,24,42,49,54",
       "social": "DR_LV,INB_LV,SPOKI",
       "quests": "2690",
       "walkingMultiplier": "0.15",
@@ -56395,7 +56395,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:10",
-      "allowedMaps": "2,21,24,28,42,49,54",
+      "allowedMaps": "2,21,24,42,49,54",
       "social": "DR_LV,INB_LV,SPOKI",
       "quests": "2690",
       "walkingMultiplier": "0.15",
@@ -56419,7 +56419,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:10",
-      "allowedMaps": "2,21,24,28,42,49,54",
+      "allowedMaps": "2,21,24,42,49,54",
       "social": "DR_LV,INB_LV,SPOKI",
       "quests": "2690",
       "walkingMultiplier": "0.15",
@@ -56447,7 +56447,7 @@ export default
       "iconClass": "itemFireLV100",
       "reward": "6:3",
       "social": "DR_LV,INB_LV,SPOKI",
-      "allowedMaps": "2,21,28,54",
+      "allowedMaps": "2,21,54",
       "b": "12,-68"
     },
     "2894": {
@@ -56468,7 +56468,7 @@ export default
       "movable": "1",
       "sellProtection": "1",
       "reward": "6:5",
-      "allowedMaps": "2,21,28,54",
+      "allowedMaps": "2,21,54",
       "quests": "2690",
       "storeType": "3",
       "b": "0,-61"
@@ -56492,7 +56492,7 @@ export default
       "movable": "1",
       "sellProtection": "1",
       "reward": "6:15",
-      "allowedMaps": "2,21,28,54",
+      "allowedMaps": "2,21,54",
       "quests": "2690",
       "b": "2,-19"
     },
@@ -56515,7 +56515,7 @@ export default
       "movable": "1",
       "sellProtection": "1",
       "reward": "6:4",
-      "allowedMaps": "2,21,28,54",
+      "allowedMaps": "2,21,54",
       "storeType": "3",
       "showItems": "2887",
       "quests": "2690",
@@ -57294,7 +57294,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:8,2:-6,307:0.35,320:0.2,1317:0.06,1318:0.05,283:0.15,286:0.2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "friendReward": "2:-5,4:20,1560:0.09,1565:0.12",
       "quests": "4433",
       "b": "27,-24"
@@ -57495,7 +57495,7 @@ export default
       "sellPrice": "-1",
       "store": "-1",
       "reward": "3440:-2,3:10,4:25,902:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "timer": "360",
       "b": "22,-88"
     },
@@ -57566,7 +57566,7 @@ export default
       "sellPrice": "-1",
       "subtype": "31",
       "iconClass": "baloons_item",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "itemClass": "baloons_",
       "layer": "0",
@@ -57639,7 +57639,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "bobsleigh_red_icon",
       "b": "10,-10"
     },
@@ -57661,7 +57661,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "1680:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "bobsleigh_blue_icon",
       "quests": "3510",
       "b": "10,-10"
@@ -57877,7 +57877,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:10,481:-1,307:-1,2916:0.05,1331:0.06",
       "buildItems": "285:1,301:1,1279:1",
-      "allowedMaps": "2,15,21,28,36",
+      "allowedMaps": "2,15,21,36",
       "social": "*",
       "b": "-9.4,-32.4"
     },
@@ -57899,7 +57899,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:650,6:35",
-      "allowedMaps": "2,15,21,28,36",
+      "allowedMaps": "2,15,21,36",
       "social": "*",
       "b": "-9.4,-32.4"
     },
@@ -58003,7 +58003,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:10,481:-1,307:-1,2916:0.05,1331:0.06",
       "buildItems": "285:1,301:1,1280:1",
-      "allowedMaps": "2,15,21,28,36",
+      "allowedMaps": "2,15,21,36",
       "social": "*",
       "b": "-9.4,-32.4"
     },
@@ -58025,7 +58025,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:650,6:35",
-      "allowedMaps": "2,15,21,28,36",
+      "allowedMaps": "2,15,21,36",
       "social": "*",
       "b": "-9.4,-32.4"
     },
@@ -58243,7 +58243,7 @@ export default
       "sellPrice": "3:3",
       "subtype": "0",
       "social": "*",
-      "allowedMaps": "2,28,43"
+      "allowedMaps": "2,43"
     },
     "2983": {
       "lifes": "1",
@@ -58367,7 +58367,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:2",
-      "allowedMaps": "2,21,28,46",
+      "allowedMaps": "2,21,46",
       "social": "*",
       "walkingMultiplier": "0.35",
       "b": "-1,-2"
@@ -59530,7 +59530,7 @@ export default
       "price": "-1",
       "store": "-1",
       "storeType": "-1",
-      "allowedMaps": "2,19,28,53"
+      "allowedMaps": "2,19,53"
     },
     "3053": {
       "iconClass": "bonusExperience",
@@ -59636,7 +59636,7 @@ export default
       "sellPrice": "-1",
       "subtype": "47",
       "iconClass": "autumnLeaf_1_item",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "social": "*",
       "quests": "3772"
     },
@@ -59649,7 +59649,7 @@ export default
       "sellPrice": "-1",
       "subtype": "47",
       "iconClass": "autumnLeaf_2_item",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "social": "*",
       "quests": "3772"
     },
@@ -59662,7 +59662,7 @@ export default
       "sellPrice": "-1",
       "subtype": "47",
       "iconClass": "autumnLeaf_3_item",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "social": "*",
       "quests": "3772"
     },
@@ -59675,7 +59675,7 @@ export default
       "sellPrice": "-1",
       "subtype": "47",
       "iconClass": "autumnLeaf_4_item",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "social": "*"
     },
     "3064": {
@@ -59687,7 +59687,7 @@ export default
       "sellPrice": "-1",
       "subtype": "47",
       "iconClass": "autumnLeaf_5_item",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "social": "*",
       "quests": "3772"
     },
@@ -59724,7 +59724,7 @@ export default
       "sellPrice": "-1",
       "subtype": "47",
       "iconClass": "autumnLeaf_8_item",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "social": "*",
       "quests": "3772"
     },
@@ -59762,7 +59762,7 @@ export default
       "quests": "10",
       "reward": "715:1,579:1,191:1,902:15,648:1,2551:0.1,2554:0.1",
       "social": "*",
-      "allowedMaps": "2,3,4,17,21,24,28,42,45"
+      "allowedMaps": "2,17,21,24,,42,45"
     },
     "3070": {
       "price": "-1",
@@ -59787,7 +59787,7 @@ export default
       "subtype": "0",
       "iconClass": "autumnUmbrella_item",
       "social": "*",
-      "allowedMaps": "2,28,35"
+      "allowedMaps": "2,35"
     },
     "3072": {
       "lifes": "6",
@@ -59808,7 +59808,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-114,-56.75,197,143,4,0",
       "reward": "481:6,1273:0.05,1274:0.06,1275:0.08,3071:1"
     },
@@ -59847,7 +59847,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "itemClass": "stoneBig",
       "quests": "11",
       "social": "*",
@@ -59873,7 +59873,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "1922:2",
       "iconClass": "beltIcon",
       "b": "5,-19"
@@ -61317,7 +61317,7 @@ export default
       "subtype": "0",
       "store": "-1",
       "level": "1",
-      "allowedMaps": "2,28,34"
+      "allowedMaps": "2,34"
     },
     "3148": {
       "itemClass": "fountainMarch_0",
@@ -61851,7 +61851,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "itemClass": "rolandsFavoriteTree_yellow",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "reward": "5:-1,1:1,4:7,1369:0.1,1373:0.1,1374:0.1,1366:0.1,1370:0.1,800:0.1,307:0.2",
@@ -61877,7 +61877,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "store": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "1:-1,316:-1,5:-1,4:10",
       "b": "31,-65",
       "transform": "3173",
@@ -61899,7 +61899,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "store": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "6:6,4:50",
       "b": "34,-43",
       "iconClass": "hourGlassIcon"
@@ -61924,7 +61924,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "2935:-1",
-      "allowedMaps": "2,28,43",
+      "allowedMaps": "2,43",
       "social": "*",
       "walkingMultiplier": "0.35",
       "transform": "1307",
@@ -62340,7 +62340,7 @@ export default
       "subtype": "0",
       "store": "-1",
       "lifes": "1",
-      "allowedMaps": "2,28,43",
+      "allowedMaps": "2,43",
       "dimension": "1,1,0",
       "size": "50,50,75",
       "layer": "0",
@@ -62799,7 +62799,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "2:-2,2072:2,311:0.1,5:20,2730:1,212:0.3,481:0.7",
-      "allowedMaps": "28,53",
+      "allowedMaps": "82,53",
       "iconClass": "singlePumkinIcon",
       "b": "29,-61"
     },
@@ -63187,7 +63187,7 @@ export default
       "price": "1546:2",
       "superPrice": "-1",
       "sellPrice": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-3,2:-2,4:8",
       "transform": "2199",
       "iconClass": "snakeGrownUp_item",
@@ -63276,7 +63276,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-2,481:-1,4:4,159:0.1,307:0.05,3237:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "quests": "3567",
       "b": "-1.2,-63.15,84,101,4,0"
     },
@@ -63616,7 +63616,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,3367:1,4:7",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "skafandr_item",
       "b": "21,-81"
     },
@@ -64097,7 +64097,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "storeType": "3",
       "reward": "5:-1,648:1,1868:0.1,4:8",
       "price": "-1",
@@ -64142,7 +64142,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-1,286:0.3,283:0.3,287:0.3,4:2,212:0.2,288:0.07,136:-1,159:-1,1279:0.05,1277:0.07,3:8",
       "iconClass": "akwardReward_B_item",
       "timer": "2200",
@@ -64167,7 +64167,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-2,4:4,2658:-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "transform": "3281",
       "buildItems": "312:3,2:35,5:18",
       "quests": "4896",
@@ -64189,7 +64189,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "reward": "1226:1,1932:1,1498:1,2186:1,1281:1,1497:2,6:45",
       "iconClass": "castlePlanIcon",
@@ -64408,7 +64408,7 @@ export default
       "subtype": "0",
       "social": "*",
       "iconClass": "chikenFanny_4_item",
-      "allowedMaps": "2,21,28"
+      "allowedMaps": "2,21,"
     },
     "3297": {
       "level": "5",
@@ -64421,7 +64421,7 @@ export default
       "subtype": "0",
       "social": "*",
       "iconClass": "chikenFanny_2_item",
-      "allowedMaps": "2,21,28"
+      "allowedMaps": "2,21,"
     },
     "3298": {
       "level": "5",
@@ -64434,7 +64434,7 @@ export default
       "subtype": "47",
       "social": "*",
       "iconClass": "ZeltaPakavs_item",
-      "allowedMaps": "2,21,28"
+      "allowedMaps": "2,21,"
     },
     "3299": {
       "level": "5",
@@ -64447,7 +64447,7 @@ export default
       "subtype": "0",
       "social": "*",
       "iconClass": "BlueKite_0_item",
-      "allowedMaps": "2,21,28"
+      "allowedMaps": "2,21,"
     },
     "3300": {
       "level": "5",
@@ -64460,7 +64460,7 @@ export default
       "subtype": "0",
       "social": "*",
       "iconClass": "BlueKite_item",
-      "allowedMaps": "2,21,28"
+      "allowedMaps": "2,21,"
     },
     "3301": {
       "type": "7",
@@ -64551,7 +64551,7 @@ export default
       "subtype": "0",
       "social": "*",
       "iconClass": "chikenFanny_withe_item",
-      "allowedMaps": "2,21,28"
+      "allowedMaps": "2,21,"
     },
     "3306": {
       "itemClass": "eggVulcano_0",
@@ -65488,7 +65488,7 @@ export default
       "subtype": "0",
       "iconClass": "saulespukes_ella",
       "social": "*",
-      "allowedMaps": "2,25,28"
+      "allowedMaps": "2,25,"
     },
     "3355": {
       "lifes": "1",
@@ -65626,7 +65626,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "iconClass": "locust_item",
       "ba": "1",
       "b": "8,-13"
@@ -65650,7 +65650,7 @@ export default
       "sellPrice": "3:100",
       "subtype": "0",
       "store": "-1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "itemClass": "tropheyLocust",
       "layer": "0",
       "walkable": "0",
@@ -65671,7 +65671,7 @@ export default
       "subtype": "46",
       "social": "*",
       "reward": "1837:0.8",
-      "allowedMaps": "28"
+      "allowedMaps": "82"
     },
     "3364": {
       "iconClass": "limestoneIcon",
@@ -65683,7 +65683,7 @@ export default
       "subtype": "23",
       "sellPrice": "-1",
       "social": "*",
-      "allowedMaps": "28"
+      "allowedMaps": "82"
     },
     "3365": {
       "iconClass": "seaBoot",
@@ -65695,7 +65695,7 @@ export default
       "subtype": "23",
       "sellPrice": "-1",
       "social": "*",
-      "allowedMaps": "28"
+      "allowedMaps": "82"
     },
     "3366": {
       "iconClass": "easterEggIcon",
@@ -66192,7 +66192,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:1,4:35,377:2",
-      "allowedMaps": "2,17,20,21,28,36",
+      "allowedMaps": "2,17,20,21,,36",
       "b": "-43.35,-25.1,183,97,2,0"
     },
     "3393": {
@@ -66252,7 +66252,7 @@ export default
       "dimension": "1,1,0",
       "size": "50,50,68",
       "itemClass": "dreamPortal_E",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "quests": "55",
       "price": "321:2,3398:4",
       "superPrice": "-1",
@@ -66273,7 +66273,7 @@ export default
       "dimension": "1,1,0",
       "size": "50,50,68",
       "itemClass": "dreamPortal_C",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "quests": "55",
       "price": "321:2,3398:4",
       "superPrice": "-1",
@@ -66646,7 +66646,7 @@ export default
       "reward": "726:-1,5:-1,2:-2,4:13,2910:0.07",
       "friendReward": "5:-1,2:-1,4:10,726:0.1",
       "iconClass": "seaHorseSpooky_item",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "b": "26,-45"
     },
     "3415": {
@@ -66671,7 +66671,7 @@ export default
       "social": "DR_LV,INB_LV,SPOKI",
       "reward": "726:-1,2:-4,5:-1,4:17,2910:0.15,2866:0.1",
       "friendReward": "5:-1,2:-3,4:13,726:0.1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "b": "15,-83"
     },
     "3416": {
@@ -66684,7 +66684,7 @@ export default
       "subtype": "0",
       "iconClass": "crocodileTheeth_item",
       "social": "*",
-      "allowedMaps": "2,21,28,49"
+      "allowedMaps": "2,21,49"
     },
     "3417": {
       "level": "20",
@@ -66697,7 +66697,7 @@ export default
       "quests": "578",
       "iconClass": "crocodileTheethNeckle_item",
       "social": "*",
-      "allowedMaps": "2,21,28,49"
+      "allowedMaps": "2,21,49"
     },
     "3418": {
       "itemClass": "candleSpooky_0",
@@ -66717,7 +66717,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2866:1,4:4,1142:0.35,1141:0.2,726:1",
       "friendReward": "2866:-1,4:5,3:1,6:1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "transform": "3419",
       "iconClass": "candleSpooky_item",
       "b": "3.65,-189.2,95,254,5,0"
@@ -66740,7 +66740,7 @@ export default
       "sellProtection": "0",
       "reward": "378:-2,308:1,4:4,1569:0.08,1574:0.08,726:1,136:1",
       "friendReward": "308:0.3,4:4,1569:0.08,1574:0.08,726:1",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "transform": "3421",
       "b": "-15.8,-119.3,114,164,5,0"
     },
@@ -66764,7 +66764,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "buildItems": "308:3",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "storeType": "4",
       "iconClass": "candleSpooky_item",
       "b": "10,-136"
@@ -66786,7 +66786,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "iconClass": "candleSpooky_item",
       "b": "11,-175",
       "reward": "4:666"
@@ -67044,7 +67044,7 @@ export default
       "subtype": "0",
       "iconClass": "Durainiti_item",
       "social": "*",
-      "allowedMaps": "2,28,46"
+      "allowedMaps": "2,46"
     },
     "3435": {
       "price": "-1",
@@ -67402,7 +67402,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "b": "10,-129",
       "reward": "5:-1,1:-1,234:-1,107:-1,106:-1,4:3,1563:0.07,320:0.11",
@@ -67638,7 +67638,7 @@ export default
       "sellPrice": "3:5",
       "subtype": "0",
       "social": "*",
-      "allowedMaps": "2,28,44",
+      "allowedMaps": "2,44",
       "quests": "4731"
     },
     "3462": {
@@ -67678,7 +67678,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "7",
       "reward": "5:-1,4:11,2:-13",
       "transform": "3464",
@@ -67702,7 +67702,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "-1",
       "reward": "1254:1,182:1,2186:1",
       "b": "-16,-76.4",
@@ -67974,7 +67974,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "-1",
       "iconClass": "eggVulcano_1_item",
       "transform": "3477",
@@ -67997,7 +67997,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "-1",
       "iconClass": "eggVulcano_1_item",
       "transform": "3478",
@@ -68020,7 +68020,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "-1",
       "iconClass": "eggVulcano_1_item",
       "transform": "3479",
@@ -68043,7 +68043,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "-1",
       "iconClass": "eggVulcano_1_item",
       "b": "-36,-7"
@@ -68337,7 +68337,7 @@ export default
       "subtype": "46",
       "social": "*",
       "reward": "288:0.8",
-      "allowedMaps": "28"
+      "allowedMaps": "82"
     },
     "3495": {
       "iconClass": "bonusChemestry",
@@ -69513,7 +69513,7 @@ export default
       "dimension": "1,1,0",
       "size": "50,50,68",
       "quests": "5",
-      "allowedMaps": "2,28,53",
+      "allowedMaps": "2,53",
       "store": "-1",
       "transform": "2687",
       "timer": "15,7200",
@@ -69784,7 +69784,7 @@ export default
       "sellPrice": "3:2",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "subtype": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "itemClass": "sack1_1",
       "layer": "0",
       "walkable": "0",
@@ -70263,7 +70263,7 @@ export default
       "social": "*",
       "superPrice": "1",
       "iconClass": "putuPerle_item",
-      "allowedMaps": "2,28,43"
+      "allowedMaps": "2,43"
     },
     "3592": {
       "level": "7",
@@ -70335,7 +70335,7 @@ export default
       "movable": "1",
       "sellProtection": "1",
       "reward": "6:34",
-      "allowedMaps": "2,21,28",
+      "allowedMaps": "2,21,",
       "b": "6,-43"
     },
     "3595": {
@@ -70845,7 +70845,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-3,4:12,1324:0.07,1325:0.06,377:1,108:1,106:1,378:1,164:0",
       "buildItems": "122:6,235:1,1142:4",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-13,-87",
       "quests": "5023"
     },
@@ -70867,7 +70867,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "6,-37",
       "iconClass": "beetrootBasket_icon",
       "reward": "5:-1,3147:-2,3606:-2,4:16",
@@ -71136,7 +71136,7 @@ export default
       "sellProtection": "1",
       "social": "*",
       "reward": "5:-1,4:8,3:1,307:0.16,149:0.1,320:0.13,1364:0.3",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "blackRosesIcon",
       "b": "0,-26",
       "friendReward": "4:2",
@@ -71160,7 +71160,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "iconClass": "DaffodilsandWillow_item",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "22.25,-31.5",
       "reward": "5:-2,1311:0.40,873:0.1,4:8,3:3,307:0.25,149:0.1,320:0.25,1364:0.3"
     },
@@ -72621,7 +72621,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-1,4:4,2:-5,3:9",
       "iconClass": "julbockIcon",
       "b": "-3,-89",
@@ -73994,7 +73994,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:9",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "TulipBlue_Item",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "b": "39.3,-36"
@@ -74015,7 +74015,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,3382:1,4:9",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "TulipRed_Item",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "b": "38.65,-34.95"
@@ -74036,7 +74036,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,3383:1,4:9",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "TulipPink_Item",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "b": "39.35,-35.5"
@@ -74057,7 +74057,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,3384:1,4:9",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "TulipYellow_Item",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "b": "39.2,-36.55"
@@ -74078,7 +74078,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,3385:1,4:9",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "TulipOrange_Item",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "b": "38.75,-35.05"
@@ -74121,7 +74121,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-2,4:8,3:1,307:0.2,149:0.1,320:0.1",
       "b": "19.7,-93.85",
       "transform": "3780",
@@ -74146,7 +74146,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-2,3377:-2,4:8,3:1,307:0.2,149:0.1,320:0.1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "22,-89.95",
       "transform": "3781",
       "buildItems": "322:1",
@@ -74170,7 +74170,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-2,3385:-2,4:8,3:1,307:0.2,149:0.1,320:0.1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "21.8,-98.4",
       "transform": "3782",
       "quests": "3936",
@@ -74193,7 +74193,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-2,4:8,3:1,307:0.2,149:0.1,320:0.1",
       "b": "25.9,-88.95",
       "transform": "3783",
@@ -74218,7 +74218,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-2,4:8,3:1,307:0.2,149:0.1,320:0.1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "26.75,-116.15",
       "transform": "3784",
       "quests": "3938",
@@ -74241,7 +74241,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "lipsCarnival_item",
       "b": "18.95,-87.5",
       "reward": "1141:2",
@@ -74265,7 +74265,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "1141:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "lipsCarnival_item",
       "b": "21.65,-79.5",
       "quests": "3939,3940"
@@ -74288,7 +74288,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "1141:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "lipsCarnival_item",
       "b": "20.2,-87.75",
       "quests": "3939,3940"
@@ -74310,7 +74310,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "1141:2",
       "iconClass": "lipsCarnival_item",
       "b": "19.2,-85",
@@ -74334,7 +74334,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "1141:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "lipsCarnival_item",
       "b": "24.55,-113.7",
       "quests": "3939,3940"
@@ -74357,7 +74357,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:7,2:-6,906:0.1,149:0.1,465:0.15,3:2,3147:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "tucan_0",
       "b": "5,-65",
       "timer": "21600,86400",
@@ -74382,7 +74382,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:10,2:-2,3147:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "2.75,-59.55,96,93,2,0",
       "transform": "3787",
       "iconClass": "tucan_0",
@@ -74408,7 +74408,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,2:-3,4:15,1319:0.05,1320:0.06,1321:0.07,3147:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "tucanIcon",
       "b": "2.75,-72.9,96,106,2,0",
       "transform": "3785",
@@ -74430,7 +74430,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "DR_LV,DR_LT,INB_LV,FB_EN,SPOKI,GD",
       "b": "-18,-139",
       "iconClass": "flowerBalloon_Icon",
@@ -74657,7 +74657,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-2,4:7,481:0.2,1271:0.07,2955:2,1266:0.07,1270:0.07",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "storeType": "-1",
       "b": "23,-47"
@@ -74945,7 +74945,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "7,-43",
       "iconClass": "tilkiIconItem",
       "reward": "5:-1,2:-3,4:7",
@@ -74970,7 +74970,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI,KONG",
       "iconClass": "tilkiIconItem",
       "storeType": "-1",
@@ -75074,7 +75074,7 @@ export default
       "sellPrice": "-1",
       "subtype": "0",
       "store": "-1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "itemClass": "stonePathCol_1",
       "lifes": "1",
@@ -75112,7 +75112,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "4:15",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "*",
       "walkingMultiplier": "0.5",
       "b": "1,0"
@@ -75393,7 +75393,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "social": "*",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "storeType": "4",
       "b": "16.75,-12.5",
       "transform": "3831",
@@ -75415,7 +75415,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "social": "*",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "18,-14",
       "timer": "28800,57600",
       "reward": "5:-1,4:4,2:-5",
@@ -75755,7 +75755,7 @@ export default
     },
     "3848": {
       "itemClass": "tikiTotem_small",
-      "lifes": "7",
+      "lifes": "5",
       "type": "8",
       "store": "-1",
       "size": "50,50,45",
@@ -75765,15 +75765,15 @@ export default
       "subtype": "0",
       "sellPrice": "-1",
       "layer": "0",
-      "walkable": "1",
+      "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "reward": "5:-1,2:-6,4:9,149:0.15,3:5,1:1",
-      "allowedMaps": "19",
+      "reward": "5:-1,4:4,925:-3",
+      "allowedMaps": "41",
       "social": "*",
       "b": "21,-41",
-      "transform": "3849",
-      "buildItems": "321:2,311:2"
+      "transform": "2193",
+      "buildItems": "315:2,626:10"
     },
     "3849": {
       "lifes": "1",
@@ -75960,7 +75960,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "23,28,53",
+      "allowedMaps": "23,,53",
       "b": "20,-27",
       "reward": "5:-10,234:-5,2:-8,3071:15,4:40,3:11"
     },
@@ -76558,7 +76558,7 @@ export default
       "sellProtection": "0",
       "iconClass": "honeyFlower_item",
       "reward": "5:-3,4:8,3:1,307:0.3,149:0.3,320:0.4",
-      "allowedMaps": "23,28,53",
+      "allowedMaps": "23,,53",
       "quests": "3774",
       "b": "0,-50"
     },
@@ -76646,7 +76646,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-20.5,-151.05",
       "quests": "4898",
       "reward": "6:8",
@@ -76865,7 +76865,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-1,3299:0.35,4:4",
       "iconClass": "BlueKite_item",
       "b": "22.7,-44"
@@ -77342,7 +77342,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-2,4:7,317:0.7,1:1,256:2",
       "b": "-78.05,-41.05",
       "quests": "28"
@@ -77364,7 +77364,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "7,-99",
       "reward": "5:-1,2:-7,322:-1,2955:-1,4:20,3:25,308:0.25"
     },
@@ -77406,7 +77406,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-77.95,-41",
       "travel": "28",
       "reward": "4:9999"
@@ -77535,7 +77535,7 @@ export default
       "subtype": "0",
       "store": "-1",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "1,1,0",
       "size": "50,50,75",
       "layer": "0",
@@ -77558,7 +77558,7 @@ export default
       "subtype": "0",
       "store": "-1",
       "lifes": "3",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "1,1,0",
       "size": "50,50,35",
       "layer": "0",
@@ -77580,7 +77580,7 @@ export default
       "subtype": "34",
       "store": "-1",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "1,1,0",
       "size": "50,50,5",
       "layer": "0",
@@ -77979,7 +77979,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28,52",
+      "allowedMaps": "82,52",
       "b": "1,-87.5"
     },
     "3952": {
@@ -78068,7 +78068,7 @@ export default
       "movable": "0",
       "sellProtection": "1",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "20,-70",
       "iconClass": "hockeyReward_item"
     },
@@ -79023,7 +79023,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:8,3:1,307:0.16,149:0.1,320:0.1",
       "friendReward": "4:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "0,-26",
       "iconClass": "grassClean_item",
       "storeType": "-1",
@@ -79181,7 +79181,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,2:15,1069:0.07,3:10",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "0,-16.1,100,66,4,0"
     },
     "4005": {
@@ -79362,7 +79362,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:4,2:15,3:11",
       "friendReward": "4:4,1499:0.3",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-6.4,-38.8,111,88,4,0"
     },
     "4012": {
@@ -80118,7 +80118,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-4,4:30",
       "friendReward": "2:-4,4:20,1572:0.9,1562:0.8",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "ba": "1",
       "b": "7,-51"
     },
@@ -80144,7 +80144,7 @@ export default
       "reward": "5:-1,2:-5,4:5",
       "friendReward": "2:-5,4:25",
       "iconClass": "easterFoxIcon",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "12.85,-47.95,69,86,2,0",
       "transform": "4043"
     },
@@ -80168,7 +80168,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-5,4:8,149:0.06,122:0.05,3:0.5,311:0.05",
       "friendReward": "2:-5,4:25",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "4.25,-36.5,92,76,2,0"
     },
     "4044": {
@@ -80272,7 +80272,7 @@ export default
       "reward": "5:-1,2:-2,4:4",
       "friendReward": "2:-2,4:10",
       "iconClass": "meerkat_0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "20.9,2.15,60,32,2,0",
       "quests": "5080"
     },
@@ -80296,7 +80296,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-2,4:10",
       "friendReward": "2:-2,4:10",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "5,-146"
     },
     "4049": {
@@ -80375,7 +80375,7 @@ export default
       "reward": "5:-1,317:-1,4:15,2910:0.07",
       "friendReward": "317:-1,4:10",
       "iconClass": "foal",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "15,-46"
     },
     "4052": {
@@ -80400,7 +80400,7 @@ export default
       "social": "*",
       "reward": "5:-1,317:-1,4:17,2910:0.15",
       "friendReward": "317:-1,4:12",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-10,-69"
     },
     "4053": {
@@ -80502,7 +80502,7 @@ export default
       "reward": "5:-1,2:-30,4:30",
       "friendReward": "2:-30,4:150",
       "iconClass": "sloth_0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "30,-30"
     },
     "4057": {
@@ -80526,7 +80526,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,2:-30,4:90,796:1",
       "friendReward": "2:-30,4:150",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "3,-72"
     },
     "4058": {
@@ -81403,7 +81403,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "20,-42",
       "iconClass": "fence_Native_short_Icon",
       "reward": "5:-2,1:3,4:5"
@@ -82722,7 +82722,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:7,1254:1,3:2,4157:3",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "sackIcon",
       "level": "11",
       "storeType": "3",
@@ -83902,7 +83902,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "buildItems": "317:12,316:12,5:12",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "store": "-1",
       "b": "-43,-8",
       "transform": "4213",
@@ -83949,7 +83949,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "fireplaceLatvia_item",
       "ba": "1",
       "b": "-9,-36",
@@ -84045,7 +84045,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:8,3:1,294:0.16,320:0.2,149:0.2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "b": "-31,-85",
       "storeType": "3",
@@ -85481,7 +85481,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "level": "5",
       "dimension": "1,1,0",
       "size": "50,50,60",
@@ -85509,7 +85509,7 @@ export default
       "lifes": "1",
       "level": "5",
       "storeType": "-1",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "dimension": "1,1,0",
       "size": "50,50,150",
       "quests": "5",
@@ -85533,7 +85533,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,1697:-1,4:8,3:1,307:0.1,149:0.2,320:0.3,482:0.1,2875:1",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "iconClass": "kawaii_ghosts_2_item",
       "level": "11",
       "storeType": "3",
@@ -85558,7 +85558,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:8,3:1,307:0.1,149:0.2,320:0.3",
       "friendReward": "4:2",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "iconClass": "kawaii_ghosts_1_item",
       "level": "11",
       "storeType": "3",
@@ -85584,7 +85584,7 @@ export default
       "movable": "0",
       "sellProtection": "1",
       "reward": "5:-1,1397:1,4:4,2581:0.35",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "b": "25.05,-34.6",
       "buildItems": "311:2,313:4,307:3"
     },
@@ -85604,7 +85604,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "iconClass": "ghostShellsIcon",
       "b": "17.45,-32.1",
       "reward": "5:-1,4:6,2:-4,307:0.6,1564:0.06,1318:0.05,1374:0.11",
@@ -85631,7 +85631,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,4:12,316:-4",
       "buildItems": "473:3,122:4,2:60",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "b": "-43.75,-13.8"
     },
     "4287": {
@@ -85653,7 +85653,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,2866:2,309:1,4:15,1285:0.2,1289:0.2,149:0.35",
-      "allowedMaps": "28,44",
+      "allowedMaps": "82,44",
       "b": "-43.9,1.25"
     },
     "4288": {
@@ -85709,7 +85709,7 @@ export default
       "store": "-1",
       "itemClass": "carpenterHouse_Flip",
       "lifes": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "dimension": "3,2,0",
       "size": "150,100,165",
       "layer": "0",
@@ -86173,7 +86173,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-2,2218:4,4:12,2:-11,1331:0.11,1374:0.11,1657:0.15",
       "b": "5,-82",
       "iconClass": "shovelIcon",
@@ -86417,7 +86417,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "iconClass": "vezis_trideksnis_item",
       "b": "-6.65,-136.6"
     },
@@ -86611,7 +86611,7 @@ export default
     "4330": {
       "type": "7",
       "subtype": "0",
-      "iconClass": "diamond",
+      "iconClass": "note_TrebleClef_item",
       "price": "-1",
       "superPrice": "-1",
       "store": "-1",
@@ -86861,7 +86861,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,3435:1,4:7",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "15.65,6.6,70,41,2,0"
     },
     "4343": {
@@ -86884,7 +86884,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,2660:1,4:7",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "4,-45"
     },
     "4344": {
@@ -86907,7 +86907,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,3185:1,4:7",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-1.25,-13.5,103,64,2,0"
     },
     "4345": {
@@ -86930,7 +86930,7 @@ export default
       "movable": "0",
       "sellProtection": "0",
       "reward": "5:-1,3185:1,4:7",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "8,-4"
     },
     "4346": {
@@ -86948,7 +86948,7 @@ export default
       "walkable": "1",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "reward": "5:-1,2967:1,4:7",
       "social": "*",
       "b": "19,-88"
@@ -86972,7 +86972,7 @@ export default
       "movable": "0",
       "sellProtection": "1",
       "reward": "5:-1,3184:1,4:7",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "0,-100"
     },
     "4348": {
@@ -86995,7 +86995,7 @@ export default
       "iconClass": "LedusBite_item",
       "reward": "5:-1,3368:1,4:7",
       "social": "*",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "5.85,-51.25"
     },
     "4349": {
@@ -87015,7 +87015,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:8",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "quests": "4898",
       "b": "-18.6,-104.5,137,150,2,0",
       "iconClass": "jukebox_item"
@@ -87039,7 +87039,7 @@ export default
       "movable": "1",
       "sellProtection": "1",
       "reward": "6:8",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "6,-43",
       "quests": "4898"
     },
@@ -88214,7 +88214,7 @@ export default
       "sellProtection": "1",
       "iconClass": "bookshelfIcon",
       "social": "*",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-27,-99"
     },
     "4408": {
@@ -88239,7 +88239,7 @@ export default
       "social": "DR_LV,DR_LT,INB_LV,SPOKI",
       "reward": "5:-1,316:-1,4:4",
       "buildItems": "321:8,108:30,320:6",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-37,-34"
     },
     "4409": {
@@ -88261,7 +88261,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-48,-31",
       "reward": "1548:2,6:5"
     },
@@ -88283,7 +88283,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "5:-1,4:8,2:-4,307:0.35,1317:0.06,1318:0.05,321:0.15,481:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-14,-84"
     },
     "4411": {
@@ -88304,7 +88304,7 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "9,-81",
       "iconClass": "portrait",
       "reward": "5:-1,2:-4,4:15,312:0.15,311:0.15"
@@ -88330,7 +88330,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-1,1141:-1,4:3",
       "buildItems": "234:7,308:2",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "3.15,0.35,94,48,2,0",
       "quests": "5012"
     },
@@ -88350,7 +88350,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "itemClass": "cream_reward",
       "b": "10,-84",
       "iconClass": "cream_soft"
@@ -88373,7 +88373,7 @@ export default
       "walkable": "0",
       "movable": "1",
       "sellProtection": "1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "-14,-167"
     },
     "4415": {
@@ -88398,7 +88398,7 @@ export default
       "sellProtection": "0",
       "reward": "5:-2,316:-2,4:7",
       "buildItems": "3605:7,149:3,284:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "25.1,-138"
     },
     "4416": {
@@ -88422,7 +88422,7 @@ export default
       "movable": "1",
       "sellProtection": "0",
       "reward": "6:6,1254:1",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "b": "3.15,-138.6"
     },
     "4417": {
@@ -88459,7 +88459,7 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "allowedMaps": "28",
+      "allowedMaps": "82",
       "social": "KONG",
       "travel": "2",
       "b": "22,-89",
@@ -89622,10 +89622,11 @@ export default
       "walkable": "1",
       "movable": "1",
       "sellProtection": "0",
-      "reward": "6:1",
+      "reward": "6:8",
       "allowedMaps": "2,17,21,24,25,47,51,52",
       "walkingMultiplier": "0.15",
-      "b": "-0.65,-1"
+      "b": "-0.65,-1",
+      "social": "DR_LV"
     },
     "4470": {
       "price": "-1",
@@ -89642,9 +89643,9 @@ export default
       "walkable": "0",
       "movable": "0",
       "sellProtection": "0",
-      "reward": "6:500,4:6000,10:3",
       "allowedMaps": "2",
-      "b": "-48.5,-283.9"
+      "b": "-48.5,-283.9",
+      "social": "DR_LV"
     },
     "4471": {
       "iconClass": "unisexCatBlue_item",
@@ -89655,18 +89656,20 @@ export default
       "subtype": "0",
       "store": "-1",
       "allowedMaps": "2",
-      "level": "2"
+      "level": "2",
+      "social": "DR_LV"
     },
     "4472": {
       "price": "-1",
       "type": "17",
       "sellPrice": "-1",
       "subtype": "0",
-      "store": "0",
-      "superPrice": "5",
+      "store": "-1",
+      "superPrice": "-1",
       "iconClass": "hairGreyCat_item",
-      "storeType": "2",
-      "allowedMaps": "2"
+      "storeType": "-1",
+      "allowedMaps": "2",
+      "social": "DR_LV"
     },
     "4473": {
       "type": "15",
@@ -89678,7 +89681,8 @@ export default
       "allowedMaps": "55",
       "iconClass": "bodyGrayCat_iteam",
       "level": "2",
-      "quests": "4553"
+      "quests": "4553",
+      "social": "DR_LV"
     },
     "4474": {
       "itemClass": "tunnel_bird",
@@ -90040,6 +90044,112 @@ export default
       "allowedMaps": "19,28",
       "social": "*",
       "b": "-15.55,-77,141,169,3,"
+    },
+    "4490": {
+      "price": "-1",
+      "superPrice": "-1",
+      "type": "7",
+      "store": "-1",
+      "quests": "597",
+      "sellPrice": "-1",
+      "subtype": "0",
+      "social": "*",
+      "iconClass": "LHstage4",
+      "allowedMaps": "2"
+    },
+    "4491": {
+      "itemClass": "mandarinuElla_Podi_Violet_01",
+      "lifes": "20",
+      "price": "-1",
+      "superPrice": "-1",
+      "type": "8",
+      "store": "-1",
+      "size": "50,50,65",
+      "dimension": "1,1,0",
+      "transform": "4492",
+      "subtype": "0",
+      "quests": "43",
+      "sellPrice": "854:50",
+      "layer": "0",
+      "social": "*",
+      "walkable": "0",
+      "movable": "1",
+      "sellProtection": "0",
+      "reward": "5:-1,6:1,4:17,1177:-1,443:-1,843:-1,3:75,2916:0.22,2:12",
+      "buildItems": "394:9,975:24,1142:15",
+      "allowedMaps": "2",
+      "b": "7.85,-48",
+      "iconClass": "mandarinuElla_Podi_Violet_02_item"
+    },
+    "4492": {
+      "itemClass": "mandarinuElla_Podi_Violet_02",
+      "level": "7",
+      "lifes": "5",
+      "price": "-1",
+      "superPrice": "-1",
+      "type": "18",
+      "store": "-1",
+      "size": "50,50,92",
+      "dimension": "1,1,0",
+      "subtype": "0",
+      "timer": "172800",
+      "sellPrice": "854:50",
+      "layer": "0",
+      "social": "*",
+      "walkable": "0",
+      "movable": "1",
+      "sellProtection": "0",
+      "iconClass": "mandarinuElla_Podi_Violet_02_item",
+      "reward": "5:-3,843:-2,975:-3,1314:-2,3:210,4:17,1280:0.06,2911:0.04,6:1",
+      "allowedMaps": "2",
+      "b": "7.85,-48"
+    },
+    "4493": {
+      "itemClass": "mandarinuElla_Podi_Red_01",
+      "lifes": "20",
+      "price": "-1",
+      "superPrice": "-1",
+      "type": "8",
+      "store": "-1",
+      "size": "50,50,65",
+      "dimension": "1,1,0",
+      "transform": "4494",
+      "subtype": "0",
+      "quests": "43",
+      "sellPrice": "975:50",
+      "layer": "0",
+      "social": "*",
+      "walkable": "0",
+      "movable": "1",
+      "sellProtection": "0",
+      "reward": "5:-1,6:1,4:17,1141:-2,972:-1,975:-1,2:15,2916:0.22,3:10",
+      "buildItems": "467:1,843:24,742:3",
+      "allowedMaps": "2",
+      "b": "7.85,-48",
+      "iconClass": "mandarinuElla_Podi_Red_02_item"
+    },
+    "4494": {
+      "itemClass": "mandarinuElla_Podi_Red_02",
+      "level": "7",
+      "lifes": "5",
+      "price": "-1",
+      "superPrice": "-1",
+      "type": "18",
+      "store": "-1",
+      "size": "50,50,92",
+      "dimension": "1,1,0",
+      "subtype": "0",
+      "timer": "172800",
+      "sellPrice": "975:50",
+      "layer": "0",
+      "social": "*",
+      "walkable": "0",
+      "movable": "1",
+      "sellProtection": "0",
+      "iconClass": "mandarinuElla_Podi_Red_02_item",
+      "reward": "5:-3,975:-3,843:-2,972:-2,311:-1,1579:-3,4:17,1280:0.06,2914:0.09,2:135,6:1",
+      "allowedMaps": "2",
+      "b": "7.85,-48"
     }
   },
   "collections": {
@@ -90109,5 +90219,5 @@ export default
       "quest_id": "2700"
     }
   },
-  "item_count": "4490"
+  "item_count": "4495"
 }

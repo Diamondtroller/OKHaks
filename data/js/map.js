@@ -781,21 +781,21 @@ export default
     "spawn": {
       "2278": {
         "start": 1642075200,
-        "end": 1679140800,
+        "end": 1715158800,
         "random": "6:9",
         "max": 37,
         "quest": 11
       },
       "2279": {
         "start": 1642075200,
-        "end": 1679140800,
+        "end": 1715158800,
         "random": "6:9",
         "max": 37,
         "quest": 11
       },
       "2280": {
         "start": 1642075200,
-        "end": 1679140800,
+        "end": 1715158800,
         "random": "6:9",
         "max": 37,
         "quest": 11
@@ -980,7 +980,7 @@ export default
     }
   },
   "54": {
-    "tilesets": [0, 6],
-    "background": "0xFFFFFF"
+    "tilesets": [0, 11, 12, 13],
+    "background": "0x5DC5E2"
   }
 }
