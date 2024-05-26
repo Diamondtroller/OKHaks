@@ -762,7 +762,8 @@ export default
     "tilesets": [0]
   },
   "36": {
-    "tilesets": [0, 7]
+    "tilesets": [0, 7],
+    "background": "0xFFFFFF"
   },
   "37": {
     "tilesets": [0]
@@ -887,7 +888,8 @@ export default
     "background": "0xEDE084"
   },
   "48": {
-    "tilesets": [11]
+    "tilesets": [0],
+    "background": "0xFFFFFF"
   },
   "49": {
     "tilesets": [0],
@@ -915,31 +917,7 @@ export default
     }
   },
   "51": {
-    "tilesets": [12],
-    "background": "0xC64006",
-    "spawn": {
-      "2278": {
-        "start": 1642075200,
-        "end": 1680267600,
-        "random": "4:7",
-        "max": 37,
-        "quest": 4393
-      },
-      "2279": {
-        "start": 1642075200,
-        "end": 1680267600,
-        "random": "4:7",
-        "max": 37,
-        "quest": 4393
-      },
-      "2280": {
-        "start": 1642075200,
-        "end": 1680267600,
-        "random": "4:7",
-        "max": 37,
-        "quest": 4393
-      }
-    }
+    "tilesets": [0]
   },
   "52": {
     "tilesets": [0],
@@ -980,7 +958,6 @@ export default
     }
   },
   "54": {
-    "tilesets": [0, 11, 12, 13],
-    "background": "0x5DC5E2"
+    "tilesets": [0]
   }
 }
