@@ -1,128 +1,71 @@
 "use strict";
+
+import * as c from "./common.js";
 const filter = document.getElementById("filter");
 const results = document.getElementById("results");
-const choice = document.getElementById("choice");
 const itemInfo = document.getElementById("itemInfo");
-
-import * as stringsLVmodule from "/data/js/stringsLV.js";
-const stringsLV = stringsLVmodule.default;
-import * as itemsmodule from "/data/js/items.js";
-const items = itemsmodule.default;
-
-function createElementWithAttrs(elTag, attrs) {
-  const element = document.createElement(elTag);
-  for (const [attrName, attrValue] of attrs) {
-    element.setAttribute(attrName, attrValue);
-  }
-  return element;
-}
-
-function deleteChildren(element) {
-  while (element.firstChild) {
-    element.firstChild.remove();
-  }
-}
-
-function makeTitle(title) {
-  const element = document.createElement("h3");
-  element.textContent = title;
-  return element;
-}
-
-function makeItem(id, makeLink) {
-  let icon = items.items[id].iconClass;
-  if (icon === undefined) {
-    icon = "quest_icons/misteryTask";
-  } else {
-    icon = "item_icons/" + icon;
-  }
-  const item = document.createElement("table");
-  const tr = document.createElement("tr");
-  const imgCol = document.createElement("td");
-  const nameCol = document.createElement("td");
-  const img = createElementWithAttrs("img", [[
-    "src",
-    `https://okeanija.draugiem.lv/html5/i/${icon}.png`,
-  ]]);
-  const name = document.createTextNode(
-    `${stringsLV.ITEMS[id].CAPTION} (#${id})`,
-  );
-  nameCol.appendChild(name);
-  imgCol.appendChild(img);
-  tr.appendChild(imgCol);
-  tr.appendChild(nameCol);
-  item.appendChild(tr);
-  if (makeLink) {
-    const anchor = createElementWithAttrs("a", [
-      ["id", `a_${id}`],
-      ["href", "#"],
-      ["data-id", id.toString()],
-    ]);
-    anchor.appendChild(item);
-    anchor.onclick = () => navigate(id);
-    return anchor;
-  }
-  return item;
-}
 
 filter.onsubmit = () => {
   const data = new FormData(filter);
   const query = data.get("query").toLowerCase();
-  deleteChildren(results);
-  for (const [id, n] of Object.entries(stringsLV.ITEMS)) {
+  c.deleteChildren(results);
+  let count = 0;
+  for (const [id, n] of Object.entries(c.stringsLV.ITEMS)) {
     if (
       n.CAPTION.toLowerCase().search(query) !== -1 &&
-      items.items[id] !== undefined
+      c.items.items[id] !== undefined
     ) {
-      const option = createElementWithAttrs("input", [
-        ["type", "radio"],
-        ["name", "item"],
-        ["value", id.toString()],
-        ["id", `c_${id}`],
+      const option = c.createElementWithAttrs("a", [
+        ["href", `#${id}`],
       ]);
-      results.appendChild(option);
-      const label = createElementWithAttrs("label", [["for", `c_${id}`]]);
-      label.textContent = `${n.CAPTION} (#${id})`;
-      results.appendChild(label);
-      results.appendChild(document.createElement("br"));
+      option.textContent = `${n.CAPTION} (#${id})`;
+      const item = document.createElement("li");
+      item.appendChild(option);
+      results.appendChild(item);
+      count++;
+    }
+    if (count > 30) {
+      break;
     }
   }
 };
 
 function load() {
-  const url_data = new URLSearchParams(location.search);
-  const id = url_data.get("item");
+  const id = location.hash.substring(1);
 
-  deleteChildren(itemInfo);
-
-  if (id === null) {
+  if (id === null || id === "") {
     return;
   }
-  if (items.items[id] === undefined) {
+
+  c.deleteChildren(itemInfo);
+
+  const item = c.items.items[id];
+
+  if (item === undefined) {
     itemInfo.textContent = "Šī lieta netika atrasta!";
     return;
   }
 
   itemInfo.appendChild(document.createElement("hr"));
-  const item = document.createElement("h2");
-  item.appendChild(makeItem(id, false));
-  itemInfo.appendChild(item);
+  const itemEl = document.createElement("h2");
+  itemEl.appendChild(c.makeItem(id, c.link.none));
+  itemInfo.appendChild(itemEl);
   itemInfo.appendChild(document.createElement("hr"));
 
-  if (stringsLV.ITEMS[id].NOTE !== "") {
+  if (c.stringsLV.ITEMS[id].NOTE !== "") {
     const note = document.createElement("blockquote");
-    note.textContent = stringsLV.ITEMS[id].NOTE;
+    note.textContent = c.stringsLV.ITEMS[id].NOTE;
     itemInfo.appendChild(note);
   }
 
-  itemInfo.appendChild(makeTitle("Vispārīga informācija"));
+  itemInfo.appendChild(c.makeTitle("Vispārīga informācija"));
   function makeRow(label, value, doBorder) {
     if (value !== undefined) {
       const row = document.createElement("tr");
       let labelElement, valueElement;
       if (doBorder) {
-        labelElement = createElementWithAttrs("td", [["class", "info"]]);
-        valueElement = createElementWithAttrs("td", [["class", "info"]]);
+        labelElement = c.createElementWithAttrs("td", [["class", "info"]]);
+        valueElement = c.createElementWithAttrs("td", [["class", "info"]]);
       } else {
         labelElement = document.createElement("td");
         valueElement = document.createElement("td");
@@ -145,87 +88,74 @@ function load() {
     return table;
   }
 
-  function makeValueItemTable(values) {
-    const table = document.createElement("table");
-    for (const entry of values.split(",")) {
-      const [itemId, value] = entry.split(":");
-      const row = document.createElement("tr");
-      const valueElement = document.createElement("td");
-      valueElement.textContent = value.toString();
-      row.appendChild(valueElement);
-      const itemElement = document.createElement("td");
-      itemElement.appendChild(makeItem(itemId, true));
-      row.appendChild(itemElement);
-      table.appendChild(row);
-    }
-    return table;
-  }
-
   const generalInfoRows = [];
-  if (items.items[id].level !== undefined) {
+
+  if (item.level !== undefined) {
     generalInfoRows.push(
       makeRow(
         "Atbloķēšanās līmenis",
-        document.createTextNode(items.items[id].level),
+        document.createTextNode(item.level),
         true,
       ),
     );
   }
 
-  const superPrice = items.items[id].superPrice;
-  if (superPrice !== "-1" && superPrice !== undefined) {
-    const t = document.createElement("table");
+  if (item.superPrice !== "-1" && item.superPrice !== undefined) {
     generalInfoRows.push(
-      makeRow("Rubīnu cena", makeValueItemTable(`0:${superPrice}`), true),
+      makeRow("Rubīnu cena", c.makeValueItemTable(`0:${item.superPrice}`, c.link.soft), true),
     );
   }
 
-  const price = items.items[id].price;
-  if (price !== "-1" && price !== undefined) {
+  if (item.price !== "-1" && item.price !== undefined) {
     generalInfoRows.push(
-      makeRow("Veikala cena", makeValueItemTable(items.items[id].price), true),
+      makeRow("Veikala cena", c.makeValueItemTable(item.price, c.link.soft), true),
     );
   }
 
-  const sellPrice = items.items[id].sellPrice;
-  if (sellPrice !== "-1" && sellPrice !== undefined) {
+  if (item.sellPrice !== "-1" && item.sellPrice !== undefined) {
     generalInfoRows.push(
       makeRow(
         "Pārdošanas cena",
-        makeValueItemTable(items.items[id].sellPrice),
+        c.makeValueItemTable(item.sellPrice, c.link.soft),
         true,
       ),
     );
   }
 
-  if (items.items[id].lifes !== undefined) {
+  if (item.lifes !== undefined) {
     generalInfoRows.push(
       makeRow(
         "Darbības reizes",
-        document.createTextNode(items.items[id].lifes),
+        document.createTextNode(item.lifes),
         true,
       ),
     );
   }
 
-  if (items.items[id].transform !== undefined) {
+  if (item.transform !== undefined) {
     generalInfoRows.push(
-      makeRow("Pārvēršas par", makeItem(items.items[id].transform, true), true),
+      makeRow("Pārvēršas par", c.makeItem(item.transform, c.link.soft), true),
     );
   }
 
   itemInfo.appendChild(makeTable(generalInfo, generalInfoRows));
 
-  if (items.items[id].reward !== undefined) {
-    itemInfo.appendChild(makeTitle("Lietas apbalvojumu varbūtības"));
-    itemInfo.appendChild(makeValueItemTable(items.items[id].reward));
+  if (item.quests !== undefined) {
+    itemInfo.appendChild(c.makeTitle("Nepieciešamie uzdevumi"));
+    itemInfo.appendChild(c.makeQuests(item.quests, c.link.hard));
   }
 
-  if (items.items[id].friendReward !== undefined) {
+
+  if (item.reward !== undefined) {
+    itemInfo.appendChild(c.makeTitle("Lietas apbalvojumu varbūtības"));
+    itemInfo.appendChild(c.makeValueItemTable(item.reward, c.link.soft));
+  }
+
+  if (item.friendReward !== undefined) {
     itemInfo.appendChild(
-      makeTitle("Lietas apbalvojumu varbūtības pie draugiem"),
+      c.makeTitle("Lietas apbalvojumu varbūtības pie draugiem"),
     );
-    itemInfo.appendChild(makeValueItemTable(items.items[id].friendReward));
+    itemInfo.appendChild(c.makeValueItemTable(item.friendReward, c.link.soft));
   }
 
   itemInfo.appendChild(document.createElement("hr"));
@@ -235,28 +165,11 @@ function load() {
   raw.appendChild(rawLabel);
   const code = document.createElement("code");
   const text = document.createElement("pre");
-  text.textContent = JSON.stringify(items.items[id], null, 2);
+  text.textContent = JSON.stringify(item, null, 2);
   code.appendChild(text);
   raw.appendChild(code);
   itemInfo.appendChild(raw);
 }
 
 load();
-
-function navigate(id) {
-  const url = new URL(location);
-  url.searchParams.set("item", id);
-  history.pushState({}, "", url);
-  load();
-}
-
-choice.onsubmit = () => {
-  const data = new FormData(choice);
-  const id = data.get("item");
-  if (id === null) {
-    return;
-  }
-  navigate(id);
-};
-
-window.onpopstate = load;
+window.onhashchange = load;

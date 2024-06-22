@@ -34,10 +34,6 @@ blockquote {
   font-style: italic;
 }
 
-li {
-  list-style-type: none;
-}
-
 img.logo {
   width: 25vw;
   max-width: 250px;
