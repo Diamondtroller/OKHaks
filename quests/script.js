@@ -1,6 +1,6 @@
 "use strict";
 
-import * as c from "./common.js";
+import * as c from "../common.js";
 const filter = document.getElementById("filter");
 const results = document.getElementById("results");
 const questInfo = document.getElementById("questInfo");
