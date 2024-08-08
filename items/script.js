@@ -1,6 +1,6 @@
 "use strict";
 
-import * as c from "./common.js";
+import * as c from "../common.js";
 const filter = document.getElementById("filter");
 const results = document.getElementById("results");
 const itemInfo = document.getElementById("itemInfo");
@@ -141,7 +141,7 @@ function load() {
   itemInfo.appendChild(makeTable(generalInfo, generalInfoRows));
 
   if (item.quests !== undefined) {
-    itemInfo.appendChild(c.makeTitle("Nepieciešamie uzdevumi"));
+    itemInfo.appendChild(c.makeTitle("Nepieciešamie mērķi"));
     itemInfo.appendChild(c.makeQuests(item.quests, c.link.hard));
   }
 
