@@ -799,7 +799,8 @@ export default
     }
   },
   "36": {
-    "tilesets": [0, 7]
+    "tilesets": [0, 12],
+    "background": "0xC64006"
   },
   "37": {
     "tilesets": [0]
