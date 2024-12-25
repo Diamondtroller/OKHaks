@@ -1,0 +1,140 @@
+@import '@fontsource/fira-mono';
+
+:root {
+  --inner-color: #f6ffad;
+  --outer-color: #f7ef79;
+  --sel-color: #f0d055;
+  --color-theme-1:var(--sel-color);
+  --font-body: Arial, sans-serif;
+  --font-weight: bold;
+  --font-mono: 'Fira Mono', monospace;
+  --color-text: #815412;
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+  background-color: var(--color-bg-1);
+  background-size: 100vw 100vh;
+  background-image: radial-gradient(50% 50% at 50% 50%,
+      var(--inner-color) 0%,
+      var(--outer-color) 100%);
+}
+
+::selection,
+::-moz-selection {
+  background: var(--sel-color);
+}
+
+th, td {
+  padding: 0.5vh 0.5vh;
+  font-weight: var(--font-weight);
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.5;
+}
+
+input,
+button {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #815412;
+  background-color: #F6FFAD;
+}
+
+fieldset {
+  border: 0;
+}
+
+
+blockquote {
+  font-weight: var(--font-weight);
+  font-style: italic;
+}
+
+a {
+  font-weight: var(--font-weight);
+  color: inherit;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+pre {
+  font-size: 16px;
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 3px;
+  box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+  padding: 0.5em;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: outset #815412;
+}
+
+.tcenter {
+  align-self: center;
+}
+.tleft {
+  align-self: start;
+}
+
+.text-column {
+  display: flex;
+  max-width: 48rem;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+input,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* @media (min-width: 720px) { */
+/*   h1 { */
+/*     font-size: 2.4rem; */
+/*   } */
+/* } */
+
+/* .visually-hidden { */
+/* 	border: 0; */
+/* 	clip: rect(0 0 0 0); */
+/* 	height: auto; */
+/* 	margin: 0; */
+/* 	overflow: hidden; */
+/* 	padding: 0; */
+/* 	position: absolute; */
+/* 	width: 1px; */
+/* 	white-space: nowrap; */
+/* } */
