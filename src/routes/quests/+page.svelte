@@ -18,9 +18,8 @@
 		if (Number.isNaN(id)) id = -1;
 		questsp.then(() => {
 			quest = $quests.quests[id];
-			nextQuests = [];
 			tasks = Object.entries($quests.tasks)
-				.filter((entry) => entry[0] == id_str)
+				.filter((entry) => entry[1].quest_id == id_str)
 				.map((entry) => entry[0]);
 			nextQuests = Object.entries($quests.quests)
 				.filter((entry) => entry[1].req_quests && entry[1].req_quests.split(',').includes(id_str))
