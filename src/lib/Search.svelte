@@ -22,7 +22,7 @@
 		} else {
 			for (const [id, name] of Object.entries(names)) {
 				const id_n = parseInt(id);
-				if (name[key].toLowerCase().search(query) !== -1 && objects[id_n]) {
+				if (name[key].toLowerCase().search(query.toLowerCase()) !== -1 && objects[id_n]) {
 					results.push(id_n);
 				}
 				if (results.length >= 20) {
