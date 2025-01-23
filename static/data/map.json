@@ -178,8 +178,7 @@
 		"background":"0x14217D"
 	},
 	"36":{
-		"tilesets":[13],
-		"background":"0x9BDFFF"
+		"tilesets":[0,6]
 	},
 	"37":{
 		"tilesets":[0]
