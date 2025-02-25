@@ -256,5 +256,9 @@
 	"54":{
 		"tilesets":[14],
 		"background":"0x14217D"
+	},
+	"60":{
+		"tilesets":[13],
+		"background":"0x9BDFFF"
 	}
 }
