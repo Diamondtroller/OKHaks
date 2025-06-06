@@ -33,28 +33,42 @@
 		
 	},
 	"4":{
-	
+		
+		
 	},
 	"5":{
 		"tilesets":[4]
 	},
 	"6":{
-		"tilesets":[0,11],
-		"background":"0x5DC5E1"
+		"tilesets":[0],
+		"background":"0xEDE084",
+		"spawn":{
+			"3975":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3976":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3977":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3978":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3979":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3980":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3981":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3982":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219},
+			"3983":{"start":1603357200,"end":1671624000 ,"random":"5:15","max":3,"quest":4219}}
 	},
 	"7":{
 		"tilesets":[0]
 	},
 	"8":{
-		"tilesets":[13],
-		"background":"0x9BDFFF"
+		"tilesets":[0,6],
+		"background":"0xFFFFFF"
 	},
 	"9":{
 		
 	},
 	"10":{
-		"tilesets":[12],
-		"background":"0xC64006"
+		"tilesets":[0],
+		"background":"0x8B008B",
+		"spawn":{
+			"3175":{"start":1603357200,"end":1671624000,"random":"7:12","max":12,"quest":4220},
+			"3177":{"start":1603357200,"end":1671624000,"random":"15:30","max":2,"quest":4223}}
 	},
 	"11":{
 		"tilesets":[4,7]
@@ -66,7 +80,10 @@
 		"tilesets":[4]
 	},
 	"14":{
-		"tilesets":[0]
+		"tilesets":[0],
+		"background":"0x1C232C",
+		"spawn":{
+			"2804":{"start":1650070801,"end":1685530800,"random":"17:33","max":6,"quest":4501}}
 	},
 	"15":{
 		"tilesets":[14],
@@ -257,11 +274,5 @@
 	"64":{
 		"background":"0x1C232C",
 		"tilesets":[9,10]
-	},
-	"65":{
-		"tilesets":[7]
-	},
-	"66":{
-		"tilesets":[0]
 	}
 }
