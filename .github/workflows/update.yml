@@ -1,0 +1,26 @@
+name: Update data files # https://svelte.dev/docs/kit/adapter-static#GitHub-Pages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update data
+        run: make update
+
+      - name: Set up user
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.emal "github-actions[bot]@users.noreply.github.com"
+      - name: Commit
+        run: |
+          git add static/data
+          git commit -m "data: update"
+          git push
