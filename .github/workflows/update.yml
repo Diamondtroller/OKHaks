@@ -19,8 +19,8 @@ jobs:
 
       - name: Set up user
         run: |
-          git config --local user.name "{user.login}"
-          git config --local user.email "{user.id}+{user.login}@users.noreply.github.com"
+          git config --local user.name "${{ user.login }}"
+          git config --local user.email "${{ user.id }}+${{ user.login }}@users.noreply.github.com"
       - name: Commit
         run: |
           git add static/data
