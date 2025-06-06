@@ -19,10 +19,10 @@ jobs:
 
       - name: Set up user
         run: |
-          git config --local user.name "${{ user.login }}"
-          git config --local user.email "${{ user.id }}+${{ user.login }}@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Commit
         run: |
           git add static/data
-          git commit -m "data: update"
+          git commit -m "data: update" || exit 0
           git push
