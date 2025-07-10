@@ -1,36 +1,37 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import logo from '$lib/images/OKHaks.png';
 </script>
 
 <header>
-  <div class="corner"><img src={logo} alt="OKHaks" ></div>
+	<a class="corner" href="https://github.com/Diamondtroller/OKHaks"
+		><img src={logo} alt="OKHaks" /></a
+	>
 	<nav>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-        <a href="/">Sākums</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/items/' ? 'page' : undefined}>
-				<a href="/items/">Lietas</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/quests/' ? 'page' : undefined}>
-				<a href="/quests/">Mērķi</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/quests/tasks/' ? 'page' : undefined}>
-				<a href="/quests/tasks/">Uzdevumi</a>
-			</li>
+			{#each [{ path: '/', label: 'sākums' }, { path: '/items/', label: 'lietas' }, { path: '/quests/', label: 'mērķi' }, { path: '/quests/tasks/', label: 'uzdevumi' }] as link}
+				<li aria-current={page.url.pathname === link.path ? 'page' : null}>
+					<a href={link.path}>{link.label}</a>
+				</li>
+			{/each}
 		</ul>
 	</nav>
 </header>
 
 <style>
 	header {
+		position: absolute;
+		width: calc(100% - 2*var(--bor-thick));
 		display: flex;
 		justify-content: space-around;
+		z-index: 1;
+    --background: #d9c969;
+    background-color: var(--background);
+    border: solid var(--bor-thick);
 	}
 
 	.corner {
-		height: 5rem;
+		height: 4rem;
 	}
 
 	.corner img {
@@ -41,19 +42,19 @@
 	nav {
 		display: flex;
 		justify-content: space-around;
-		--background: rgba(255, 255, 255, 0.7);
+    align-items: center;
 	}
 
 	ul {
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
+		height: 2.5rem;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
+    background-color: var(--inner-color);
 		background-size: contain;
 	}
 
@@ -63,15 +64,19 @@
 	}
 
 	li[aria-current='page']::before {
-		--size: 6px;
+		--size: 0.5rem;
 		content: '';
 		width: 0;
 		height: 0;
 		position: absolute;
-		top: 0;
+		top: calc(100% - 2 * var(--size));
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
+		border-bottom: var(--size) solid var(--color-theme-1);
+	}
+
+	li[aria-current='page'] {
+		border-bottom: solid var(--bor-thick);
 	}
 
 	nav a {
@@ -80,7 +85,6 @@
 		align-items: center;
 		padding: 0 0.5rem;
 		color: var(--color-text);
-		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
 	}

@@ -1,80 +1,86 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { tick } from 'svelte';
 
-	export let label: string;
-	export let names: Record<string, any>;
-	export let key: string;
-	export let objects: any;
-	export let element: any;
-	export let className = '';
+	interface Props {
+		names: Record<string, any>;
+		key: string;
+		objects: any;
+		Element: any;
+		data: any;
+	}
 
-	let query: string;
-	let open = true;
+	let { names, key, objects, Element, data }: Props = $props();
 
-	let results: number[];
-	function getMatches(query: string) {
-		const results = [];
+	let query = $state('');
+
+	const LIMIT = 20;
+	const results = $derived.by(() => {
+		let results: number[] = [];
+		if (query.length === 0) return results;
 		if (query[0] === '#') {
-			const id_n = parseInt(query.slice(1));
-			if (names[id_n] && objects[id_n]) {
-				results.push(id_n);
+			const id_s = query.slice(1);
+			if (id_s.endsWith('+')) {
+				const id_n = parseInt(id_s.slice(0, -1));
+				if (!isNaN(id_n))
+					for (let id_i = id_n; results.length < LIMIT; id_i++) {
+						if (names[id_i] || objects[id_i]) results.push(id_i);
+					}
+			} else {
+				const id_n = parseInt(id_s);
+				if (!isNaN(id_n)) {
+					results.push(id_n);
+				} else if (id_s === 'rand') {
+					const k = Object.keys(names);
+					const id = Math.ceil(k.length * Math.random());
+					results.push(id);
+				}
 			}
 		} else {
 			for (const [id, name] of Object.entries(names)) {
-				const id_n = parseInt(id);
-				if (name[key].toLowerCase().search(query.toLowerCase()) !== -1 && objects[id_n]) {
+				const id_n = Number(id);
+				if (
+					name[key].toLowerCase().includes(query.toLowerCase()) &&
+					!isNaN(id_n) &&
+					objects[id_n]
+				) {
 					results.push(id_n);
 				}
-				if (results.length >= 20) {
-					break;
-				}
+				if (results.length >= LIMIT) break;
 			}
 		}
-		if (results.length === 1) {
-			goto(`?id=${results.at(0)}`);
-      return [];
-		}
+		if (results.length === 1) goto(`?id=${results[0]}`, { keepFocus: true, noScroll: true });
 		return results;
-	}
-	function closeMatches(ev?: MouseEvent | KeyboardEvent) {
-		if (ev instanceof KeyboardEvent) {
-			if (ev.code !== 'Enter') {
-				return;
-			}
-		}
-		open = false;
-	}
+	});
 </script>
 
-<div class={className}>
-	<form
-		id="filter"
-		method="dialog"
-		on:submit={() => {
-			open = true;
-			results = getMatches(query);
-		}}
-	>
-		<fieldset>
-			<label for="query">{label}</label>
-			<input
+<div class="tcenter">
+	<form method="dialog">
+		<label
+			>Meklēt:<input
 				type="search"
 				name="query"
-				id="query"
-        placeholder="nos. daļa vai #id"
+				placeholder="nos. daļa / #id / #id+"
+				autocomplete="off"
 				bind:value={query}
-			/>
-			<button type="submit">Meklēt</button>
-		</fieldset>
+			/></label
+		>
+		<button type="reset">X</button>
+		<button
+			type="button"
+			onclick={async() => {
+				query = '#rand';
+        await tick();
+				query = '';
+			}}>Nejaušs</button
+		>
 	</form>
-	{#if results && results.length > 0}
-		<details bind:open>
-			<summary>Meklēšanas rezultāti ({results.length})</summary>
-			{#each results as id}
-				<div on:click={closeMatches} on:keydown={closeMatches} role="link" tabindex="0">
-					<svelte:component this={element} {id} small={true} />
-				</div>
-			{/each}
-		</details>
-	{/if}
 </div>
+
+{#if results && results.length > 1}
+	<div class="tcenter">
+		{#each results as id}
+			<Element {...data} {id} small fixed />
+		{/each}
+	</div>
+{/if}

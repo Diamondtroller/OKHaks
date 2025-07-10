@@ -1,15 +1,16 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte';
 	import '../app.css';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <div class="app">
-	<Header />
-
-	<main>
-		<slot />
-	</main>
-
+  <Header />
+	<main>{@render children?.()}</main>
 </div>
 
 <style>
@@ -24,10 +25,11 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
+		padding-top: 6rem;
 		width: 100%;
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-    align-items: start;
+		align-items: start;
 	}
 </style>

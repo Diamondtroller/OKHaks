@@ -1,198 +1,226 @@
 <script lang="ts">
-	import { items, itemsp } from '$lib/items';
-	import { stringsLV, stringsLVp } from '$lib/stringsLV';
-	export let id: number | string;
-	let imageElement: HTMLImageElement;
-	let divElement: HTMLDivElement;
-	let imageWidth: number, imageHeight: number;
-	let frames: any;
-	let options: any;
-	let loop = false;
+	import type { Items } from '$lib/items';
+	import type { StringsLV } from '$lib/stringsLV';
+	import { onDestroy } from 'svelte';
 
-	if (typeof id === 'string') {
-		id = parseInt(id);
-		if (Number.isNaN(id)) id = -1;
+	interface Props {
+		items: Items;
+		stringsLV: StringsLV;
+		id: number;
+		small?: boolean;
+		fixed?: boolean;
 	}
-	export let small = false;
 
-	let icon = 'quest_icons/misteryTask';
-	$: itemsp.then(() => {
-		icon = $items.items[id]?.itemClass
-			? 'map_objects/' + $items.items[id].itemClass
-			: $items.items[id]?.iconClass
-				? 'item_icons/' + $items.items[id].iconClass
-				: 'quest_icons/misteryTask';
-	});
-	let name = 'Ielādē...';
-	$: stringsLVp.then(() => {
-		name = $stringsLV.ITEMS[id]?.CAPTION ?? 'Nav atrasts';
+	let { items, stringsLV, id, small = false, fixed = false }: Props = $props();
+
+	const item = $derived(items.items[id]);
+
+	const icon = $derived(
+		item?.itemClass
+			? 'map_objects/' + item.itemClass
+			: item?.iconClass && item.iconClass !== ' '
+				? 'item_icons/' + item.iconClass
+				: 'quest_icons/misteryTask'
+	);
+	const name = $derived(stringsLV.ITEMS[id]?.CAPTION ?? 'Nav atrasts');
+
+	let divEl: HTMLDivElement | undefined;
+	let imgEl: HTMLImageElement | undefined;
+	let animation: Animation | undefined = $state();
+	let width: number | undefined = $state();
+	let height: number | undefined = $state();
+
+	async function startRand() {
+		if (!animation) return;
+
+		while (animation) {
+			try {
+				if (!animation) break;
+				await animation.finished;
+				if (!animation) break;
+				await new Promise((resolve) => setTimeout(resolve, (4 * Math.random() + 3) * 1000));
+				if (!animation) break;
+				animation.play();
+			} catch (error) {
+				break;
+			}
+		}
+	}
+
+	function animationCleanup(imgEl: HTMLImageElement | undefined) {
+		imgEl?.getAnimations({ subtree: true }).forEach((an) => {
+			an.cancel();
+		});
+		animation?.cancel();
+		animation = undefined;
+	}
+
+	onDestroy(() => {
+		animationCleanup(imgEl);
 	});
 
-	function loadImage(id: number) {
-		function animationCleanup() {
-			loop = false;
-			imageElement.getAnimations().forEach((an) => {
-				an.cancel();
-			});
+	function redraw(clientWidth: number) {
+		if (!imgEl || !divEl || width === undefined || height === undefined) {
+			return;
+		}
+		const ratio = clientWidth / width;
+		divEl.style.height = `${height * ratio}px`;
+		imgEl.style.width = `${imgEl.naturalWidth * ratio}px`;
+		imgEl.style.height = `${imgEl.naturalHeight * ratio}px`;
+	}
+
+	function onload() {
+		if (!imgEl || !divEl) {
+			return;
 		}
 
-		if (!$items.items[id]) return animationCleanup();
-		let spriteInfo = {} as {
+		type SpriteConfig = {
 			width?: number;
 			height?: number;
+			frames?: number;
+			frameStack?: number[][];
+			flash: boolean;
+			fps?: number;
 			type?: string;
 			animated?: boolean;
-			frames: number;
-			framePositions?: [number, number][];
-			fps: number;
-			flash: boolean;
+			imageWidth: number;
+			imageHeight: number;
+		};
+		let sConfig: SpriteConfig = {
+			flash: item?.ba !== undefined,
+			imageWidth: imgEl.naturalWidth,
+			imageHeight: imgEl.naturalHeight
 		};
 
-		if ($items.items[id].animation) {
-			spriteInfo = Object.fromEntries(
-				$items.items[id].animation!.split(',').map((r) => r.split(':'))
-			);
-			spriteInfo.animated = true;
+		if (item?.animation && !sConfig.flash) {
+			sConfig = {
+				...sConfig,
+				...Object.fromEntries(item.animation.split(',').map((r) => r.split(':')))
+			};
+
+			for (const key of Object.keys(sConfig) as Array<keyof SpriteConfig>) {
+				if (key !== 'type') sConfig[key] = Number(sConfig[key]) as never;
+			}
+			sConfig.animated = true;
 		}
-		spriteInfo.flash = $items.items[id].ba ? $items.items[id].ba === '1' : false;
-		if ($items.items[id].b) {
-			const b = $items.items[id].b.split(',').map((x) => parseInt(x)); // [0] [1] are floats but we don't care about them
+
+		if (item?.b) {
+			const b = item.b.split(',').map(Number);
 			if (b.length > 2) {
-				spriteInfo.width = b[2];
-				spriteInfo.height = b[3];
-				spriteInfo.frames = b[4];
-				spriteInfo.animated = b[5] === 1;
+				sConfig = {
+					...sConfig,
+					width: b[2],
+					height: b[3],
+					frames: b[4],
+					animated: b[5] === 1
+				};
+			}
+		}
+		if (item?.bfs) {
+			const bfs = item.bfs.split(';');
+			if (bfs.length > 1) {
+				sConfig.frameStack = bfs
+					.map((r) => r.split(',').map(Number))
+					.map((r) =>
+						r.slice(2).map((q) => [r[0] / sConfig.imageWidth, r[1] / sConfig.imageHeight, q])
+					)
+					.flat()
+					.sort((a, b) => a[2] - b[2])
+					.map((r) => r.slice(0, 2));
+				sConfig.frames = sConfig.frameStack.length;
 			}
 		}
 
-		//Animate everything for now, because it's pretty
-		if (!spriteInfo.animated && !spriteInfo.flash && spriteInfo.frames > 1) {
-			spriteInfo.animated = true;
-			spriteInfo.fps = 0.5;
-		}
+		sConfig.width ??= sConfig.imageWidth;
+		sConfig.height ??= sConfig.imageHeight;
 
-		spriteInfo.framePositions = new Array(spriteInfo.frames);
-		if ($items.items[id].bfs) {
-			for (const e of $items.items[id].bfs.split(';').map((r) => r.split(','))) {
-				for (const index of e.slice(2)) {
-					spriteInfo.framePositions[parseFloat(index)] = [
-						parseFloat(e[0]) / imageWidth,
-						parseFloat(e[1]) / imageHeight
-					];
+		const rows = sConfig.imageHeight / sConfig.height;
+		const cols = sConfig.imageWidth / sConfig.width;
+
+		if (sConfig.frames && sConfig.frames > 1) {
+			if (!sConfig.frameStack) {
+				sConfig.frameStack = new Array(sConfig.frames);
+				stop: for (let row = 0; row < rows; row++) {
+					for (let col = 0; col < cols; col++) {
+						const idx = col + cols * row;
+						sConfig.frameStack[idx] = [col / cols, row / rows];
+						if (idx >= sConfig.frames! - 1) break stop;
+					}
 				}
 			}
-		} else {
-			const rows = imageHeight / spriteInfo.height!;
-			const cols = imageWidth / spriteInfo.width!;
-			stop: for (let row = 0; row < rows; row++) {
-				for (let col = 0; col < cols; col++) {
-					const idx = col + cols * row;
-					spriteInfo.framePositions[idx] = [col / cols, row / rows];
-					if (idx >= spriteInfo.frames - 1) break stop;
-				}
+			if (!sConfig.animated) {
+				sConfig.animated = true;
+				sConfig.fps = 0.5;
 			}
 		}
-		spriteInfo.fps ??= 24;
-		if (spriteInfo.flash) {
-			// not loading zips for now, because of CORS errors
-			spriteInfo.animated = false;
-			delete spriteInfo.height;
-			delete spriteInfo.width;
-		}
-		spriteInfo.animated &&= !spriteInfo.flash; // Above was getting spriteInfo
 
-		// Now apply spriteInfo to the element
-		imageElement.width = imageWidth;
-		imageElement.height = imageHeight;
-
-		divElement.style.width = `${spriteInfo.width ?? imageWidth}px`;
-		divElement.style.height = `${spriteInfo.height ?? imageHeight}px`;
+		width = sConfig.width;
+		height = sConfig.height;
 
 		if (small) {
-			imageElement.style.height = '2rem';
-			const clientHeight = imageElement.clientHeight;
-			const aspectRatio = (spriteInfo.width ?? imageWidth) / (spriteInfo.height ?? imageHeight);
-			imageElement.style.height = '';
-			imageElement.style.objectFit = 'contain';
-
-			divElement.style.width = `${clientHeight * aspectRatio}px`;
-			divElement.style.height = `${clientHeight}px`;
-
-			imageElement.style.height = `${clientHeight * (imageHeight / (spriteInfo.height ?? imageHeight))}px`;
-			imageElement.style.width = `${clientHeight * aspectRatio * (imageWidth / (spriteInfo.width ?? imageWidth))}px`;
-		}
-
-		if (spriteInfo.animated) {
-			options = {
-				duration: (spriteInfo.frames / spriteInfo.fps) * 1000,
-				iterations: spriteInfo.type === 'rand' ? 1 : Infinity,
-				easing: `steps(${spriteInfo.frames}, jump-none)`
-			};
-			frames = [];
-			for (const frame of spriteInfo.framePositions) {
-				frames.push({
-					transform: `translate(-${frame[0] * 100}%,-${frame[1] * 100}%)`
-				});
-			}
-			if (spriteInfo.type === 'rand') {
-				startAnimation();
-			} else {
-				imageElement.animate(frames, options);
-			}
+			divEl.style.height = '1.5rem';
+			const ratio = divEl.clientHeight / sConfig.height;
+			divEl.style.width = `${sConfig.width * ratio}px`;
 		} else {
-			animationCleanup(); // cleanup animations from previous elements
+			divEl.style.width = `${sConfig.width}px`;
+			divEl.style.height = `${sConfig.height}px`;
 		}
-		async function startAnimation() {
-			loop = true;
-			while (loop) {
-				const a = imageElement.animate(frames, options);
-				a.oncancel = () => {
-					loop = false;
-				};
-				await a.finished;
-				await new Promise((res) => setTimeout(res, (Math.random() * 4 + 3) * 1000));
+
+		sConfig.frames ??= 1;
+		sConfig.fps ??= 24;
+
+		sConfig.animated &&= !sConfig.flash;
+
+		animationCleanup(imgEl);
+		if (sConfig.animated && sConfig.frameStack) {
+			sConfig.type ??= 'loop';
+
+			let options = {
+				duration: (sConfig.frames / sConfig.fps) * 1000,
+				iterations: sConfig.type === 'rand' ? 1 : Infinity,
+				easing: `steps(${sConfig.frames}, jump-none)`
+			};
+			const frames = sConfig.frameStack.map((f) => ({
+				transform: `translate(-${f[0] * 100}%,-${f[1] * 100}%)`
+			}));
+
+			animation = imgEl.animate(frames, options);
+			if (sConfig.type === 'rand') {
+				startRand();
 			}
 		}
 	}
 </script>
 
-<a href="/items/?id={id}" data-sveltekit-preload-data="false">
-	<table>
-		<tr>
-			<td>
-				{#await itemsp}
-					<img src="https://okeanija.draugiem.lv/html5/i/{icon}.png?v=4" alt={name} />
-				{:then}
-					<div bind:this={divElement}>
-						<img
-							src="https://okeanija.draugiem.lv/html5/i/{icon}.png?v=4"
-							alt={name}
-							bind:naturalWidth={imageWidth}
-							bind:naturalHeight={imageHeight}
-							bind:this={imageElement}
-							on:load={() => loadImage(id)}
-						/>
-					</div>
-				{/await}
-			</td>
-			<td>{name} (#{id})</td>
-		</tr>
-	</table>
-</a>
+<a href="/items/?id={id}" data-sveltekit-noscroll class={{ fixed }}>
+	<div bind:this={divEl} bind:clientWidth={null, redraw}>
+		<img
+			src="https://okeanija.draugiem.lv/html5/i/{icon}.png?v=4"
+			alt={name}
+			bind:this={imgEl}
+			{onload}
+		/>
+	</div>
+	{name} (#{id})</a
+>
 
 <style>
 	div {
 		overflow: clip;
-	}
-	table {
-		border: unset;
+		max-width: 50%;
 	}
 	img {
-		overflow: clip;
-		object-fit: none;
+		object-fit: cover;
 		object-position: left top;
+		flex-basis: content;
 	}
-	td {
-		border: unset;
+	a {
+		display: flex;
+		align-items: center;
+		padding: 0.1em;
+		gap: 0.1em;
+		&.fixed {
+			width: 18em;
+		}
 	}
 </style>

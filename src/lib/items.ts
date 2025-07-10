@@ -1,48 +1,53 @@
-import { getData } from "$lib/data";
-import { writable } from "svelte/store";
-
 export type Item = {
-  type?: string;
-  price?: string;
-  superPrice?: string;
-  sellPrice?: string;
-  subtype?: string;
-  iconClass?: string;
-  store?: string;
-  social?: string;
   allowedMaps?: string;
-  itemClass?: string;
-  dimension?: string;
-  size?: string;
-  layer?: string;
-  walkable?: string;
-  movable?: string;
-  sellProtection?: string;
-  lifes?: string;
-  b?: string;
-  timer?: string;
-  level?: string;
-  reward?: string;
-  friendReward?: string;
-  quests?: string;
-  v?: string;
-  transform?: string;
-  ba?: string;
-  storeType?: string;
-  buildItems?: string;
+  amb?: string;
+  /**
+   * Field ontains:
+   * - width, height of the frame,
+   * - number of frames
+   * - animation type:
+   *   - loop: loop without pauses
+   *   - rand: loop with random pauses in-between
+   */
   animation?: string;
+  b?: string;
+  /** Designates whether binary animation is used (preprocessed flash)*/
+  ba?: string;
   bfs?: string;
-  travel?: string;
-  walkingMultiplier?: string;
-  discount?: string;
-  showItems?: string;
   bonusType?: string;
+  buildItems?: string;
+  dimension?: string;
+  discount?: string;
+  friendReward?: string;
+  iconClass?: string;
+  itemClass?: string;
+  layer?: string;
+  level?: string;
+  lifes?: string;
+  movable?: string;
+  petClass?: string;
+  price?: string;
+  quests?: string;
+  reward?: string;
+  sellPrice?: string;
+  sellProtection?: string;
+  showItems?: string;
+  size?: string;
+  social?: string;
+  store?: string;
+  storeType?: string;
+  subtype: string;
+  superPrice?: string;
+  timer?: string;
+  transform?: string;
+  travel?: string;
+  type: string;
+  v?: string;
   values?: string;
-};
+  walkable?: string;
+  walkingMultiplier?: string;
+}
 
-type Items = {
+export type Items = {
   items: Record<number, Item>;
 };
-
-export let items = writable(undefined as Items | undefined);
-export const itemsp = getData("/data/items.json").then((v : Items) => items.set(v));

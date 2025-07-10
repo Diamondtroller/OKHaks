@@ -1,29 +1,27 @@
-import { getData } from "$lib/data";
-import { writable } from "svelte/store";
-
 export type Quest = {
-  id?: string;
-  type?: string;
+  cancelable: string;
+  id: string;
   image?: string;
+  npc_texts?: string;
   req_quests?: string;
   reward?: string;
+  social: string;
   timer?: string;
-  cancelable?: string;
-  social?: string;
-  npc_texts?: string;
+  type: string;
 };
+
 export type Task = {
-  id?: string;
-  quest_id?: string;
-  icon?: string;
   action?: string;
-  target?: string;
-  rule?: string;
   ammount_max?: string;
-  reward?: string;
-  price?: string;
+  icon?: string;
+  id: string;
   island?: string;
   npc_texts?: string;
+  price?: string;
+  quest_id: string;
+  reward?: string;
+  rule: string;
+  target?: string;
 };
 
 export const type = {
@@ -72,10 +70,7 @@ export const actions = {
   "undefined": ["Nezināms", type.none],
 } as Record<string, any>;
 
-type Quests = {
+export type Quests = {
   quests: Record<number, Quest>;
   tasks: Record<number, Task>;
 };
-
-export let quests = writable(undefined as Quests | undefined);
-export const questsp = getData("/data/quests.json").then((v : Quests) => quests.set(v));

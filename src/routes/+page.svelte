@@ -20,6 +20,6 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		flex: 0.6;
+		flex: 0.8;
 	}
 </style>
