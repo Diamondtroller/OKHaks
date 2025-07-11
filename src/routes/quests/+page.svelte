@@ -25,11 +25,11 @@
 </svelte:head>
 
 <h1 class="tcenter">Mērķu informācijas meklētājs</h1>
-{#await Promise.all([data.quests, data.stringsLV])}
+{#await Promise.all([data.quests, data.strings])}
 	<Loading />
 {:then fetchedData}
 	{@const quests = fetchedData[0]}
-	{@const stringsLV = fetchedData[1]}
+	{@const strings = fetchedData[1]}
 	{@const quest = quests.quests[id]}
 	{@const tasks = Object.entries(quests.tasks)
 		.filter((entry) => entry[1].quest_id == id_str)
@@ -38,11 +38,11 @@
 		.filter((entry) => entry[1].req_quests && entry[1].req_quests.split(',').includes(id_str!))
 		.map((entry) => entry[0])}
 	<Search
-		names={stringsLV.QUESTS}
+		names={strings.QUESTS}
 		key="NAME"
 		objects={quests.quests}
 		Element={Quest}
-		data={{ quests: quests, stringsLV: stringsLV }}
+		data={{ quests: quests, strings: strings }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">
@@ -50,17 +50,17 @@
 			uzdevumu)!
 		</p>
 	{:else}
-		<h2><Quest {quests} {stringsLV} {id} /></h2>
+		<h2><Quest {quests} {strings} {id} /></h2>
 		{#if quest}
-			{#if stringsLV.QUESTS[id]?.DESCRIPTION}
-				<blockquote>{stringsLV.QUESTS[id].DESCRIPTION}</blockquote>
+			{#if strings.QUESTS[id]?.DESCRIPTION}
+				<blockquote>{strings.QUESTS[id].DESCRIPTION}</blockquote>
 			{/if}
 			{#if tasks.length !== 0}
 				<section>
 					<h3>Mērķa uzdevumi</h3>
 					<div class="tcenter">
 						{#each tasks as task_id}
-							<Task {quests} {stringsLV} id={parseInt(task_id)} />
+							<Task {quests} {strings} id={parseInt(task_id)} />
 						{/each}
 					</div>
 				</section>
@@ -78,7 +78,7 @@
 					{:then items}
 						<Table
 							ColumnType={Item}
-							data={{ items: items, stringsLV: stringsLV }}
+							data={{ items: items, strings: strings }}
 							content={quest.reward}
 							className="tcenter"
 						/>
@@ -91,7 +91,7 @@
 					<p>Šie mērķi ir jāsasniedz lai varētu pildīt šo mērķi.</p>
 					<div class="tcenter">
 						{#each quest.req_quests.split(',') as quest_id}
-							<Quest {quests} {stringsLV} id={parseInt(quest_id)} />
+							<Quest {quests} {strings} id={parseInt(quest_id)} />
 						{/each}
 					</div>
 				</section>
@@ -102,7 +102,7 @@
 					<p>Šie mērķi sekos pēc šī mērķa sasniegšanas.</p>
 					<div class="tcenter">
 						{#each nextQuests as quest_id}
-							<Quest {quests} {stringsLV} id={parseInt(quest_id)} />
+							<Quest {quests} {strings} id={parseInt(quest_id)} />
 						{/each}
 					</div>
 				</section>

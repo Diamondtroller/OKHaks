@@ -1,5 +1,3 @@
-<!-- @migration-task Error while migrating Svelte code: `<tr>` cannot be a child of `<table>`. `<table>` only allows these children: `<caption>`, `<colgroup>`, `<tbody>`, `<thead>`, `<tfoot>`, `<style>`, `<script>`, `<template>`. The browser will 'repair' the HTML (by moving, removing, or inserting elements) which breaks Svelte's assumptions about the structure of your components.
-https://svelte.dev/e/node_invalid_placement -->
 <script lang="ts">
 	import Loading from '$lib/Loading.svelte';
 	import Table from '$lib/Table.svelte';
@@ -19,7 +17,7 @@ https://svelte.dev/e/node_invalid_placement -->
 		const id_test = parseInt(id_str!);
 		return isNaN(id_test) ? -1 : id_test;
 	});
-  const title_str = $derived(id === -1 ? '' : ` #${id_str}`);
+	const title_str = $derived(id === -1 ? '' : ` #${id_str}`);
 </script>
 
 <svelte:head>
@@ -28,29 +26,29 @@ https://svelte.dev/e/node_invalid_placement -->
 </svelte:head>
 
 <h1 class="tcenter">Uzdevumu informācijas meklētājs</h1>
-{#await Promise.all([data.quests, data.stringsLV, data.items])}
+{#await Promise.all([data.quests, data.strings, data.items])}
 	<Loading />
 {:then fetchedData}
 	{@const quests = fetchedData[0]}
-	{@const stringsLV = fetchedData[1]}
+	{@const strings = fetchedData[1]}
 	{@const items = fetchedData[2]}
 	{@const task = quests.tasks[id]}
 	<Search
-		names={stringsLV.TASKS}
+		names={strings.TASKS}
 		key="NAME"
 		objects={quests.tasks}
 		Element={Task}
-		data={{ quests: quests, stringsLV: stringsLV }}
+		data={{ quests: quests, strings: strings }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">
 			Ieraksti kāda uzdevuma nosaukumu vai nosaukuma daļu un atrodi informāciju par šo uzdevumu!
 		</p>
 	{:else}
-		<h2><Task {quests} {stringsLV} {id} /></h2>
+		<h2><Task {quests} {strings} {id} /></h2>
 		{#if task}
-			{#if stringsLV.TASKS[id]?.DESCRIPTION}
-				<blockquote>{stringsLV.TASKS[id].DESCRIPTION}</blockquote>
+			{#if strings.TASKS[id]?.DESCRIPTION}
+				<blockquote>{strings.TASKS[id].DESCRIPTION}</blockquote>
 			{/if}
 			{#if task?.action}
 				<section>
@@ -78,13 +76,13 @@ https://svelte.dev/e/node_invalid_placement -->
 									<td>
 										{#each task.target.split(',') as e_id}
 											{#if actions[task.action][1] === type.item}
-												<Item {items} {stringsLV} id={parseInt(e_id)} small />
+												<Item {items} {strings} id={parseInt(e_id)} small />
 											{:else if actions[task.action][1] === type.quest}
-												<Quest {quests} {stringsLV} id={parseInt(e_id)} small />
+												<Quest {quests} {strings} id={parseInt(e_id)} small />
 											{:else if actions[task.action][1] === type.task}
-												<Task {quests} {stringsLV} id={parseInt(e_id)} small />
+												<Task {quests} {strings} id={parseInt(e_id)} small />
 											{:else if actions[task.action][1] === type.island}
-												<div>{stringsLV.MAP_NAMES[parseInt(task.target)]}</div>
+												<div>{strings.MAP_NAMES[parseInt(task.target)]}</div>
 											{/if}
 										{/each}
 									</td>
@@ -98,7 +96,7 @@ https://svelte.dev/e/node_invalid_placement -->
 				<section>
 					<h3>Virsmērķis</h3>
 					<p>Uzdevums, ko šobrīd skati atbilst zemāk redzamajam uzdevumam.</p>
-					<div class="tcenter"><Quest {quests} {stringsLV} id={parseInt(task.quest_id)} /></div>
+					<div class="tcenter"><Quest {quests} {strings} id={parseInt(task.quest_id)} /></div>
 				</section>
 			{/if}
 			{#if task.reward}
@@ -111,7 +109,7 @@ https://svelte.dev/e/node_invalid_placement -->
 					</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, stringsLV: stringsLV }}
+						data={{ items: items, strings: strings }}
 						content={task.reward}
 						className="tcenter"
 					/>

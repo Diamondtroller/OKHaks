@@ -1,17 +1,17 @@
 <script lang="ts">
 	import type { Items } from '$lib/items';
-	import type { StringsLV } from '$lib/stringsLV';
+	import type { Strings } from '$lib/strings';
 	import { onDestroy } from 'svelte';
 
 	interface Props {
 		items: Items;
-		stringsLV: StringsLV;
+		strings: Strings;
 		id: number;
 		small?: boolean;
 		fixed?: boolean;
 	}
 
-	let { items, stringsLV, id, small = false, fixed = false }: Props = $props();
+	let { items, strings, id, small = false, fixed = false }: Props = $props();
 
 	const item = $derived(items.items[id]);
 
@@ -22,7 +22,7 @@
 				? 'item_icons/' + item.iconClass
 				: 'quest_icons/misteryTask'
 	);
-	const name = $derived(stringsLV.ITEMS[id]?.CAPTION ?? 'Nav atrasts');
+	const name = $derived(strings.ITEMS[id]?.CAPTION ?? 'Nav atrasts');
 
 	let divEl: HTMLDivElement | undefined;
 	let imgEl: HTMLImageElement | undefined;
@@ -41,7 +41,7 @@
 				await new Promise((resolve) => setTimeout(resolve, (4 * Math.random() + 3) * 1000));
 				if (!animation) break;
 				animation.play();
-			} catch (error) {
+			} catch {
 				break;
 			}
 		}

@@ -15,7 +15,7 @@
 		const id_test = parseInt(id_str);
 		return isNaN(id_test) ? -1 : id_test;
 	});
-  const title_str = $derived(id === -1 ? '' : ` #${id_str}`);
+	const title_str = $derived(id === -1 ? '' : ` #${id_str}`);
 </script>
 
 <svelte:head>
@@ -24,28 +24,28 @@
 </svelte:head>
 
 <h1 class="tcenter">Lietu informācijas meklētājs</h1>
-{#await Promise.all([data.items, data.stringsLV])}
+{#await Promise.all([data.items, data.strings])}
 	<Loading />
 {:then fetchedData}
 	{@const items = fetchedData[0]}
-	{@const stringsLV = fetchedData[1]}
+	{@const strings = fetchedData[1]}
 	{@const item = items.items[id]}
 	<Search
-		names={stringsLV.ITEMS}
+		names={strings.ITEMS}
 		key="CAPTION"
 		objects={items.items}
 		Element={Item}
-		data={{ items: items, stringsLV: stringsLV }}
+		data={{ items: items, strings: strings }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">
 			Ieraksti kādas lietas nosaukumu vai nosaukuma daļu un atrodi informāciju par šo lietu!
 		</p>
 	{:else}
-		<h2 style="max-width: 100%;"><Item {items} {stringsLV} {id} /></h2>
+		<h2 style="max-width: 100%;"><Item {items} {strings} {id} /></h2>
 		{#if item}
-			{#if stringsLV.ITEMS[id]?.NOTE}
-				<blockquote>{stringsLV.ITEMS[id].NOTE}</blockquote>
+			{#if strings.ITEMS[id]?.NOTE}
+				<blockquote>{strings.ITEMS[id].NOTE}</blockquote>
 			{/if}
 			<section>
 				<h3>Vispārīga informācija</h3>
@@ -82,7 +82,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items: items, stringsLV: stringsLV }}
+										data={{ items: items, strings: strings }}
 										content={`0:${item.superPrice}`}
 										noborder
 									/></td
@@ -95,7 +95,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items: items, stringsLV: stringsLV }}
+										data={{ items: items, strings: strings }}
 										content={item.price}
 										noborder
 									/></td
@@ -108,7 +108,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items: items, stringsLV: stringsLV }}
+										data={{ items: items, strings: strings }}
 										content={item.sellPrice}
 										noborder
 									/></td
@@ -118,7 +118,7 @@
 						{#if item.transform}
 							<tr>
 								<th>Pārvēršas par:</th>
-								<td><Item {items} {stringsLV} id={parseInt(item.transform)} small /></td>
+								<td><Item {items} {strings} id={parseInt(item.transform)} small /></td>
 							</tr>
 						{/if}
 					</tbody>
@@ -132,7 +132,7 @@
 						<Loading />
 					{:then quests}
 						{#each item.quests.split(',') as quest_id}
-							<div class="tcenter"><Quest {quests} {stringsLV} id={parseInt(quest_id)} /></div>
+							<div class="tcenter"><Quest {quests} {strings} id={parseInt(quest_id)} /></div>
 						{/each}
 					{/await}
 				</section>
@@ -147,7 +147,7 @@
 					</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, stringsLV: stringsLV }}
+						data={{ items: items, strings: strings }}
 						content={item.reward}
 						color
 						className="tcenter"
@@ -160,7 +160,7 @@
 					<p>Šīs lietas vajadzīgas, lai pabeigtu būvēt lauciņu.</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, stringsLV: stringsLV }}
+						data={{ items: items, strings: strings }}
 						content={item.buildItems}
 						className="tcenter"
 					/>
@@ -175,7 +175,7 @@
 					</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, stringsLV: stringsLV }}
+						data={{ items: items, strings: strings }}
 						content={item.friendReward}
 						color
 						className="tcenter"

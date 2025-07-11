@@ -1,1 +1,1 @@
-*.json diff=json
+static/data/*.json diff=json

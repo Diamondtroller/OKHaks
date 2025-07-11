@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import logo from '$lib/images/OKHaks.png';
 </script>
@@ -21,13 +21,13 @@
 <style>
 	header {
 		position: absolute;
-		width: calc(100% - 2*var(--bor-thick));
+		width: calc(100% - 2 * var(--bor-thick));
 		display: flex;
 		justify-content: space-around;
 		z-index: 1;
-    --background: #d9c969;
-    background-color: var(--background);
-    border: solid var(--bor-thick);
+		--background: #d9c969;
+		background-color: var(--background);
+		border: solid var(--bor-thick);
 	}
 
 	.corner {
@@ -42,7 +42,7 @@
 	nav {
 		display: flex;
 		justify-content: space-around;
-    align-items: center;
+		align-items: center;
 	}
 
 	ul {
@@ -54,7 +54,7 @@
 		justify-content: space-between;
 		align-items: center;
 		list-style: none;
-    background-color: var(--inner-color);
+		background-color: var(--inner-color);
 		background-size: contain;
 	}
 

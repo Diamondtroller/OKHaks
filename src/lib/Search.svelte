@@ -68,9 +68,9 @@
 		<button type="reset">X</button>
 		<button
 			type="button"
-			onclick={async() => {
+			onclick={async () => {
 				query = '#rand';
-        await tick();
+				await tick();
 				query = '';
 			}}>Nejaušs</button
 		>

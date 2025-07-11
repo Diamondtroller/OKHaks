@@ -8,9 +8,7 @@
 
 <div>
 	<h1>Esi sveicināts OKHaka lapā</h1>
-	<h2>
-	  Šajā lapā varēsi atrast rīkus draugiem.lv spēles "Okeānija" atvieglošanai.
-	</h2>
+	<h2>Šajā lapā varēsi atrast rīkus draugiem.lv spēles "Okeānija" atvieglošanai.</h2>
 </div>
 
 <style>

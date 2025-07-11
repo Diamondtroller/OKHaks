@@ -1,25 +1,23 @@
-<!-- @migration-task Error while migrating Svelte code: `<tr>` cannot be a child of `<table>`. `<table>` only allows these children: `<caption>`, `<colgroup>`, `<tbody>`, `<thead>`, `<tfoot>`, `<style>`, `<script>`, `<template>`. The browser will 'repair' the HTML (by moving, removing, or inserting elements) which breaks Svelte's assumptions about the structure of your components.
-https://svelte.dev/e/node_invalid_placement -->
 <script lang="ts">
 	import type { Quests } from '$lib/quests';
-	import type { StringsLV } from '$lib/stringsLV';
+	import type { Strings } from '$lib/strings';
 
 	interface Props {
 		quests: Quests;
-		stringsLV: StringsLV;
+		strings: Strings;
 		id: number;
 		small?: boolean;
 		fixed?: boolean;
 	}
 
-	let { quests, stringsLV, id, small = false, fixed = false }: Props = $props();
+	let { quests, strings, id, small = false, fixed = false }: Props = $props();
 
 	const icon = $derived.by(() => {
 		const icon = quests.tasks[id]?.icon;
 		if ([undefined, '', ' '].includes(icon)) return 'misteryTask';
 		return icon;
 	});
-	const name = $derived(stringsLV.TASKS[id]?.NAME ?? 'Nav atrasts');
+	const name = $derived(strings.TASKS[id]?.NAME ?? 'Nav atrasts');
 </script>
 
 <a href="/quests/tasks/?id={id}" data-sveltekit-noscroll class={{ fixed }}
@@ -46,7 +44,7 @@ https://svelte.dev/e/node_invalid_placement -->
 		padding: 0.1rem;
 		gap: 0.1rem;
 		&.fixed {
-      width: 18em;
+			width: 18em;
 		}
 	}
 </style>

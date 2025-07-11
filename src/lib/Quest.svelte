@@ -1,23 +1,23 @@
 <script lang="ts">
 	import type { Quests } from '$lib/quests';
-	import type { StringsLV } from '$lib/stringsLV';
+	import type { Strings } from '$lib/strings';
 
 	interface Props {
 		quests: Quests;
-		stringsLV: StringsLV;
+		strings: Strings;
 		id: number;
 		small?: boolean;
 		fixed?: boolean;
 	}
 
-	let { quests, stringsLV, id, small = false, fixed = false }: Props = $props();
+	let { quests, strings, id, small = false, fixed = false }: Props = $props();
 
 	const icon = $derived.by(() => {
 		const icon = quests.quests[id]?.image;
 		if ([undefined, '', ' '].includes(icon)) return 'misteryTask';
 		return icon;
 	});
-	const name = $derived(stringsLV.QUESTS[id]?.NAME ?? 'Nav atrasts');
+	const name = $derived(strings.QUESTS[id]?.NAME ?? 'Nav atrasts');
 </script>
 
 <a href="/quests/?id={id}" data-sveltekit-noscroll class={{ fixed }}
@@ -44,7 +44,7 @@
 		padding: 0.1rem;
 		gap: 0.1rem;
 		&.fixed {
-      width: 18em;
+			width: 18em;
 		}
 	}
 </style>
