@@ -17,15 +17,21 @@
 	const LIMIT = 20;
 	const results = $derived.by(() => {
 		let results: number[] = [];
+		const lastNameId = Number(Object.keys(names).at(-1));
+		const lastObjectId = Number(Object.keys(objects).at(-1));
 		if (query.length === 0) return results;
 		if (query[0] === '#') {
 			const id_s = query.slice(1);
 			if (id_s.endsWith('+')) {
-				const id_n = parseInt(id_s.slice(0, -1));
-				if (!isNaN(id_n))
+				let id_n = parseInt(id_s.slice(0, -1));
+				if (!isNaN(id_n)) {
+					if (id_n < 0) id_n = 0;
+
 					for (let id_i = id_n; results.length < LIMIT; id_i++) {
 						if (names[id_i] || objects[id_i]) results.push(id_i);
+						if (id_i > lastNameId && id_i > lastObjectId) break;
 					}
+				}
 			} else {
 				const id_n = parseInt(id_s);
 				if (!isNaN(id_n)) {
