@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { page } from '$app/state';
+	console.log(page.params.lang);
+</script>
 <svelte:head>
 	<title>Sākums</title>
 	<meta
