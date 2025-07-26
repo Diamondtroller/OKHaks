@@ -269,5 +269,10 @@
 	},
 	"68":{
 		"tilesets":[0]
+	},
+	"70":{
+		"tilesets":[0],
+		"background":"0xEDE084"
+
 	}
 }
