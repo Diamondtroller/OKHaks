@@ -273,6 +273,8 @@
 	"70":{
 		"tilesets":[0],
 		"background":"0xEDE084"
-
+	},
+	"71":{
+		"tilesets":[0,11]
 	}
 }
