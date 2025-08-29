@@ -237,8 +237,8 @@
 		"tilesets":[0]
 	},
 	"54":{
-		"tilesets":[14],
-		"background":"0x14217D"
+		"tilesets":[0],
+		"background":"0xEDE084"
 	},
 	"60":{
 		"tilesets":[13],
