@@ -17,7 +17,7 @@
 				</li>
 			{/each}
 			{#if true}
-			{@const link = page.url.pathname.startsWith('/en') ? { path: localizeHref(deLocalizeHref(page.url.pathname), { locale: 'lv'}), label: 'Latviski' } : { path: localizeHref(deLocalizeHref(page.url.pathname), { locale: 'en'}), label: 'English'}}
+			{@const link = page.url.pathname.startsWith('/en') ? { path: localizeHref(deLocalizeHref(page.url.href), { locale: 'lv'}), label: 'Latviski' } : { path: localizeHref(deLocalizeHref(page.url.href), { locale: 'en'}), label: 'English'}}
 			<li>
 				<a data-sveltekit-reload href={link.path}>{link.label}</a>
 			</li>
