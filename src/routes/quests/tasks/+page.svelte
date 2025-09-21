@@ -6,6 +6,7 @@
 	import Quest from '$lib/Quest.svelte';
 	import Search from '$lib/Search.svelte';
 	import { actions, type } from '$lib/quests';
+	import { m } from '$lib/paraglide/messages.js';
 
 	import type { PageProps } from './$types';
 	let { data }: PageProps = $props();
@@ -21,11 +22,11 @@
 </script>
 
 <svelte:head>
-	<title>Uzdevumi{title_str}</title>
-	<meta name="description" content="Uzdevumu informācijas meklētājs" />
+	<title>{m['tasks.tasks']() + title_str}</title>
+	<meta name="description" content={m['tasks.heading']()} />
 </svelte:head>
 
-<h1 class="tcenter">Uzdevumu informācijas meklētājs</h1>
+<h1 class="tcenter">{m['tasks.heading']()}</h1>
 {#await Promise.all([data.quests, data.strings, data.items])}
 	<Loading />
 {:then fetchedData}
@@ -41,9 +42,7 @@
 		data={{ quests: quests, strings: strings }}
 	/>
 	{#if !id_str}
-		<p class="tcenter">
-			Ieraksti kāda uzdevuma nosaukumu vai nosaukuma daļu un atrodi informāciju par šo uzdevumu!
-		</p>
+		<p class="tcenter">{m['tasks.description']()}</p>
 	{:else}
 		<h2><Task {quests} {strings} {id} /></h2>
 		{#if task}
@@ -52,36 +51,27 @@
 			{/if}
 			{#if task?.action}
 				<section>
-					<h3>Uzdevumā darāmais</h3>
-					<p>Šī ir tabula, kur teikts, kas šajā uzdevumā ir jādara.</p>
+					<h3>{m['tasks.action.heading']()}</h3>
+					<p>{m['tasks.action.description']()}</p>
 					<table class="tcenter" style:text-align="center">
-						<thead>
-							<tr>
-								<th>Darbība</th>
-								{#if task.ammount_max}
-									<th>Daudzums</th>
-								{/if}
-								{#if task.target}
-									<th>Mērķis</th>
-								{/if}
-							</tr>
-						</thead>
 						<tbody>
 							<tr>
-								<td style:font-size="1.5rem">{actions[task.action][0]}</td>
+								<td style:font-size="1.5rem"
+									>{m[('tasks.actions.' + task.action) as keyof typeof m]()}</td
+								>
 								{#if task.ammount_max}
 									<td style:font-size="1.5rem">{task.ammount_max}</td>
 								{/if}
 								{#if task.target}
 									<td>
 										{#each task.target.split(',') as e_id}
-											{#if actions[task.action][1] === type.item}
+											{#if actions[task.action] === type.item}
 												<Item {items} {strings} id={parseInt(e_id)} small />
-											{:else if actions[task.action][1] === type.quest}
+											{:else if actions[task.action] === type.quest}
 												<Quest {quests} {strings} id={parseInt(e_id)} small />
-											{:else if actions[task.action][1] === type.task}
+											{:else if actions[task.action] === type.task}
 												<Task {quests} {strings} id={parseInt(e_id)} small />
-											{:else if actions[task.action][1] === type.island}
+											{:else if actions[task.action] === type.island}
 												<div>{strings.MAP_NAMES[parseInt(task.target)]}</div>
 											{/if}
 										{/each}
@@ -94,19 +84,15 @@
 			{/if}
 			{#if task.quest_id}
 				<section>
-					<h3>Virsmērķis</h3>
-					<p>Uzdevums, ko šobrīd skati atbilst zemāk redzamajam uzdevumam.</p>
+					<h3>{m['tasks.quest.heading']()}</h3>
+					<p>{m['tasks.quest.description']()}</p>
 					<div class="tcenter"><Quest {quests} {strings} id={parseInt(task.quest_id)} /></div>
 				</section>
 			{/if}
 			{#if task.reward}
 				<section>
-					<h3>Uzdevuma sasniegšana apbalvojumu saraksts</h3>
-					<p>
-						Saraksts ar lietām, ko tu iegūsti, ja izpildīsi šo uzdevumu. Negatīva vērtība nozīmē, ka
-						zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9%
-						iespēja iegūt šo lietu.
-					</p>
+					<h3>{m['tasks.reward.heading']()}</h3>
+					<p>{m['tasks.reward.description']()}</p>
 					<Table
 						ColumnType={Item}
 						data={{ items: items, strings: strings }}
@@ -118,7 +104,7 @@
 
 			<section>
 				<details>
-					<summary>Skatīt tīros datus</summary>
+					<summary>{m['rawData']()}</summary>
 					<code>
 						<pre>{JSON.stringify(task, null, 2)}</pre>
 					</code>

@@ -4,6 +4,7 @@
 	import Item from '$lib/Item.svelte';
 	import Search from '$lib/Search.svelte';
 	import Quest from '$lib/Quest.svelte';
+	import { m } from '$lib/paraglide/messages.js';
 
 	import type { PageProps } from './$types';
 	let { data }: PageProps = $props();
@@ -19,11 +20,11 @@
 </script>
 
 <svelte:head>
-	<title>Lietas{title_str}</title>
-	<meta name="description" content="Lietu informācijas meklētājs" />
+	<title>{m['items.items']() + title_str}</title>
+	<meta name="description" content={m['items.heading']()} />
 </svelte:head>
 
-<h1 class="tcenter">Lietu informācijas meklētājs</h1>
+<h1 class="tcenter">{m['items.heading']()}</h1>
 {#await Promise.all([data.items, data.strings])}
 	<Loading />
 {:then fetchedData}
@@ -38,9 +39,7 @@
 		data={{ items: items, strings: strings }}
 	/>
 	{#if !id_str}
-		<p class="tcenter">
-			Ieraksti kādas lietas nosaukumu vai nosaukuma daļu un atrodi informāciju par šo lietu!
-		</p>
+		<p class="tcenter">{m['items.description']()}</p>
 	{:else}
 		<h2 style="max-width: 100%;"><Item {items} {strings} {id} /></h2>
 		{#if item}
@@ -48,37 +47,37 @@
 				<blockquote>{strings.ITEMS[id].NOTE}</blockquote>
 			{/if}
 			<section>
-				<h3>Vispārīga informācija</h3>
-				<p>Vispārīga informācija par šo lietu.</p>
+				<h3>{m['items.generalInfo.label']()}</h3>
+				<p>{m['items.generalInfo.description']()}</p>
 				<table class="tcenter">
 					<tbody>
 						{#if item.level}
 							<tr>
-								<th>Atbloķēšanās līmenis</th>
+								<th>{m['items.generalInfo.level']()}</th>
 								<td class="value">{item.level}</td>
 							</tr>
 						{/if}
 						{#if item.lifes}
 							<tr>
-								<th>Darbības reizes</th>
+								<th>{m['items.generalInfo.lifes']()}</th>
 								<td class="value">{item.lifes}</td>
 							</tr>
 						{/if}
 						{#if item.walkable}
 							<tr>
-								<th>Caurstaigājams lauciņš</th>
-								<td class="value">{item.walkable === '1' ? 'Jā' : 'Nē'}</td>
+								<th>{m['items.generalInfo.walkable']()}</th>
+								<td class="value">{item.walkable === '1' ? m.yes() : m.no()}</td>
 							</tr>
 						{/if}
 						{#if item.movable}
 							<tr>
-								<th>Pārvietojams lauciņš</th>
-								<td class="value">{item.movable === '1' ? 'Jā' : 'Nē'}</td>
+								<th>{m['items.generalInfo.movable']()}</th>
+								<td class="value">{item.movable === '1' ? m.yes() : m.no()}</td>
 							</tr>
 						{/if}
 						{#if item.superPrice && item.superPrice !== '-1'}
 							<tr>
-								<th>Rubīnu cena</th>
+								<th>{m['items.generalInfo.superPrice']()}</th>
 								<td
 									><Table
 										ColumnType={Item}
@@ -91,7 +90,7 @@
 						{/if}
 						{#if item.price && item.price !== '-1'}
 							<tr>
-								<th>Veikala cena</th>
+								<th>{m['items.generalInfo.price']()}</th>
 								<td
 									><Table
 										ColumnType={Item}
@@ -104,7 +103,7 @@
 						{/if}
 						{#if item.sellPrice && item.sellPrice !== '-1'}
 							<tr>
-								<th>Pārdošanas cena</th>
+								<th>{m['items.generalInfo.sellPrice']()}</th>
 								<td
 									><Table
 										ColumnType={Item}
@@ -117,7 +116,7 @@
 						{/if}
 						{#if item.transform}
 							<tr>
-								<th>Pārvēršas par:</th>
+								<th>{m['items.generalInfo.transform']()}</th>
 								<td><Item {items} {strings} id={parseInt(item.transform)} small /></td>
 							</tr>
 						{/if}
@@ -126,8 +125,8 @@
 			</section>
 			{#if item.quests}
 				<section>
-					<h3>Nepieciešamie mērķi</h3>
-					<p>Šie mērķi ir jāsasniedz, lai šī lieta būtu pieejama.</p>
+					<h3>{m['items.quests.heading']()}</h3>
+					<p>{m['items.quests.description']()}</p>
 					{#await data.quests}
 						<Loading />
 					{:then quests}
@@ -139,12 +138,8 @@
 			{/if}
 			{#if item.reward}
 				<section>
-					<h3>Izmantošanas apbalvojumu varbūtības</h3>
-					<p>
-						Saraksts ar lietām, ko tu gūsti vai zaudē vācot šo lauciņu vai izmantojot šo lietu.
-						Negatīva vērtība nozīmē, ka zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var
-						iegūt šo lietu: 0.09 = 9% iespēja iegūt šo lietu. Šīs var arī būt būvēšanas izmaksas.
-					</p>
+					<h3>{m['items.rewards.heading']()}</h3>
+					<p>{m['items.rewards.description']()}</p>
 					<Table
 						ColumnType={Item}
 						data={{ items: items, strings: strings }}
@@ -156,8 +151,8 @@
 			{/if}
 			{#if item.buildItems}
 				<section>
-					<h3>Pabeigšanas cena</h3>
-					<p>Šīs lietas vajadzīgas, lai pabeigtu būvēt lauciņu.</p>
+					<h3>{m['items.buildItems.heading']()}</h3>
+					<p>{m['items.buildItems.description']()}</p>
 					<Table
 						ColumnType={Item}
 						data={{ items: items, strings: strings }}
@@ -168,11 +163,8 @@
 			{/if}
 			{#if item.friendReward}
 				<section>
-					<h3>Izmantošanas apbalvojumu varbūtības pie draugiem</h3>
-					<p>
-						Līdzīgi kā iepriekšējā sadaļa, taču šie apbalvojumi pieejami šo lauciņu novācot pie
-						draugiem.
-					</p>
+					<h3>{m['items.friendReward.heading']()}</h3>
+					<p>{m['items.friendReward.description']()}</p>
 					<Table
 						ColumnType={Item}
 						data={{ items: items, strings: strings }}
@@ -184,7 +176,7 @@
 			{/if}
 			<section>
 				<details>
-					<summary>Skatīt tīros datus</summary>
+					<summary>{m['rawData']()}</summary>
 					<code>
 						<pre>{JSON.stringify(item, null, 2)}</pre>
 					</code>

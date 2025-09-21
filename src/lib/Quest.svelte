@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Quests } from '$lib/quests';
 	import type { Strings } from '$lib/strings';
+	import { localizeHref } from './paraglide/runtime';
+	import { m } from '$lib/paraglide/messages.js';
 
 	interface Props {
 		quests: Quests;
@@ -14,13 +16,13 @@
 
 	const icon = $derived.by(() => {
 		const icon = quests.quests[id]?.image;
-		if ([undefined, '', ' '].includes(icon)) return 'misteryTask';
+		if ([undefined, '', ' '].includes(icon)) return 'misteryTaskB';
 		return icon;
 	});
-	const name = $derived(strings.QUESTS[id]?.NAME ?? 'Nav atrasts');
+	const name = $derived(strings.QUESTS[id]?.NAME ?? m['notFound']());
 </script>
 
-<a href="/quests/?id={id}" data-sveltekit-noscroll class={{ fixed }}
+<a href={localizeHref(`/quests/?id=${id}`)} data-sveltekit-noscroll class={{ fixed }}
 	><img
 		src="https://okeanija.draugiem.lv/html5/i/quest_icons/{icon}.png"
 		alt={name}

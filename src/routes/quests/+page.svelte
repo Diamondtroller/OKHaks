@@ -5,6 +5,7 @@
 	import Item from '$lib/Item.svelte';
 	import Search from '$lib/Search.svelte';
 	import Task from '$lib/Task.svelte';
+	import { m } from '$lib/paraglide/messages.js';
 
 	import type { PageProps } from './$types';
 	let { data }: PageProps = $props();
@@ -20,11 +21,11 @@
 </script>
 
 <svelte:head>
-	<title>Mērķi{title_str}</title>
-	<meta name="description" content="Mērķu informācijas meklētājs" />
+	<title>{m['quests.quests']() + title_str}</title>
+	<meta name="description" content={m['quests.heading']()} />
 </svelte:head>
 
-<h1 class="tcenter">Mērķu informācijas meklētājs</h1>
+<h1 class="tcenter">{m['quests.heading']()}</h1>
 {#await Promise.all([data.quests, data.strings])}
 	<Loading />
 {:then fetchedData}
@@ -45,10 +46,7 @@
 		data={{ quests: quests, strings: strings }}
 	/>
 	{#if !id_str}
-		<p class="tcenter">
-			Ieraksti kāda mērķa nosaukumu vai nosaukuma daļu un atrodi informāciju par šo mērķu(ne
-			uzdevumu)!
-		</p>
+		<p class="tcenter">{m['quests.description']()}</p>
 	{:else}
 		<h2><Quest {quests} {strings} {id} /></h2>
 		{#if quest}
@@ -57,7 +55,7 @@
 			{/if}
 			{#if tasks.length !== 0}
 				<section>
-					<h3>Mērķa uzdevumi</h3>
+					<h3>{m['quests.tasks']()}</h3>
 					<div class="tcenter">
 						{#each tasks as task_id}
 							<Task {quests} {strings} id={parseInt(task_id)} />
@@ -67,12 +65,8 @@
 			{/if}
 			{#if quest.reward}
 				<section>
-					<h3>Mērķa sasniegšana apbalvojumu saraksts</h3>
-					<p>
-						Saraksts ar lietām, ko tu iegūsti, ja sasniegsi šo mēŗķi. Negatīva vērtība nozīmē, ka
-						zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9%
-						iespēja iegūt šo lietu.
-					</p>
+					<h3>{m['quests.reward.heading']()}</h3>
+					<p>{m['quests.reward.description']()}</p>
 					{#await data.items}
 						<Loading />
 					{:then items}
@@ -87,8 +81,8 @@
 			{/if}
 			{#if quest.req_quests}
 				<section>
-					<h3>Nepieciešamie mērķi</h3>
-					<p>Šie mērķi ir jāsasniedz lai varētu pildīt šo mērķi.</p>
+					<h3>{m['quests.req_quests.heading']()}</h3>
+					<p>{m['quests.req_quests.description']()}</p>
 					<div class="tcenter">
 						{#each quest.req_quests.split(',') as quest_id}
 							<Quest {quests} {strings} id={parseInt(quest_id)} />
@@ -98,8 +92,8 @@
 			{/if}
 			{#if nextQuests.length > 0}
 				<section>
-					<h3>Nākamie mērķi</h3>
-					<p>Šie mērķi sekos pēc šī mērķa sasniegšanas.</p>
+					<h3>{m['quests.next_quests.heading']()}</h3>
+					<p>{m['quests.next_quests.description']()}</p>
 					<div class="tcenter">
 						{#each nextQuests as quest_id}
 							<Quest {quests} {strings} id={parseInt(quest_id)} />
@@ -110,7 +104,7 @@
 
 			<section>
 				<details>
-					<summary>Skatīt tīros datus</summary>
+					<summary>{m['rawData']()}</summary>
 					<code>
 						<pre>{JSON.stringify(quest, null, 2)}</pre>
 					</code>

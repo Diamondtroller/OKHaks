@@ -12,7 +12,16 @@ const config = {
 			fallback: '404.html',
 			precompress: false,
 			strict: true
-		})
+		}),
+		prerender: {
+			entries: [
+				'*',
+				'/en/',
+				'/en/items/',
+				'/en/quests/',
+				'/en/quests/tasks/',
+			]
+		}
 	}
 };
 

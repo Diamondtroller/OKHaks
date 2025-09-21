@@ -1,0 +1,128 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"main": {
+		"heading": "Esi sveicināts OKHaka lapā",
+		"description": "Šajā lapā varēsi atrast rīkus draugiem.lv spēles \"Okeānija\" atvieglošanai."
+	},
+	"header": {
+		"main": "Sākums",
+		"items": "Lietas",
+		"quests": "Mērķi",
+		"tasks": "Uzdevumi"
+	},
+	"loading": "Notiek datu ielāde...",
+	"search": {
+		"label": "Meklēt: ",
+		"placeholder": "nos. daļa / #id / #id+",
+		"random": "Nejaušs"
+	},
+	"notFound": "Nav atrasts",
+	"yes": "Jā",
+	"no": "Nē",
+	"rawData": "Skatīt jēlos datus",
+	"items": {
+		"items": "Lietas",
+		"heading": "Lietu informācijas meklētājs",
+		"description": "Ieraksti kādas lietas nosaukumu vai nosaukuma daļu un atrodi informāciju par šo lietu!",
+		"generalInfo": {
+			"label": "Vispārīga informācija",
+			"description": "Vispārīga informācija par šo lietu.",
+			"level": "Atbloķēšanās līmenis",
+			"lifes": "Darbības reizes",
+			"walkable": "Caurstaigājams lauciņš",
+			"movable": "Pārvietojams lauciņš",
+			"superPrice": "Rubīnu cena",
+			"price": "Veikala cena",
+			"sellPrice": "Pārdošanas cena",
+			"transform": "Pārvēršas par"
+		},
+		"quests": {
+			"heading": "Nepieciešamie mērķi",
+			"description": "Šie mērķi ir jāsasniedz, lai šī lieta būtu pieejama."
+		},
+		"rewards": {
+			"heading": "Izmantošanas apbalvojumu varbūtības",
+			"description": "Saraksts ar lietām, ko tu gūsti vai zaudē vācot šo lauciņu vai izmantojot šo lietu. Negatīva vērtība nozīmē, ka zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9% iespēja iegūt šo lietu. Šīs var arī būt būvēšanas izmaksas."
+		},
+		"buildItems": {
+			"heading": "Pabeigšanas cena",
+			"description": "Šīs lietas vajadzīgas, lai pabeigtu būvēt lauciņu."
+		},
+		"friendReward": {
+			"heading": "Izmantošanas apbalvojumu varbūtības pie draugiem",
+			"description": "Līdzīgi kā iepriekšējā sadaļa, taču šie apbalvojumi pieejami šo lauciņu novācot pie draugiem."
+		}
+	},
+	"quests": {
+		"quests": "Mērķi",
+		"heading": "Mērķu informācijas meklētājs",
+		"description": "Ieraksti kāda mērķa nosaukumu vai nosaukuma daļu un atrodi informāciju par šo mērķi!",
+		"tasks": "Mērķa uzdevumi",
+		"reward": {
+			"heading": "Mērķa pabeigšanas apbalvojumi",
+			"description": "Saraksts ar lietām, ko tu iegūsti, ja sasniegsi šo mēŗķi. Negatīva vērtība nozīmē, ka zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9% iespēja iegūt šo lietu."
+		},
+		"req_quests": {
+			"heading": "Nepieciešamie mērķi",
+			"description": "Šie mērķi ir jāsasniedz, lai varētu pildīt šo mērķi."
+		},
+		"next_quests": {
+			"heading": "Nākamie mērķi",
+			"description": "Šie mērķi sekos pēc šī mērķa sasniegšanas."
+		}
+	},
+	"tasks": {
+		"tasks": "Uzdevumi",
+		"heading": "Uzdevumu informācijas meklētājs",
+		"description": "Ieraksti kāda uzdevuma nosaukumu vai nosaukuma daļu un atrodi informāciju par šo mērķi!",
+		"action": {
+			"heading": "Uzdevumā darāmais",
+			"description": "Šī ir tabula, kur teikti darāmie darbi."
+		},
+		"quest": {
+			"heading": "Virsmērķis",
+			"description": "Uzdevums, ko šobrīd skati atbilst zemāk redzamajam mērķim."
+		},
+		"reward": {
+			"heading": "Uzdevuma pabeigšanas apbalvojumi",
+			"description": "Saraksts ar lietām, ko tu iegūsti, ja izpildīsi šo uzdevumu. Negatīva vērtība nozīmē, ka zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9% iespēja iegūt šo lietu."
+		},
+		"actions": {
+			"animal_feed": "Pabarot",
+			"animal_heal": "Izārtstēt",
+			"bonus_activate": "Aktivizēt",
+			"building_finish": "Pabeidz būvēt",
+			"building_upgrade": "Uzlabot būvi",
+			"building_use": "Izmantot būvi",
+			"character_change": "Nomainīt drēbes",
+			"crafting_create": "Izgatavot",
+			"friend_do_work": "Novākt pie drauga",
+			"give_item": "Iesniegt",
+			"have_item": "Turēt",
+			"impossible": "Neiespējami",
+			"inventory_sell": "Pārdot no somas",
+			"inventory_use": "Izmantot somā",
+			"map_create_field": "Rakt vagas",
+			"map_harvest_field": "Novākt",
+			"map_object_create": "Nolikt",
+			"map_object_delete": "Aizvākt",
+			"map_object_have": "Salā jābūt",
+			"map_object_hp_change": "Vākt/Būvēt",
+			"map_object_move": "Pārvietot",
+			"map_object_remove": "Novākt",
+			"map_object_sell": "Pārdot",
+			"map_object_store": "Noglabāt",
+			"map_object_use": "Spēlēt",
+			"map_plant_field": "Iestādīt",
+			"map_visit": "Apciemot",
+			"npc_talk": "Runāt ar",
+			"quest_finish": "Izpildīt mērķi",
+			"resources_collect": "Iegūt",
+			"resources_spend": "Iztērēt",
+			"shop_buy": "Nopirkt",
+			"task_finish": "Izpildīt uzdevumu",
+			"tractor_use": "Izmantot traktoru",
+			"undefined": "Nezināms"
+		}
+	}
+}

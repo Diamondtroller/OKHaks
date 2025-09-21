@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from './Header.svelte';
-	import '../../app.css';
+	import '../app.css';
+
 	interface Props {
 		children?: import('svelte').Snippet;
 	}

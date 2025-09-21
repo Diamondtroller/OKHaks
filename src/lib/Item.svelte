@@ -2,6 +2,8 @@
 	import type { Items } from '$lib/items';
 	import type { Strings } from '$lib/strings';
 	import { onDestroy } from 'svelte';
+	import { localizeHref } from './paraglide/runtime';
+	import { m } from '$lib/paraglide/messages.js';
 
 	interface Props {
 		items: Items;
@@ -20,9 +22,9 @@
 			? 'map_objects/' + item.itemClass
 			: item?.iconClass && item.iconClass !== ' '
 				? 'item_icons/' + item.iconClass
-				: 'quest_icons/misteryTask'
+				: 'quest_icons/misteryTaskB'
 	);
-	const name = $derived(strings.ITEMS[id]?.CAPTION ?? 'Nav atrasts');
+	const name = $derived(strings.ITEMS[id]?.CAPTION ?? m['notFound']());
 
 	let divEl: HTMLDivElement | undefined;
 	let imgEl: HTMLImageElement | undefined;
@@ -192,7 +194,7 @@
 	}
 </script>
 
-<a href="/items/?id={id}" data-sveltekit-noscroll class={{ fixed }}>
+<a href={localizeHref(`/items/?id=${id}`)} data-sveltekit-noscroll class={{ fixed }}>
 	<div bind:this={divEl} bind:clientWidth={null, redraw}>
 		<img
 			src="https://okeanija.draugiem.lv/html5/i/{icon}.png?v=4"

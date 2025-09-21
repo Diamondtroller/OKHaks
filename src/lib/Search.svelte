@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { tick } from 'svelte';
+	import { m } from '$lib/paraglide/messages.js';
 
 	interface Props {
 		names: Record<string, any>;
@@ -63,10 +64,10 @@
 <div class="tcenter">
 	<form method="dialog">
 		<label
-			>Meklēt:<input
+			>{m['search.label']()}<input
 				type="search"
 				name="query"
-				placeholder="nos. daļa / #id / #id+"
+				placeholder={m['search.placeholder']()}
 				autocomplete="off"
 				bind:value={query}
 			/></label
@@ -78,7 +79,7 @@
 				query = '#rand';
 				await tick();
 				query = '';
-			}}>Nejaušs</button
+			}}>{m['search.random']()}</button
 		>
 	</form>
 </div>

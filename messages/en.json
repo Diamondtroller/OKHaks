@@ -1,0 +1,128 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"main": {
+		"heading": "Welcome to OKHaks website",
+		"description": "On this website you'll find some tools for making Oceania game easier."
+	},
+	"header": {
+		"main": "Main",
+		"items": "Items",
+		"quests": "Quests",
+		"tasks": "Tasks"
+	},
+	"loading": "Data is loading...",
+	"search": {
+		"label": "Search: ",
+		"placeholder": "part of name / #id / #id+",
+		"random": "Random"
+	},
+	"notFound": "Not found",
+	"yes": "Yes",
+	"no": "No",
+	"rawData": "See the raw data",
+	"items": {
+		"items": "Items",
+		"heading": "Item information finder",
+		"description": "Enter the name or part of it to find information about some item!",
+		"generalInfo": {
+			"label": "General information",
+			"description": "General information about this item.",
+			"level": "Unlocking level",
+			"lifes": "Number of actions",
+			"walkable": "Walkable tile",
+			"movable": "Movalble tile",
+			"superPrice": "Ruby price",
+			"price": "Store price",
+			"sellPrice": "Selling price",
+			"transform": "Turns into"
+		},
+		"quests": {
+			"heading": "Required quests",
+			"description": "You need to finish these quests for the item to be available."
+		},
+		"rewards": {
+			"heading": "Usage reward",
+			"description": "List of items you get or lose interacting with this tile or using this item. Negative value means that you lose corresponding items after a use, while decimals represent the probablity of getting this item: 0.09 = 9% you get this item. These can be part of building costs and other interactions."
+		},
+		"buildItems": {
+			"heading": "Finishing cost",
+			"description": "These items will be spent as part of building completion."
+		},
+		"friendReward": {
+			"heading": "User reward while visiting friends",
+			"description": "Similarly to usage rewards section these are rewards for interacting with tiles while visiting friends."
+		}
+	},
+	"quests": {
+		"quests": "Quests",
+		"heading": "Quest information finder",
+		"description": "Enter the name or part of it to find information about some quest!",
+		"tasks": "Quest's tasks",
+		"reward": {
+			"heading": "Quest completion rewards",
+			"description": "List of items you get or lose after finishing this quest. Negative value means that you lose corresponding items, while decimals represent the probablity of getting this item: 0.09 = 9% you get this item."
+		},
+		"req_quests": {
+			"heading": "Required quests",
+			"description": "You need to complete these quests for this quest to be available."
+		},
+		"next_quests": {
+			"heading": "Next quests",
+			"description": "These quests will become available after completing this quest."
+		}
+	},
+	"tasks": {
+		"tasks": "Tasks",
+		"heading": "Task information finder",
+		"description": "Enter the name or part of it to find information about some task!",
+		"action": {
+			"heading": "Task's actions",
+			"description": "Table of actions that have to be done to complete this task."
+		},
+		"quest": {
+			"heading": "Parent quest",
+			"description": "This task corresponds to this Quest."
+		},
+		"reward": {
+			"heading": "Task completion rewards",
+			"description": "List of items you get or lose after finishing this task. Negative value means that you lose corresponding items, while decimals represent the probablity of getting this item: 0.09 = 9% you get this item."
+		},
+		"actions": {
+			"animal_feed": "Feed",
+			"animal_heal": "Heal",
+			"bonus_activate": "Activate",
+			"building_finish": "Finish building",
+			"building_upgrade": "Upgrade building",
+			"building_use": "Interact with",
+			"character_change": "Change clothes to",
+			"crafting_create": "Craft",
+			"friend_do_work": "While visiting interact with",
+			"give_item": "Give",
+			"have_item": "Have",
+			"impossible": "Impossible",
+			"inventory_sell": "Sell from inventory",
+			"inventory_use": "Use",
+			"map_create_field": "Dig field",
+			"map_harvest_field": "Harvest",
+			"map_object_create": "Place",
+			"map_object_delete": "Remove",
+			"map_object_have": "Have on island",
+			"map_object_hp_change": "Interact with",
+			"map_object_move": "Move",
+			"map_object_remove": "Remove",
+			"map_object_sell": "Sell",
+			"map_object_store": "Store",
+			"map_object_use": "Play",
+			"map_plant_field": "Plant",
+			"map_visit": "Visit",
+			"npc_talk": "Talk with",
+			"quest_finish": "Complete quest",
+			"resources_collect": "Collect",
+			"resources_spend": "Spend",
+			"shop_buy": "Buy",
+			"task_finish": "Complete task",
+			"tractor_use": "Use tractor",
+			"undefined": "Unknown"
+		}
+	}
+}

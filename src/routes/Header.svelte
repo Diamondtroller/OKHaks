@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import logo from '$lib/images/OKHaks.png';
+	import { m } from '$lib/paraglide/messages.js';
+	import { localizeHref, deLocalizeHref } from '$lib/paraglide/runtime';
 </script>
 
 <header>
@@ -9,11 +11,17 @@
 	>
 	<nav>
 		<ul>
-			{#each [{ path: '/', label: 'sākums' }, { path: '/items/', label: 'lietas' }, { path: '/quests/', label: 'mērķi' }, { path: '/quests/tasks/', label: 'uzdevumi' }] as link}
-				<li aria-current={page.url.pathname === link.path ? 'page' : null}>
-					<a href={link.path}>{link.label}</a>
+			{#each [{ path: '/', label: m['header.main']() }, { path: '/items/', label: m['header.items']() }, { path: '/quests/', label: m['header.quests']() }, { path: '/quests/tasks/', label: m['header.tasks']() }] as link}
+				<li aria-current={deLocalizeHref(page.url.pathname) === link.path ? 'page' : null}>
+					<a href={localizeHref(link.path)}>{link.label}</a>
 				</li>
 			{/each}
+			{#if true}
+			{@const link = page.url.pathname.startsWith('/en') ? { path: localizeHref(deLocalizeHref(page.url.pathname), { locale: 'lv'}), label: 'Latviski' } : { path: localizeHref(deLocalizeHref(page.url.pathname), { locale: 'en'}), label: 'English'}}
+			<li>
+				<a data-sveltekit-reload href={link.path}>{link.label}</a>
+			</li>
+			{/if}
 		</ul>
 	</nav>
 </header>

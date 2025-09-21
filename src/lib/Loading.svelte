@@ -1,9 +1,10 @@
 <script lang="ts">
 	import LoadingSVG from './Loading.svg.svelte';
+	import { m } from '$lib/paraglide/messages.js';
 </script>
 
 <div class="tcenter">
-	<p>Notiek datu ielāde..</p>
+	<p>{m['loading']()}</p>
 	<div class="tcenter rot" style:width="5vw">
 		<LoadingSVG />
 	</div>
