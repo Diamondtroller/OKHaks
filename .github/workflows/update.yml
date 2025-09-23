@@ -23,7 +23,8 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Commit
         run: |
-          if [ $(git status -s | wc -l) -gt 0 ]; then
+          if [ $(git status -s | wc -l) -gt 0 ]
+          then
             git add static/data
             git commit -m "data: update"
             git push
@@ -31,7 +32,7 @@ jobs:
           else
             NEW_DATA=false
           fi
-          echo "NEW_DATA=$NEW_DATA" >> $GITHUB_ENV;
+          echo "NEW_DATA=$NEW_DATA" >> $GITHUB_ENV
   deploy:
     if: ${{ env.NEW_DATA == 'true' }}
     uses: ./.github/workflows/deploy.yml
