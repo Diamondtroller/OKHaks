@@ -1,4 +1,4 @@
-name: Update data files # https://svelte.dev/docs/kit/adapter-static#GitHub-Pages
+name: Update data files
 
 on:
   workflow_dispatch:
