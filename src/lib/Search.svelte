@@ -56,7 +56,7 @@
 				if (results.length >= LIMIT) break;
 			}
 		}
-		if (results.length === 1) goto(`?id=${results[0]}`, { keepFocus: true, noScroll: true });
+		if (results.length === 1) goto(`?id=${results[0]}${data.competition ? '&competition' : ''}`, { keepFocus: true, noScroll: true });
 		return results;
 	});
 </script>

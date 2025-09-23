@@ -12,6 +12,7 @@
 
 	import { page } from '$app/state';
 
+	const competition = $derived(page.url.searchParams.has('competition'));
 	const id_str = $derived(page.url.searchParams.get('id'));
 	const id = $derived.by(() => {
 		const id_test = parseInt(id_str!);
@@ -43,12 +44,12 @@
 		key="NAME"
 		objects={quests.quests}
 		Element={Quest}
-		data={{ quests: quests, strings: strings }}
+		data={{ quests, strings, competition }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">{m['quests.description']()}</p>
 	{:else}
-		<h2><Quest {quests} {strings} {id} /></h2>
+		<h2><Quest {quests} {strings} {id} {competition} /></h2>
 		{#if quest}
 			{#if strings.QUESTS[id]?.DESCRIPTION}
 				<blockquote>{strings.QUESTS[id].DESCRIPTION}</blockquote>
@@ -58,7 +59,7 @@
 					<h3>{m['quests.tasks']()}</h3>
 					<div class="tcenter">
 						{#each tasks as task_id}
-							<Task {quests} {strings} id={parseInt(task_id)} />
+							<Task {quests} {strings} id={parseInt(task_id)} {competition} />
 						{/each}
 					</div>
 				</section>
@@ -72,7 +73,7 @@
 					{:then items}
 						<Table
 							ColumnType={Item}
-							data={{ items: items, strings: strings }}
+							data={{ items, strings, competition }}
 							content={quest.reward}
 							className="tcenter"
 						/>
@@ -85,7 +86,7 @@
 					<p>{m['quests.req_quests.description']()}</p>
 					<div class="tcenter">
 						{#each quest.req_quests.split(',') as quest_id}
-							<Quest {quests} {strings} id={parseInt(quest_id)} />
+							<Quest {quests} {strings} id={parseInt(quest_id)} {competition} />
 						{/each}
 					</div>
 				</section>
@@ -96,7 +97,7 @@
 					<p>{m['quests.next_quests.description']()}</p>
 					<div class="tcenter">
 						{#each nextQuests as quest_id}
-							<Quest {quests} {strings} id={parseInt(quest_id)} />
+							<Quest {quests} {strings} id={parseInt(quest_id)} {competition} />
 						{/each}
 					</div>
 				</section>

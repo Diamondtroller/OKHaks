@@ -8,11 +8,12 @@
 		quests: Quests;
 		strings: Strings;
 		id: number;
+		competition?: boolean;
 		small?: boolean;
 		fixed?: boolean;
 	}
 
-	let { quests, strings, id, small = false, fixed = false }: Props = $props();
+	let { quests, strings, id, competition = false, small = false, fixed = false }: Props = $props();
 
 	const icon = $derived.by(() => {
 		const icon = quests.tasks[id]?.icon;
@@ -22,7 +23,7 @@
 	const name = $derived(strings.TASKS[id]?.NAME ?? m['notFound']());
 </script>
 
-<a href={localizeHref(`/quests/tasks/?id=${id}`)} data-sveltekit-noscroll class={{ fixed }}
+<a href={localizeHref(`/quests/tasks/?id=${id}${competition ? '&competition' : ''}`)} data-sveltekit-noscroll class={{ fixed }}
 	><img
 		src="https://okeanija.draugiem.lv/html5/i/quest_icons/{icon}.png"
 		alt={name}

@@ -11,6 +11,7 @@
 
 	import { page } from '$app/state';
 
+	const competition = $derived(page.url.searchParams.has('competition'));
 	const id_str = $derived(page.url.searchParams.get('id') ?? '');
 	const id = $derived.by(() => {
 		const id_test = parseInt(id_str);
@@ -36,12 +37,12 @@
 		key="CAPTION"
 		objects={items.items}
 		Element={Item}
-		data={{ items: items, strings: strings }}
+		data={{ items, strings, competition }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">{m['items.description']()}</p>
 	{:else}
-		<h2 style="max-width: 100%;"><Item {items} {strings} {id} /></h2>
+		<h2 style="max-width: 100%;"><Item {items} {strings} {id} {competition} /></h2>
 		{#if item}
 			{#if strings.ITEMS[id]?.NOTE}
 				<blockquote>{strings.ITEMS[id].NOTE}</blockquote>
@@ -81,7 +82,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items: items, strings: strings }}
+										data={{ items, strings, competition }}
 										content={`0:${item.superPrice}`}
 										noborder
 									/></td
@@ -94,7 +95,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items: items, strings: strings }}
+										data={{ items, strings, competition }}
 										content={item.price}
 										noborder
 									/></td
@@ -107,7 +108,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items: items, strings: strings }}
+										data={{ items, strings, competition }}
 										content={item.sellPrice}
 										noborder
 									/></td
@@ -117,7 +118,7 @@
 						{#if item.transform}
 							<tr>
 								<th>{m['items.generalInfo.transform']()}</th>
-								<td><Item {items} {strings} id={parseInt(item.transform)} small /></td>
+								<td><Item {items} {strings} id={parseInt(item.transform)} {competition} small /></td>
 							</tr>
 						{/if}
 					</tbody>
@@ -131,7 +132,7 @@
 						<Loading />
 					{:then quests}
 						{#each item.quests.split(',') as quest_id}
-							<div class="tcenter"><Quest {quests} {strings} id={parseInt(quest_id)} /></div>
+							<div class="tcenter"><Quest {quests} {strings} id={parseInt(quest_id)} {competition} /></div>
 						{/each}
 					{/await}
 				</section>
@@ -142,7 +143,7 @@
 					<p>{m['items.rewards.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, strings: strings }}
+						data={{ items, strings, competition }}
 						content={item.reward}
 						color
 						className="tcenter"
@@ -155,7 +156,7 @@
 					<p>{m['items.buildItems.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, strings: strings }}
+						data={{ items, strings, competition }}
 						content={item.buildItems}
 						className="tcenter"
 					/>
@@ -167,7 +168,7 @@
 					<p>{m['items.friendReward.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, strings: strings }}
+						data={{ items, strings, competition }}
 						content={item.friendReward}
 						color
 						className="tcenter"

@@ -13,6 +13,7 @@
 
 	import { page } from '$app/state';
 
+	const competition = $derived(page.url.searchParams.has('competition'));
 	const id_str = $derived(page.url.searchParams.get('id'));
 	const id = $derived.by(() => {
 		const id_test = parseInt(id_str!);
@@ -39,12 +40,12 @@
 		key="NAME"
 		objects={quests.tasks}
 		Element={Task}
-		data={{ quests: quests, strings: strings }}
+		data={{ quests, strings, competition }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">{m['tasks.description']()}</p>
 	{:else}
-		<h2><Task {quests} {strings} {id} /></h2>
+		<h2><Task {quests} {strings} {id} {competition} /></h2>
 		{#if task}
 			{#if strings.TASKS[id]?.DESCRIPTION}
 				<blockquote>{strings.TASKS[id].DESCRIPTION}</blockquote>
@@ -66,11 +67,11 @@
 									<td>
 										{#each task.target.split(',') as e_id}
 											{#if actions[task.action] === type.item}
-												<Item {items} {strings} id={parseInt(e_id)} small />
+												<Item {items} {strings} id={parseInt(e_id)} {competition} small />
 											{:else if actions[task.action] === type.quest}
-												<Quest {quests} {strings} id={parseInt(e_id)} small />
+												<Quest {quests} {strings} id={parseInt(e_id)} {competition} small />
 											{:else if actions[task.action] === type.task}
-												<Task {quests} {strings} id={parseInt(e_id)} small />
+												<Task {quests} {strings} id={parseInt(e_id)} {competition} small />
 											{:else if actions[task.action] === type.island}
 												<div>{strings.MAP_NAMES[parseInt(task.target)]}</div>
 											{/if}
@@ -86,7 +87,7 @@
 				<section>
 					<h3>{m['tasks.quest.heading']()}</h3>
 					<p>{m['tasks.quest.description']()}</p>
-					<div class="tcenter"><Quest {quests} {strings} id={parseInt(task.quest_id)} /></div>
+					<div class="tcenter"><Quest {quests} {strings} id={parseInt(task.quest_id)} {competition} /></div>
 				</section>
 			{/if}
 			{#if task.reward}
@@ -95,7 +96,7 @@
 					<p>{m['tasks.reward.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items: items, strings: strings }}
+						data={{ items, strings, competition }}
 						content={task.reward}
 						className="tcenter"
 					/>

@@ -9,11 +9,12 @@
 		items: Items;
 		strings: Strings;
 		id: number;
+		competition?: boolean;
 		small?: boolean;
 		fixed?: boolean;
 	}
 
-	let { items, strings, id, small = false, fixed = false }: Props = $props();
+	let { items, strings, id, competition = false, small = false, fixed = false }: Props = $props();
 
 	const item = $derived(items.items[id]);
 
@@ -194,7 +195,7 @@
 	}
 </script>
 
-<a href={localizeHref(`/items/?id=${id}`)} data-sveltekit-noscroll class={{ fixed }}>
+<a href={localizeHref(`/items/?id=${id}${competition ? '&competition' : ''}`)} data-sveltekit-noscroll class={{ fixed }}>
 	<div bind:this={divEl} bind:clientWidth={null, redraw}>
 		<img
 			src="https://okeanija.draugiem.lv/html5/i/{icon}.png?v=4"
