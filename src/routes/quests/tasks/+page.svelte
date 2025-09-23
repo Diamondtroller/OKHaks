@@ -33,22 +33,25 @@
 {:then fetchedData}
 	{@const quests = fetchedData[0]}
 	{@const strings = fetchedData[1]}
+	{@const strITEMS = competition ? strings.comITEMS : strings.ITEMS}
+	{@const strQUESTS = competition ? strings.comQUESTS : strings.QUESTS}
+	{@const strTASKS = competition ? strings.comTASKS : strings.TASKS}
 	{@const items = fetchedData[2]}
 	{@const task = quests.tasks[id]}
 	<Search
-		names={strings.TASKS}
+		names={strTASKS}
 		key="NAME"
 		objects={quests.tasks}
 		Element={Task}
-		data={{ quests, strings, competition }}
+		data={{ quests, strTASKS, competition }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">{m['tasks.description']()}</p>
 	{:else}
-		<h2><Task {quests} {strings} {id} {competition} /></h2>
+		<h2><Task {quests} {strTASKS} {id} {competition} /></h2>
 		{#if task}
-			{#if strings.TASKS[id]?.DESCRIPTION}
-				<blockquote>{strings.TASKS[id].DESCRIPTION}</blockquote>
+			{#if strTASKS[id]?.DESCRIPTION}
+				<blockquote>{strTASKS[id].DESCRIPTION}</blockquote>
 			{/if}
 			{#if task?.action}
 				<section>
@@ -67,11 +70,11 @@
 									<td>
 										{#each task.target.split(',') as e_id}
 											{#if actions[task.action] === type.item}
-												<Item {items} {strings} id={parseInt(e_id)} {competition} small />
+												<Item {items} {strITEMS} id={parseInt(e_id)} {competition} small />
 											{:else if actions[task.action] === type.quest}
-												<Quest {quests} {strings} id={parseInt(e_id)} {competition} small />
+												<Quest {quests} {strQUESTS} id={parseInt(e_id)} {competition} small />
 											{:else if actions[task.action] === type.task}
-												<Task {quests} {strings} id={parseInt(e_id)} {competition} small />
+												<Task {quests} {strTASKS} id={parseInt(e_id)} {competition} small />
 											{:else if actions[task.action] === type.island}
 												<div>{strings.MAP_NAMES[parseInt(task.target)]}</div>
 											{/if}
@@ -87,7 +90,7 @@
 				<section>
 					<h3>{m['tasks.quest.heading']()}</h3>
 					<p>{m['tasks.quest.description']()}</p>
-					<div class="tcenter"><Quest {quests} {strings} id={parseInt(task.quest_id)} {competition} /></div>
+					<div class="tcenter"><Quest {quests} {strQUESTS} id={parseInt(task.quest_id)} {competition} /></div>
 				</section>
 			{/if}
 			{#if task.reward}
@@ -96,7 +99,7 @@
 					<p>{m['tasks.reward.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items, strings, competition }}
+						data={{ items, strITEMS, competition }}
 						content={task.reward}
 						className="tcenter"
 					/>

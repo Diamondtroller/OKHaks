@@ -6,21 +6,21 @@
 
 	interface Props {
 		quests: Quests;
-		strings: Strings;
+		strQUESTS: Strings["QUESTS"];
 		id: number;
 		competition?: boolean;
 		small?: boolean;
 		fixed?: boolean;
 	}
 
-	let { quests, strings, id, competition = false, small = false, fixed = false }: Props = $props();
+	let { quests, strQUESTS, id, competition = false, small = false, fixed = false }: Props = $props();
 
 	const icon = $derived.by(() => {
 		const icon = quests.quests[id]?.image;
 		if ([undefined, '', ' '].includes(icon)) return 'misteryTaskB';
 		return icon;
 	});
-	const name = $derived(strings.QUESTS[id]?.NAME ?? m['notFound']());
+	const name = $derived(strQUESTS[id]?.NAME ?? m['notFound']());
 </script>
 
 <a href={localizeHref(`/quests/?id=${id}${competition ? '&competition' : ''}`)} data-sveltekit-noscroll class={{ fixed }}

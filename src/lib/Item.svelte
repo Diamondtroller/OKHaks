@@ -7,14 +7,14 @@
 
 	interface Props {
 		items: Items;
-		strings: Strings;
+		strITEMS: Strings["ITEMS"];
 		id: number;
 		competition?: boolean;
 		small?: boolean;
 		fixed?: boolean;
 	}
 
-	let { items, strings, id, competition = false, small = false, fixed = false }: Props = $props();
+	let { items, strITEMS, id, competition = false, small = false, fixed = false }: Props = $props();
 
 	const item = $derived(items.items[id]);
 
@@ -25,7 +25,7 @@
 				? 'item_icons/' + item.iconClass
 				: 'quest_icons/misteryTaskB'
 	);
-	const name = $derived(strings.ITEMS[id]?.CAPTION ?? m['notFound']());
+	const name = $derived(strITEMS[id]?.CAPTION ?? m['notFound']());
 
 	let divEl: HTMLDivElement | undefined;
 	let imgEl: HTMLImageElement | undefined;

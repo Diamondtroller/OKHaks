@@ -32,6 +32,9 @@
 {:then fetchedData}
 	{@const quests = fetchedData[0]}
 	{@const strings = fetchedData[1]}
+	{@const strITEMS = competition ? strings.comITEMS : strings.ITEMS}
+	{@const strQUESTS = competition ? strings.comQUESTS : strings.QUESTS}
+	{@const strTASKS = competition ? strings.comTASKS : strings.TASKS}
 	{@const quest = quests.quests[id]}
 	{@const tasks = Object.entries(quests.tasks)
 		.filter((entry) => entry[1].quest_id == id_str)
@@ -40,26 +43,26 @@
 		.filter((entry) => entry[1].req_quests && entry[1].req_quests.split(',').includes(id_str!))
 		.map((entry) => entry[0])}
 	<Search
-		names={strings.QUESTS}
+		names={strQUESTS}
 		key="NAME"
 		objects={quests.quests}
 		Element={Quest}
-		data={{ quests, strings, competition }}
+		data={{ quests, strQUESTS, competition }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">{m['quests.description']()}</p>
 	{:else}
-		<h2><Quest {quests} {strings} {id} {competition} /></h2>
+		<h2><Quest {quests} {strQUESTS} {id} {competition} /></h2>
 		{#if quest}
-			{#if strings.QUESTS[id]?.DESCRIPTION}
-				<blockquote>{strings.QUESTS[id].DESCRIPTION}</blockquote>
+			{#if strQUESTS[id]?.DESCRIPTION}
+				<blockquote>{strQUESTS[id].DESCRIPTION}</blockquote>
 			{/if}
 			{#if tasks.length !== 0}
 				<section>
 					<h3>{m['quests.tasks']()}</h3>
 					<div class="tcenter">
 						{#each tasks as task_id}
-							<Task {quests} {strings} id={parseInt(task_id)} {competition} />
+							<Task {quests} {strTASKS} id={parseInt(task_id)} {competition} />
 						{/each}
 					</div>
 				</section>
@@ -73,7 +76,7 @@
 					{:then items}
 						<Table
 							ColumnType={Item}
-							data={{ items, strings, competition }}
+							data={{ items, strITEMS, competition }}
 							content={quest.reward}
 							className="tcenter"
 						/>
@@ -86,7 +89,7 @@
 					<p>{m['quests.req_quests.description']()}</p>
 					<div class="tcenter">
 						{#each quest.req_quests.split(',') as quest_id}
-							<Quest {quests} {strings} id={parseInt(quest_id)} {competition} />
+							<Quest {quests} {strQUESTS} id={parseInt(quest_id)} {competition} />
 						{/each}
 					</div>
 				</section>
@@ -97,7 +100,7 @@
 					<p>{m['quests.next_quests.description']()}</p>
 					<div class="tcenter">
 						{#each nextQuests as quest_id}
-							<Quest {quests} {strings} id={parseInt(quest_id)} {competition} />
+							<Quest {quests} {strQUESTS} id={parseInt(quest_id)} {competition} />
 						{/each}
 					</div>
 				</section>

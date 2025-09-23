@@ -31,21 +31,23 @@
 {:then fetchedData}
 	{@const items = fetchedData[0]}
 	{@const strings = fetchedData[1]}
+	{@const strITEMS = competition ? strings.comITEMS : strings.ITEMS}
+	{@const strQUESTS = competition ? strings.comQUESTS : strings.QUESTS}
 	{@const item = items.items[id]}
 	<Search
-		names={strings.ITEMS}
+		names={strITEMS}
 		key="CAPTION"
 		objects={items.items}
 		Element={Item}
-		data={{ items, strings, competition }}
+		data={{ items, strITEMS, competition }}
 	/>
 	{#if !id_str}
 		<p class="tcenter">{m['items.description']()}</p>
 	{:else}
-		<h2 style="max-width: 100%;"><Item {items} {strings} {id} {competition} /></h2>
+		<h2 style="max-width: 100%;"><Item {items} {strITEMS} {id} {competition} /></h2>
 		{#if item}
-			{#if strings.ITEMS[id]?.NOTE}
-				<blockquote>{strings.ITEMS[id].NOTE}</blockquote>
+			{#if strITEMS[id]?.NOTE}
+				<blockquote>{strITEMS[id].NOTE}</blockquote>
 			{/if}
 			<section>
 				<h3>{m['items.generalInfo.label']()}</h3>
@@ -82,7 +84,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items, strings, competition }}
+										data={{ items, strITEMS, competition }}
 										content={`0:${item.superPrice}`}
 										noborder
 									/></td
@@ -95,7 +97,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items, strings, competition }}
+										data={{ items, strITEMS, competition }}
 										content={item.price}
 										noborder
 									/></td
@@ -108,7 +110,7 @@
 								<td
 									><Table
 										ColumnType={Item}
-										data={{ items, strings, competition }}
+										data={{ items, strITEMS, competition }}
 										content={item.sellPrice}
 										noborder
 									/></td
@@ -118,7 +120,7 @@
 						{#if item.transform}
 							<tr>
 								<th>{m['items.generalInfo.transform']()}</th>
-								<td><Item {items} {strings} id={parseInt(item.transform)} {competition} small /></td>
+								<td><Item {items} {strITEMS} id={parseInt(item.transform)} {competition} small /></td>
 							</tr>
 						{/if}
 					</tbody>
@@ -132,7 +134,7 @@
 						<Loading />
 					{:then quests}
 						{#each item.quests.split(',') as quest_id}
-							<div class="tcenter"><Quest {quests} {strings} id={parseInt(quest_id)} {competition} /></div>
+							<div class="tcenter"><Quest {quests} {strQUESTS} id={parseInt(quest_id)} {competition} /></div>
 						{/each}
 					{/await}
 				</section>
@@ -143,7 +145,7 @@
 					<p>{m['items.rewards.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items, strings, competition }}
+						data={{ items, strITEMS, competition }}
 						content={item.reward}
 						color
 						className="tcenter"
@@ -156,7 +158,7 @@
 					<p>{m['items.buildItems.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items, strings, competition }}
+						data={{ items, strITEMS, competition }}
 						content={item.buildItems}
 						className="tcenter"
 					/>
@@ -168,7 +170,7 @@
 					<p>{m['items.friendReward.description']()}</p>
 					<Table
 						ColumnType={Item}
-						data={{ items, strings, competition }}
+						data={{ items, strITEMS, competition }}
 						content={item.friendReward}
 						color
 						className="tcenter"
