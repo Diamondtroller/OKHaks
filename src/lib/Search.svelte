@@ -29,7 +29,7 @@
 					if (id_n < 0) id_n = 0;
 
 					for (let id_i = id_n; results.length < LIMIT; id_i++) {
-						if (names[id_i] || objects[id_i]) results.push(id_i);
+						if (names[id_i] && objects[id_i]) results.push(id_i);
 						if (id_i > lastNameId && id_i > lastObjectId) break;
 					}
 				}
@@ -38,8 +38,8 @@
 				if (!isNaN(id_n)) {
 					results.push(id_n);
 				} else if (id_s === 'rand') {
-					const k = Object.keys(names);
-					const id = Math.ceil(k.length * Math.random());
+					const k = Object.keys(objects);
+					const id = parseInt(k[Math.ceil(k.length * Math.random())]);
 					results.push(id);
 				}
 			}
