@@ -29,7 +29,7 @@
 					if (id_n < 0) id_n = 0;
 
 					for (let id_i = id_n; results.length < LIMIT; id_i++) {
-						if (names[id_i] && objects[id_i]) results.push(id_i);
+						if (names[id_i] || objects[id_i]) results.push(id_i);
 						if (id_i > lastNameId && id_i > lastObjectId) break;
 					}
 				}
