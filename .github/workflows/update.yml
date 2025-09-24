@@ -34,6 +34,9 @@ jobs:
           fi
           echo "NEW_DATA=$NEW_DATA" >> $GITHUB_OUTPUT
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     needs: update-data
     if: ${{ needs.update-data.outputs.NEW_DATA == 'true' }}
     uses: ./.github/workflows/deploy.yml
