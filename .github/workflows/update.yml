@@ -32,7 +32,8 @@ jobs:
           else
             NEW_DATA=false
           fi
-          echo "NEW_DATA=$NEW_DATA" >> $GITHUB_ENV
+          echo "NEW_DATA=$NEW_DATA" >> $GITHUB_OUTPUT
   deploy:
-    if: ${{ env.NEW_DATA == 'true' }}
+    needs: updata-data
+    if: ${{ needs.update-data.outputs.NEW_DATA == 'true' }}
     uses: ./.github/workflows/deploy.yml
