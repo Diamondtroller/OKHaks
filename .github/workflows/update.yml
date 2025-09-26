@@ -38,5 +38,5 @@ jobs:
       pages: write
       id-token: write
     needs: update-data
-    if: ${{ needs.update-data.outputs.NEW_DATA == 'true' }}
+    if: ${{ needs.update-data.outputs.new_data == 'true' }}
     uses: ./.github/workflows/deploy.yml
