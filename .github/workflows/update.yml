@@ -11,7 +11,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     outputs:
-      new_data: ${{ steps.Commit.outputs.new_data }}
+      new_data: ${{ steps.commit.outputs.new_data }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,6 +24,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Commit
+        id: commit
         run: |
           if [ $(git status -s | wc -l) -gt 0 ]
           then
@@ -36,10 +37,14 @@ jobs:
           fi
           echo "new_data=$new_data" >> $GITHUB_OUTPUT
           echo $new_data
+  debug-task:
+    needs: update-data
+    steps:
+      - run: echo '${{ toJSON(needs.update-data.outputs) }}'
   deploy:
     permissions:
       pages: write
       id-token: write
     needs: update-data
-    if: ${{ needs.update-data.outputs.new_data == true }}
+    if: ${{ startsWith(needs.update-data.outputs.new_data, 'true') }}
     uses: ./.github/workflows/deploy.yml
