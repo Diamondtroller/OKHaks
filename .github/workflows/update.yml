@@ -38,6 +38,7 @@ jobs:
           echo "new_data=$new_data" >> $GITHUB_OUTPUT
           echo $new_data
   debug-task:
+    runs-on: ubuntu-latest
     needs: update-data
     steps:
       - run: echo '${{ toJSON(needs.update-data.outputs) }}'
