@@ -10,6 +10,8 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    outputs:
+      NEW_DATA: ${{ steps.Commit.outputs.NEW_DATA }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,5 +40,5 @@ jobs:
       pages: write
       id-token: write
     needs: update-data
-    if: ${{ needs.update-data.outputs.new_data == 'true' }}
+    if: ${{ needs.update-data.outputs.NEW_DATA == 'true' }}
     uses: ./.github/workflows/deploy.yml
