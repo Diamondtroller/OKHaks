@@ -11,7 +11,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     outputs:
-      NEW_DATA: ${{ steps.Commit.outputs.NEW_DATA }}
+      new_data: ${{ steps.Commit.outputs.new_data }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,15 +30,16 @@ jobs:
             git add static/data
             git commit -m "data: update"
             git push
-            NEW_DATA=true
+            new_data=true
           else
-            NEW_DATA=false
+            new_data=false
           fi
-          echo "NEW_DATA=$NEW_DATA" >> $GITHUB_OUTPUT
+          echo "new_data=$new_data" >> $GITHUB_OUTPUT
+          echo $new_data
   deploy:
     permissions:
       pages: write
       id-token: write
     needs: update-data
-    if: ${{ needs.update-data.outputs.NEW_DATA == 'true' }}
+    if: ${{ needs.update-data.outputs.new_data == true }}
     uses: ./.github/workflows/deploy.yml
