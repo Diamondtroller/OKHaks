@@ -280,5 +280,9 @@
 	},
 	"71":{
 		"tilesets":[0,11]
+	},
+	"72":{
+		"background":"0x1C232C",
+		"tilesets":[9]
 	}
 }
