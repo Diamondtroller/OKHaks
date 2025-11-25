@@ -36,7 +36,7 @@
 	{@const item = items.items[id]}
 	<Search
 		names={strITEMS}
-		key="CAPTION"
+		keyGetter={(name) => name.CAPTION}
 		objects={items.items}
 		Element={Item}
 		data={{ items, strITEMS, competition }}
@@ -147,7 +147,7 @@
 						ColumnType={Item}
 						data={{ items, strITEMS, competition }}
 						content={item.reward}
-						color
+						split
 						className="tcenter"
 					/>
 				</section>
@@ -166,13 +166,13 @@
 			{/if}
 			{#if item.friendReward}
 				<section>
-					<h3>{m['items.friendReward.heading']()}</h3>
-					<p>{m['items.friendReward.description']()}</p>
+					<h3>{m['items.friendRewards.heading']()}</h3>
+					<p>{m['items.friendRewards.description']()}</p>
 					<Table
 						ColumnType={Item}
 						data={{ items, strITEMS, competition }}
 						content={item.friendReward}
-						color
+						split
 						className="tcenter"
 					/>
 				</section>

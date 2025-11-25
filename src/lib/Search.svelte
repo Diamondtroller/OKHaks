@@ -5,13 +5,13 @@
 
 	interface Props {
 		names: Record<string, any>;
-		key: string;
+		keyGetter: (name: any) => string;
 		objects: any;
 		Element: any;
 		data: any;
 	}
 
-	let { names, key, objects, Element, data }: Props = $props();
+	let { names, keyGetter, objects, Element, data }: Props = $props();
 
 	let query = $state('');
 
@@ -47,7 +47,7 @@
 			for (const [id, name] of Object.entries(names)) {
 				const id_n = Number(id);
 				if (
-					name[key].toLowerCase().includes(query.toLowerCase()) &&
+					keyGetter(name).toLowerCase().includes(query.toLowerCase()) &&
 					!isNaN(id_n) &&
 					objects[id_n]
 				) {

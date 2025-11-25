@@ -6,11 +6,15 @@
 	},
 	"header": {
 		"main": "Sākums",
-		"items": "Lietas",
+		"finders": "Meklētāji",
 		"quests": "Mērķi",
 		"tasks": "Uzdevumi"
 	},
 	"loading": "Notiek datu ielāde...",
+	"table": {
+		"give": "Dod",
+		"take": "Paņem"
+	},
 	"search": {
 		"label": "Meklēt: ",
 		"placeholder": "nos. daļa / #id / #id+",
@@ -41,15 +45,15 @@
 			"description": "Šie mērķi ir jāsasniedz, lai šī lieta būtu pieejama."
 		},
 		"rewards": {
-			"heading": "Izmantošanas apbalvojumu varbūtības",
-			"description": "Saraksts ar lietām, ko tu gūsti vai zaudē vācot šo lauciņu vai izmantojot šo lietu. Negatīva vērtība nozīmē, ka zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9% iespēja iegūt šo lietu. Šīs var arī būt būvēšanas izmaksas."
+			"heading": "Izmantošanas apbalvojumi",
+			"description": "Saraksts ar lietām, ko tu gūsti vai zaudē vācot šo lauciņu vai izmantojot šo lietu. Negatīva vērtība nozīmē, ka zaudē šo lietu. Šīs var arī būt būvēšanas izmaksas."
 		},
 		"buildItems": {
 			"heading": "Pabeigšanas cena",
 			"description": "Šīs lietas vajadzīgas, lai pabeigtu būvēt lauciņu."
 		},
-		"friendReward": {
-			"heading": "Izmantošanas apbalvojumu varbūtības pie draugiem",
+		"friendRewards": {
+			"heading": "Izmantošanas apbalvojumi pie draugiem",
 			"description": "Līdzīgi kā iepriekšējā sadaļa, taču šie apbalvojumi pieejami šo lauciņu novācot pie draugiem."
 		}
 	},
@@ -58,9 +62,9 @@
 		"heading": "Mērķu informācijas meklētājs",
 		"description": "Ieraksti kāda mērķa nosaukumu vai nosaukuma daļu un atrodi informāciju par šo mērķi!",
 		"tasks": "Mērķa uzdevumi",
-		"reward": {
+		"rewards": {
 			"heading": "Mērķa pabeigšanas apbalvojumi",
-			"description": "Saraksts ar lietām, ko tu iegūsti, ja sasniegsi šo mēŗķi. Negatīva vērtība nozīmē, ka zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9% iespēja iegūt šo lietu."
+			"description": "Saraksts ar lietām, ko tu iegūsti, ja sasniegsi šo mēŗķi. Negatīva vērtība nozīmē, ka zaudē šo lietu"
 		},
 		"req_quests": {
 			"heading": "Nepieciešamie mērķi",
@@ -83,9 +87,9 @@
 			"heading": "Virsmērķis",
 			"description": "Uzdevums, ko šobrīd skati atbilst zemāk redzamajam mērķim."
 		},
-		"reward": {
+		"rewards": {
 			"heading": "Uzdevuma pabeigšanas apbalvojumi",
-			"description": "Saraksts ar lietām, ko tu iegūsti, ja izpildīsi šo uzdevumu. Negatīva vērtība nozīmē, ka zaudē šo lietu, daļskaitlis izsaka varbūtību ar kādu var iegūt šo lietu: 0.09 = 9% iespēja iegūt šo lietu."
+			"description": "Saraksts ar lietām, ko tu iegūsti, ja izpildīsi šo uzdevumu. Negatīva vērtība nozīmē, ka zaudē šo lietu."
 		},
 		"actions": {
 			"animal_feed": "Pabarot",
@@ -123,6 +127,25 @@
 			"task_finish": "Izpildīt uzdevumu",
 			"tractor_use": "Izmantot traktoru",
 			"undefined": "Nezināms"
+		}
+	},
+	"crafting": {
+		"crafting": "Darbnīca",
+		"heading": "Darbnīcas informācijas meklētājs",
+		"description": "Ieraksti kādu darbnīcas receptes nosaukumu vai nosaukuma daļu un atrodi informāciju par šo recepti!",
+		"generalInfo": {
+			"label": "Vispārīga informācija",
+			"description": "Vispārīga informācija par šo darbnīcas recepti.",
+			"max": "Izgatavošanas reizes",
+			"infinite": "bezgalīgi"
+		},
+		"req_quests": {
+			"heading": "Nepieciešamie mērķi",
+			"description": "Šie mērķi ir jāsasniedz, lai varētu izmantot šo darbnīcas recepti."
+		},
+		"action": {
+			"heading": "Recepte",
+			"description": "Saraksts ar lietām, ko tu gūsti vai zaudē izmantojot šo recepti. Negatīva vērtība nozīmē, ka zaudē šo lietu, bet pozitīva, ka iegūsti."
 		}
 	}
 }

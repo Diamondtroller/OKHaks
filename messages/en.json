@@ -6,11 +6,15 @@
 	},
 	"header": {
 		"main": "Main",
-		"items": "Items",
+		"finders": "Finders",
 		"quests": "Quests",
 		"tasks": "Tasks"
 	},
 	"loading": "Data is loading...",
+	"table": {
+		"give": "Gives",
+		"take": "Takes"
+	},
 	"search": {
 		"label": "Search: ",
 		"placeholder": "part of name / #id / #id+",
@@ -41,15 +45,15 @@
 			"description": "You need to finish these quests for the item to be available."
 		},
 		"rewards": {
-			"heading": "Usage reward",
-			"description": "List of items you get or lose interacting with this tile or using this item. Negative value means that you lose corresponding items after a use, while decimals represent the probablity of getting this item: 0.09 = 9% you get this item. These can be part of building costs and other interactions."
+			"heading": "Usage rewards",
+			"description": "List of items you get or lose interacting with this tile or using this item. Negative value means that you lose corresponding items after a use. These can be part of building costs and other interactions."
 		},
 		"buildItems": {
 			"heading": "Finishing cost",
 			"description": "These items will be spent as part of building completion."
 		},
-		"friendReward": {
-			"heading": "Usage reward while visiting friends",
+		"friendRewards": {
+			"heading": "Usage rewards while visiting friends",
 			"description": "Similarly to usage rewards section these are rewards for interacting with tiles while visiting friends."
 		}
 	},
@@ -58,9 +62,9 @@
 		"heading": "Quest information finder",
 		"description": "Enter the name or part of it to find information about some quest!",
 		"tasks": "Quest's tasks",
-		"reward": {
+		"rewards": {
 			"heading": "Quest completion rewards",
-			"description": "List of items you get or lose after finishing this quest. Negative value means that you lose corresponding items, while decimals represent the probablity of getting this item: 0.09 = 9% you get this item."
+			"description": "List of items you get or lose after finishing this quest. Negative value means that you lose corresponding items."
 		},
 		"req_quests": {
 			"heading": "Required quests",
@@ -83,9 +87,9 @@
 			"heading": "Parent quest",
 			"description": "This task corresponds to this Quest."
 		},
-		"reward": {
+		"rewards": {
 			"heading": "Task completion rewards",
-			"description": "List of items you get or lose after finishing this task. Negative value means that you lose corresponding items, while decimals represent the probablity of getting this item: 0.09 = 9% you get this item."
+			"description": "List of items you get or lose after finishing this task. Negative value means that you lose corresponding items."
 		},
 		"actions": {
 			"animal_feed": "Feed",
@@ -123,6 +127,25 @@
 			"task_finish": "Complete task",
 			"tractor_use": "Use tractor",
 			"undefined": "Unknown"
+		}
+	},
+	"crafting": {
+		"crafting": "Workshop",
+		"heading": "Workshop recipe finder",
+		"description": "Enter the name or part of it to find information about some workshop recipe!",
+		"generalInfo": {
+			"label": "General info",
+			"description": "General information about this recipe.",
+			"max": "Crafting times",
+			"infinite": "infinite"
+		},
+		"req_quests": {
+			"heading": "Required quests",
+			"description": "You need to complete these quests for this workshop recipe to be available."
+		},
+		"action": {
+			"heading": "Recipe",
+			"description": "List of items you gain or lose by doing this recipe. Negative value means that you lose corresponding items after a use, whilst positive value means you gain this item."
 		}
 	}
 }

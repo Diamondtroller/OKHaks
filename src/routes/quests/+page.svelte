@@ -44,7 +44,7 @@
 		.map((entry) => entry[0])}
 	<Search
 		names={strQUESTS}
-		key="NAME"
+		keyGetter={(name) => name.NAME}
 		objects={quests.quests}
 		Element={Quest}
 		data={{ quests, strQUESTS, competition }}
@@ -69,8 +69,8 @@
 			{/if}
 			{#if quest.reward}
 				<section>
-					<h3>{m['quests.reward.heading']()}</h3>
-					<p>{m['quests.reward.description']()}</p>
+					<h3>{m['quests.rewards.heading']()}</h3>
+					<p>{m['quests.rewards.description']()}</p>
 					{#await data.items}
 						<Loading />
 					{:then items}
@@ -79,6 +79,7 @@
 							data={{ items, strITEMS, competition }}
 							content={quest.reward}
 							className="tcenter"
+							split
 						/>
 					{/await}
 				</section>

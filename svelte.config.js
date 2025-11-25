@@ -20,6 +20,7 @@ const config = {
 				'/en/items/',
 				'/en/quests/',
 				'/en/quests/tasks/',
+				'/en/crafting/',
 			]
 		}
 	}

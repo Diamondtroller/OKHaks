@@ -38,6 +38,7 @@ body {
 	background: var(--sel-color);
 }
 
+caption,
 th,
 td {
 	padding: 0.2em 0.2em;

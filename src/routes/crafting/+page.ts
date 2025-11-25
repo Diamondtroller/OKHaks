@@ -9,23 +9,26 @@ import { getLocale } from '$lib/paraglide/runtime';
 
 export const load: PageLoad = ({ url, fetch }) => {
 	const competition = url.searchParams.has("competition");
-	const quests = getData(fetch, competition ? '/data/comQuests.json' : '/data/quests.json') as Promise<Quests>;
+
+	const crafting = getData(fetch, competition ? '/data/comCrafting.json' : '/data/crafting.json') as Promise<Crafts>;
 	const strings = getData(
 		fetch,
 		`/data/strings${getLocale().toUpperCase()}.json`
 	) as Promise<Strings>;
-	const questStrings = Promise.all([quests, strings]);
-	const items = questStrings.then(
+
+	const craftingStrings = Promise.all([crafting, strings]);
+	const quests = craftingStrings.then(
+		() => getData(fetch, competition ? '/data/comQuests.json' : '/data/quests.json') as Promise<Quests>
+	);
+	const items = craftingStrings.then(
 		() => getData(fetch, competition ? '/data/comItems.json' : '/data/items.json') as Promise<Items>
 	);
-	const crafting = questStrings.then(
-		() => getData(fetch, competition ? '/data/comCrafting.json' : '/data/crafting.json') as Promise<Crafts>
-	);
+
 	// waterfall items request to happen later
 	return {
+		crafting,
 		strings,
 		quests,
-		items,
-		crafting
+		items
 	};
 };

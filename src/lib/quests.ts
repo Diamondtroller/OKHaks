@@ -29,7 +29,8 @@ export const type = {
 	item: 1, // many
 	quest: 2, // 1
 	island: 3, // 1
-	task: 4 // many
+	task: 4, // many
+	craft: 5 // 1??
 };
 
 export const actions = {
@@ -40,7 +41,7 @@ export const actions = {
 	building_upgrade: type.item,
 	building_use: type.item,
 	character_change: type.none,
-	crafting_create: type.item,
+	crafting_create: type.craft,
 	friend_do_work: type.item,
 	give_item: type.item,
 	have_item: type.item,

@@ -12,6 +12,7 @@
 	let { data }: PageProps = $props();
 
 	import { page } from '$app/state';
+	import Craft from '$lib/Craft.svelte';
 
 	const competition = $derived(page.url.searchParams.has('competition'));
 	const id_str = $derived(page.url.searchParams.get('id'));
@@ -33,14 +34,16 @@
 {:then fetchedData}
 	{@const quests = fetchedData[0]}
 	{@const strings = fetchedData[1]}
+	{@const items = fetchedData[2]}
 	{@const strITEMS = competition ? strings.comITEMS : strings.ITEMS}
 	{@const strQUESTS = competition ? strings.comQUESTS : strings.QUESTS}
 	{@const strTASKS = competition ? strings.comTASKS : strings.TASKS}
-	{@const items = fetchedData[2]}
+	{@const strCRAFTING = competition ? strings.comCRAFTING : strings.CRAFTING}
+
 	{@const task = quests.tasks[id]}
 	<Search
 		names={strTASKS}
-		key="NAME"
+		keyGetter={(name) => name.NAME}
 		objects={quests.tasks}
 		Element={Task}
 		data={{ quests, strTASKS, competition }}
@@ -75,7 +78,15 @@
 												<Quest {quests} {strQUESTS} id={parseInt(e_id)} {competition} small />
 											{:else if actions[task.action] === type.task}
 												<Task {quests} {strTASKS} id={parseInt(e_id)} {competition} small />
-											{:else if actions[task.action] === type.island}
+											{:else if actions[task.action] === type.craft}
+												{#await data.crafting}
+													<Loading />
+												{:then crafting}
+													<Craft {crafting} {strCRAFTING} id={parseInt(e_id)} {competition} small />
+												{/await}
+											{:else if actions[task.action] === type.task}
+												<Task {quests} {strTASKS} id={parseInt(e_id)} {competition} small />
+											{:else}
 												<div>{strings.MAP_NAMES[parseInt(task.target)]}</div>
 											{/if}
 										{/each}
@@ -90,18 +101,21 @@
 				<section>
 					<h3>{m['tasks.quest.heading']()}</h3>
 					<p>{m['tasks.quest.description']()}</p>
-					<div class="tcenter"><Quest {quests} {strQUESTS} id={parseInt(task.quest_id)} {competition} /></div>
+					<div class="tcenter">
+						<Quest {quests} {strQUESTS} id={parseInt(task.quest_id)} {competition} />
+					</div>
 				</section>
 			{/if}
 			{#if task.reward}
 				<section>
-					<h3>{m['tasks.reward.heading']()}</h3>
-					<p>{m['tasks.reward.description']()}</p>
+					<h3>{m['tasks.rewards.heading']()}</h3>
+					<p>{m['tasks.rewards.description']()}</p>
 					<Table
 						ColumnType={Item}
 						data={{ items, strITEMS, competition }}
 						content={task.reward}
 						className="tcenter"
+						split
 					/>
 				</section>
 			{/if}
