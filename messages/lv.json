@@ -35,6 +35,7 @@
 			"lifes": "Darbības reizes",
 			"walkable": "Caurstaigājams lauciņš",
 			"movable": "Pārvietojams lauciņš",
+			"sellProtection": "Īpašais lauciņš",
 			"superPrice": "Rubīnu cena",
 			"price": "Veikala cena",
 			"sellPrice": "Pārdošanas cena",

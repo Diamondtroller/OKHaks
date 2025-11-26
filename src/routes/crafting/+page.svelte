@@ -5,6 +5,7 @@
 	import Craft from '$lib/Craft.svelte';
 	import Search from '$lib/Search.svelte';
 	import Quest from '$lib/Quest.svelte';
+	import { simpleEntry } from '$lib/snippets.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 
 	import type { PageProps } from './$types';
@@ -56,24 +57,9 @@
 				<p>{m['crafting.generalInfo.description']()}</p>
 				<table class="tcenter">
 					<tbody>
-						{#if craft.level}
-							<tr>
-								<th>{m['items.generalInfo.level']()}</th>
-								<td class="value">{craft.level}</td>
-							</tr>
-						{/if}
-						{#if craft.timer}
-							<tr>
-								<th>{m['crafting.generalInfo.time']()}</th>
-								<td class="value">{time(craft.timer)}</td>
-							</tr>
-						{/if}
-						{#if craft.max}
-							<tr>
-								<th>{m['crafting.generalInfo.max']()}</th>
-								<td class="value">{craft.max === "0" ? m['crafting.generalInfo.infinite']() : craft.max }</td>
-							</tr>
-						{/if}
+						{@render simpleEntry(craft.level, m['items.generalInfo.level']())}
+						{@render simpleEntry(craft.timer, m['crafting.generalInfo.time'](), time)}
+						{@render simpleEntry(craft.max, m['crafting.generalInfo.max'](), () => craft.max === "0" ? m['crafting.generalInfo.infinite']() : craft.max)}
 					</tbody>
 				</table>
 			</section>
@@ -118,12 +104,3 @@
 		{/if}
 	{/if}
 {/await}
-
-<style>
-	td {
-		text-align: center;
-	}
-	th {
-		text-align: right;
-	}
-</style>

@@ -49,16 +49,16 @@
 	{#each tworows as rows, i}
 		<table class={className}>
 			{#if rows.length > 0}
-			<caption>{[m["table.take"](), m["table.give"]()][i]}</caption>
-			<tbody>
-				{#each rows as row}
-					<tr>
-						<th class:noborder class={'label' + (split && row?.color)}>{row?.value}</th>
-						<td class:noborder><ColumnType {...data} id={row?.id} small={true} /></td>
-					</tr>
-				{/each}
-			</tbody>
-		{/if}
+				<caption>{[m["table.take"](), m["table.give"]()][i]}</caption>
+				<tbody>
+					{#each rows as row}
+						<tr>
+							<th class:noborder class={'label' + (split && row?.color)}>{row?.value}</th>
+							<td class:noborder><ColumnType {...data} id={row?.id} small={true} /></td>
+						</tr>
+					{/each}
+				</tbody>
+			{/if}
 		</table>
 	{/each}
 	</div>

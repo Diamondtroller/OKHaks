@@ -4,6 +4,7 @@
 	import Item from '$lib/Item.svelte';
 	import Search from '$lib/Search.svelte';
 	import Quest from '$lib/Quest.svelte';
+	import { simpleEntry, toYesNo } from '$lib/snippets.svelte';
 	import { m } from '$lib/paraglide/messages.js';
 
 	import type { PageProps } from './$types';
@@ -54,30 +55,11 @@
 				<p>{m['items.generalInfo.description']()}</p>
 				<table class="tcenter">
 					<tbody>
-						{#if item.level}
-							<tr>
-								<th>{m['items.generalInfo.level']()}</th>
-								<td class="value">{item.level}</td>
-							</tr>
-						{/if}
-						{#if item.lifes}
-							<tr>
-								<th>{m['items.generalInfo.lifes']()}</th>
-								<td class="value">{item.lifes}</td>
-							</tr>
-						{/if}
-						{#if item.walkable}
-							<tr>
-								<th>{m['items.generalInfo.walkable']()}</th>
-								<td class="value">{item.walkable === '1' ? m.yes() : m.no()}</td>
-							</tr>
-						{/if}
-						{#if item.movable}
-							<tr>
-								<th>{m['items.generalInfo.movable']()}</th>
-								<td class="value">{item.movable === '1' ? m.yes() : m.no()}</td>
-							</tr>
-						{/if}
+						{@render simpleEntry(item.level, m['items.generalInfo.level']())}
+						{@render simpleEntry(item.lifes, m['items.generalInfo.lifes']())}
+						{@render simpleEntry(item.walkable, m['items.generalInfo.walkable'](), toYesNo)}
+						{@render simpleEntry(item.movable, m['items.generalInfo.movable'](), toYesNo)}
+						{@render simpleEntry(item.sellProtection, m['items.generalInfo.sellProtection'](), toYesNo)}
 						{#if item.superPrice && item.superPrice !== '-1'}
 							<tr>
 								<th>{m['items.generalInfo.superPrice']()}</th>
@@ -194,6 +176,6 @@
 		text-align: center;
 	}
 	th {
-		text-align: right;
+		text-align: left;
 	}
 </style>

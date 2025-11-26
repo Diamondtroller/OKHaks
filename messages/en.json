@@ -35,6 +35,7 @@
 			"lifes": "Number of actions",
 			"walkable": "Walkable tile",
 			"movable": "Movable tile",
+			"sellProtection": "Special tile",
 			"superPrice": "Ruby price",
 			"price": "Store price",
 			"sellPrice": "Selling price",
