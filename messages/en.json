@@ -136,7 +136,8 @@
 		"generalInfo": {
 			"label": "General info",
 			"description": "General information about this recipe.",
-			"max": "Crafting times",
+			"time": "Crafting duration",
+			"max": "Maximum crafting times",
 			"infinite": "infinite"
 		},
 		"req_quests": {

@@ -136,6 +136,7 @@
 		"generalInfo": {
 			"label": "Vispārīga informācija",
 			"description": "Vispārīga informācija par šo darbnīcas recepti.",
+			"time": "Izgatavošanas ilgums",
 			"max": "Izgatavošanas reizes",
 			"infinite": "bezgalīgi"
 		},

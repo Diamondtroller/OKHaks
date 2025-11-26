@@ -19,6 +19,9 @@
 		return isNaN(id_test) ? -1 : id_test;
 	});
 	const title_str = $derived(id === -1 ? '' : ` #${id_str}`);
+	function time(seconds: number)  {
+		return `${Math.floor(seconds/3600)}h ${Math.floor((seconds%3600)/60)}m ${seconds%60}s`;
+	}
 </script>
 
 <svelte:head>
@@ -57,6 +60,12 @@
 							<tr>
 								<th>{m['items.generalInfo.level']()}</th>
 								<td class="value">{craft.level}</td>
+							</tr>
+						{/if}
+						{#if craft.timer}
+							<tr>
+								<th>{m['crafting.generalInfo.time']()}</th>
+								<td class="value">{time(craft.timer)}</td>
 							</tr>
 						{/if}
 						{#if craft.max}
