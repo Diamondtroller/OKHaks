@@ -39,7 +39,7 @@
 				else acc[1].push(cur);
 				return acc;
 			},
-			[[], []]
+			[[] as {id: number; value: number; color:string}[], [] as {id: number; value: number|string; color: string}[]]
 		)
 	);
 </script>
