@@ -299,5 +299,9 @@
 	"76":{
 		"tilesets":[13],
 		"background":"0x9BDFFF"
+	},
+	"77":{
+		"background":"0x1C232C",
+		"tilesets":[0,9]
 	}
 }
