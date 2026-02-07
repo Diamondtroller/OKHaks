@@ -9,6 +9,7 @@ jobs:
   update-data:
     permissions:
       contents: write
+    environment: updater
     runs-on: ubuntu-latest
     outputs:
       new_data: ${{ steps.commit.outputs.new_data }}
