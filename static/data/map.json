@@ -303,5 +303,9 @@
 	"77":{
 		"background":"0x1C232C",
 		"tilesets":[0,9]
+	},
+	"78":{
+		"tilesets":[0],
+		"background":"0xEDE084"
 	}
 }
