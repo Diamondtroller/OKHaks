@@ -331,5 +331,8 @@
 	"82":{
 		"tilesets":[0],
 		"background":"0xEDE084"
+	},
+	"83":{
+		"tilesets":[11]
 	}
 }
