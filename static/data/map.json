@@ -216,7 +216,8 @@
 			"2211":{"start":1622777600,"end":1673352000,"random":"15:20","max":3,"quest":3872}}
 	},
 	"47":{
-		"tilesets":[7]
+		"tilesets":[0,6],
+		"background":"0x95B91B"
 	},
 	"48":{
 		"tilesets":[0],
