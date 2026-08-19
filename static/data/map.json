@@ -348,5 +348,8 @@
 	"85":{
 		"background":"0x1C232C",
 		"tilesets":[10]
+	},
+	"86":{
+		"tilesets":[0]
 	}
 }
